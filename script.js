@@ -1,4 +1,6 @@
-const reveals = document.querySelectorAll(".reveal");
+/* ============ Scroll reveal ============ */
+
+const reveals = document.querySelectorAll(".reveal, .reveal-stagger");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -9,12 +11,44 @@ const revealObserver = new IntersectionObserver(
       }
     }
   },
-  { threshold: 0.16 }
+  { threshold: 0.14 }
 );
 
 for (const node of reveals) {
   revealObserver.observe(node);
 }
+
+/* ============ Mobile / tablet hamburger nav ============ */
+
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.getElementById("primary-nav");
+const navScrim = document.querySelector(".nav-scrim");
+
+function setNav(open) {
+  document.body.classList.toggle("nav-open", open);
+  if (navToggle) {
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  if (navScrim) navScrim.hidden = !open;
+}
+
+if (navToggle) {
+  navToggle.addEventListener("click", () =>
+    setNav(!document.body.classList.contains("nav-open"))
+  );
+}
+if (navScrim) navScrim.addEventListener("click", () => setNav(false));
+if (siteNav) {
+  for (const link of siteNav.querySelectorAll("a")) {
+    link.addEventListener("click", () => setNav(false));
+  }
+}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setNav(false);
+});
+
+/* ============ Weapon tabs ============ */
 
 const weaponTabs = document.querySelectorAll(".weapon-tab");
 const weaponPanels = document.querySelectorAll(".weapon-panel");
@@ -34,6 +68,8 @@ function selectWeapon(id) {
 for (const tab of weaponTabs) {
   tab.addEventListener("click", () => selectWeapon(tab.dataset.weapon));
 }
+
+/* ============ Count-up stats ============ */
 
 const countTargets = document.querySelectorAll("[data-count]");
 
@@ -84,4 +120,110 @@ const countObserver = new IntersectionObserver(
 
 for (const el of countTargets) {
   countObserver.observe(el);
+}
+
+/* ============ FAQ: close others when one opens ============ */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+for (const item of faqItems) {
+  item.addEventListener("toggle", () => {
+    if (!item.open) return;
+    for (const other of faqItems) {
+      if (other !== item && other.open) {
+        other.open = false;
+      }
+    }
+  });
+}
+
+/* ============ Helpers ============ */
+
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+}
+
+function setNote(form, message, state) {
+  const note = form.querySelector("[data-form-note]");
+  if (!note) return;
+  if (!note.dataset.original) {
+    note.dataset.original = note.textContent;
+  }
+  note.textContent = message;
+  note.classList.remove("is-success", "is-error");
+  if (state) note.classList.add(state);
+}
+
+/* ============ Newsletter subscribe ============ */
+
+const subscribeForm = document.getElementById("subscribe-form");
+
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const input = subscribeForm.querySelector("input[type='email']");
+    const email = input.value.trim();
+
+    if (!isValidEmail(email)) {
+      input.classList.add("is-invalid");
+      setNote(subscribeForm, "Please enter a valid work email address.", "is-error");
+      input.focus();
+      return;
+    }
+
+    input.classList.remove("is-invalid");
+    input.value = "";
+    input.disabled = true;
+    subscribeForm.querySelector("button[type='submit']").disabled = true;
+    setNote(subscribeForm, "You're subscribed. Watch your inbox for the next intelligence briefing.", "is-success");
+  });
+}
+
+/* ============ Contact form (composes an email) ============ */
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = contactForm.querySelector("#cf-name");
+    const company = contactForm.querySelector("#cf-company");
+    const email = contactForm.querySelector("#cf-email");
+    const message = contactForm.querySelector("#cf-message");
+
+    let valid = true;
+
+    for (const field of [name, company, email]) {
+      const empty = field.value.trim() === "";
+      field.classList.toggle("is-invalid", empty);
+      if (empty) valid = false;
+    }
+
+    if (email.value.trim() !== "" && !isValidEmail(email.value)) {
+      email.classList.add("is-invalid");
+      valid = false;
+    }
+
+    if (!valid) {
+      setNote(contactForm, "Please complete the highlighted fields.", "is-error");
+      return;
+    }
+
+    const subject = `Free Short Analysis Request — ${company.value.trim()}`;
+    const bodyLines = [
+      `Name: ${name.value.trim()}`,
+      `Company / Ticker: ${company.value.trim()}`,
+      `Work Email: ${email.value.trim()}`,
+      "",
+      message.value.trim() || "(No additional message)",
+    ];
+    const mailto =
+      "mailto:tokenize@currencgroup.com" +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
+    window.location.href = mailto;
+    setNote(contactForm, "Opening your email client — send the drafted message to complete your request.", "is-success");
+  });
 }
