@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intelligence (SaaS Platform) | CURRENC Capital</title>
+    <meta name="description" content="CURRENC Intelligence — real-time short attack monitoring and analytics for public companies. See the attack before it destroys you, with 15-30 days of early warning." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-radar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          <path d="M12 3v3M21 12h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-coin" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-bank" viewBox="0 0 24 24">
+          <path d="M12 3 3 8h18L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 10h16M6 10v8M10.3 10v8M13.7 10v8M18 10v8M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" />
+        </symbol>
+        <symbol id="icon-megaphone" viewBox="0 0 24 24">
+          <path d="M3 10v4h3l8 4.5V5.5L6 10H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M15 9.2a4 4 0 010 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-ticker" viewBox="0 0 24 24">
+          <path d="M3 16.5l5.5-6 4 3.5L21 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="21" cy="5" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-no-cash" viewBox="0 0 24 24">
+          <rect x="2.5" y="6.5" width="19" height="12" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12.5" r="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M4 20L20 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-building" viewBox="0 0 24 24">
+          <path d="M4 21V7.2L12 3l8 4.2V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9.5 21v-5.5h5V21M3 21h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-warning" viewBox="0 0 24 24">
+          <path d="M12 3 22 20H2L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-gauge" viewBox="0 0 24 24">
+          <path d="M4 16a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M12 16l4.2-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="12" cy="16" r="1.3" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-trend-down" viewBox="0 0 24 24">
+          <path d="M3 6l6.5 6.5 4-4L21 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 10.5V17h-6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-trend-up" viewBox="0 0 24 24">
+          <path d="M3 17.5l6.5-6.5 4 4L21 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 6.5h6V12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-hourglass" viewBox="0 0 24 24">
+          <path d="M6 3h12M6 21h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M7 3c0 5 5 5.4 5 9s-5 4-5 9M17 3c0 5-5 5.4-5 9s5 4 5 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-layers" viewBox="0 0 24 24">
+          <path d="M12 2 2 7.5l10 5 10-5L12 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M2 12.3l10 5 10-5M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-shuffle" viewBox="0 0 24 24">
+          <path d="M17 3h4v4M3 21 21 3M21 17v4h-4M14.5 14.5 21 21M3 3l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24">
+          <path d="M20.5 13.4A8.5 8.5 0 1110.6 3.5a7 7 0 009.9 9.9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+          <path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
+        </symbol>
+        <symbol id="icon-badge-check" viewBox="0 0 24 24">
+          <path d="M12 2.5 15 4.6 18.8 5 18 8.8 19 12l-1 3.2.8 3.8-3.8.4L12 21.5 9 19.4l-3.8-.4.8-3.8L5 12l1-3.2L5.2 5 9 4.6 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+          <path d="M8.5 12.3l2.3 2.3 4.7-4.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-rocket" viewBox="0 0 24 24">
+          <path d="M14.5 4.5c3 .3 5 2.3 5.3 5.3-3.6.9-7.5 5.2-9.6 9.4l-3-3c4.2-2.1 8.5-6 9.4-9.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4.8 19.2c.6-2.2 1.8-3.6 3.6-4M4.8 19.2c2.2-.6 3.6-1.8 4-3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="15" cy="9" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-dollar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 6.5v11M15 9.6c0-1.5-1.4-2.6-3-2.6s-3 1-3 2.4 1.3 2 3 2.6 3 1.1 3 2.6-1.4 2.4-3 2.4-3-1.1-3-2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+          <rect x="2.5" y="5" width="19" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-doc" viewBox="0 0 24 24">
+          <path d="M6 2.5h8L19 7.5V21.5H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M14 2.5v5h5M9 12h7M9 15.5h7M9 8.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-book" viewBox="0 0 24 24">
+          <path d="M4 4.5A2.5 2.5 0 016.5 2H20v17.5H6.5A2.5 2.5 0 004 22z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20M8 6.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-list" viewBox="0 0 24 24">
+          <path d="M8 6h13M8 12h13M8 18h13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-send" viewBox="0 0 24 24">
+          <path d="M21 3 3 10.5l7 2.5 2.5 7L21 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M10 13 21 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+          <path d="M12 2.5c2.6 1.2 4.6 1.7 7 2.2-.1 6.3-2 10.6-7 13.8-5-3.2-6.9-7.5-7-13.8 2.4-.5 4.4-1 7-2.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9 11.5l2.2 2.2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="CURRENC Capital home">
+          <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="./index.html#problem">Problem</a>
+          <a href="./index.html#solution">Solution</a>
+          <a href="./index.html#arsenal">Arsenal</a>
+          <a href="./index.html#deployment">Deployment</a>
+          <a href="./index.html#why">Why CURRENC</a>
+          <a href="./index.html#news">Insights</a>
+          <a href="./index.html#faq">FAQ</a>
+          <a href="./index.html#contact">Contact</a>
+          <a class="nav-cta nav-cta-mobile" href="./index.html#contact">Free Short Analysis</a>
+        </nav>
+        <a class="nav-cta nav-cta-desktop" href="./index.html#contact">Free Short Analysis</a>
+      </div>
+    </header>
+    <div class="nav-scrim" hidden></div>
+
+    <main>
+      <!-- HERO (slide 1) -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="page-hero-num" aria-hidden="true">01</span>
+          <a class="breadcrumb" href="./index.html#solution"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>Back to the Arsenal</a>
+          <p class="meta">Weapon 01 · SaaS Platform</p>
+          <h1>INTELLIGENCE <span class="wp-paren">(SaaS Platform)</span></h1>
+          <p class="hero-subhead">Real-time short attack monitoring &amp; analytics. See the attack before it destroys you — with 15–30 days of early warning.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
+            <a class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- AT A GLANCE (slide 2) -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Intelligence Platform</p>
+            <h2>THE ONLY REAL-TIME SHORT INTELLIGENCE SYSTEM</h2>
+            <p class="section-subtitle">Purpose-built for public companies — so you are never flying blind against a short attack again.</p>
+          </div>
+          <ul class="wp-highlights">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>Real-time DTC Participant data</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>15–30 day early warning</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-shuffle"></use></svg>Synthetic position detection</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>Board-ready monthly reports</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg>4-week deployment</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- THE PROBLEM (slides 3–4) -->
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">The Problem</p>
+            <h2>THE SHORT INTELLIGENCE GAP</h2>
+            <p class="section-subtitle">What public companies simply cannot see with standard reporting.</p>
+          </div>
+          <div class="compare-grid">
+            <div class="compare-col bad">
+              <h3><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>FINRA Short Interest</h3>
+              <ul>
+                <li><span class="cx">✕</span>Published every 15 days</li>
+                <li><span class="cx">✕</span>10-day reporting delay</li>
+                <li><span class="cx">✕</span>Only exchange-reported positions</li>
+                <li><span class="cx">✕</span>No DTC Participant breakdown</li>
+                <li><span class="cx">✕</span>No synthetic position visibility</li>
+              </ul>
+            </div>
+            <div class="compare-col good">
+              <h3><svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>CURRENC Intelligence</h3>
+              <ul>
+                <li><span class="ck">✓</span>Real-time data (15-min updates)</li>
+                <li><span class="ck">✓</span>DTC Participant borrowing by firm</li>
+                <li><span class="ck">✓</span>Synthetic short detection</li>
+                <li><span class="ck">✓</span>Rehypothecation chain mapping</li>
+                <li><span class="ck">✓</span>15–30 day early warning alerts</li>
+              </ul>
+            </div>
+          </div>
+          <blockquote>By the time you see FINRA data, the damage is already done. You need real-time visibility to defend effectively.</blockquote>
+        </div>
+      </section>
+
+      <!-- COST OF BLINDNESS (slide 5) -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg danger" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">The Stakes</p>
+            <h2>THE COST OF BLINDNESS</h2>
+            <p class="section-subtitle">The most dangerous attacks are the ones you never see coming.</p>
+          </div>
+          <div class="metric-grid m4">
+            <article><strong>18 mo</strong><span class="m-label">Average attack duration</span><p>Before it is even discovered.</p></article>
+            <article><strong>40–70%</strong><span class="m-label">Stock price decline</span><p>During an undetected attack.</p></article>
+            <article><strong>$2M+</strong><span class="m-label">Defensive costs</span><p>Lawyers, IR, proxy fights.</p></article>
+            <article><strong>30%</strong><span class="m-label">CEO / CFO time</span><p>Diverted to defense.</p></article>
+          </div>
+          <ul class="arrow-list">
+            <li>Management distraction destroys focus</li>
+            <li>Key talent leaves as the stock declines</li>
+            <li>Competitors acquire at distressed prices</li>
+            <li>Customer confidence erodes</li>
+            <li>Future capital becomes more expensive</li>
+            <li>Shareholder lawsuits drain resources</li>
+          </ul>
+          <div class="callout-band">Without real-time intelligence, you are reacting to damage that is already done — <strong>not preventing it.</strong></div>
+        </div>
+      </section>
+
+      <!-- THE PLATFORM (slides 6–7) -->
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">The Platform</p>
+            <h2>PLATFORM OVERVIEW</h2>
+            <p class="section-subtitle">A cloud-based SaaS platform delivering real-time visibility into short attack activity — multi-source data fusion with proprietary attack-pattern detection.</p>
+          </div>
+          <div class="wp-cols">
+            <div class="wp-col">
+              <h3>Data Sources</h3>
+              <ul class="tick-list">
+                <li>DTC Participant borrowing data</li>
+                <li>SEC filing analytics (13F, 13D, 13G)</li>
+                <li>Options flow and open interest</li>
+                <li>Dark pool volume monitoring</li>
+                <li>Social sentiment and FUD detection</li>
+                <li>Rehypothecation tracking</li>
+                <li>Cost-to-borrow rate surveillance</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3>Platform Outputs</h3>
+              <ul class="tick-list">
+                <li>Real-time executive dashboard</li>
+                <li>Customizable alert system</li>
+                <li>Board-ready monthly reports</li>
+                <li>Peer benchmarking analysis</li>
+                <li>Attack pattern scoring</li>
+                <li>Historical trend analysis</li>
+                <li>Custom report builder</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE: REAL-TIME MONITORING (slide 8) -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Feature</p>
+            <h2>REAL-TIME MONITORING</h2>
+          </div>
+          <p class="wp-lead"><b>15-minute updates — not 15-day delays.</b> See every borrow, every return, every surge as it happens.</p>
+          <div class="feature-grid">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
+              <div><strong>Short Interest Tracking</strong><p>Live short interest updates every 15 minutes — not the 15-day FINRA delay.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+              <div><strong>DTC Participant Data</strong><p>See exactly which firms are borrowing your shares, and in what quantities.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+              <div><strong>Utilization Heat Maps</strong><p>Visualize borrowing-pressure intensity. Red zones signal an imminent attack.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+              <div><strong>Cost-to-Borrow Tracking</strong><p>Surging borrow costs are the #1 leading indicator of an attack. Track them live.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+              <div><strong>24/7 Automated Surveillance</strong><p>Never sleeps, never misses — continuous monitoring with instant alerts to your team.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE: REPORTING & INTELLIGENCE (slide 10) -->
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Feature</p>
+            <h2>REPORTING &amp; INTELLIGENCE</h2>
+          </div>
+          <p class="wp-lead">Board-ready reports and executive dashboards that turn raw data into <b>actionable intelligence.</b></p>
+          <div class="detail-grid">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>
+              <div><strong>Short Attack Risk Report</strong><p>A monthly, board-ready report with risk score, threat summary, and recommended actions.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+              <div><strong>Executive Dashboard</strong><p>A CEO/CFO real-time dashboard with key risk indicators, trend charts, and alert status.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>
+              <div><strong>SEC Filing Impact Analysis</strong><p>Track how 13F, 13D, and 13G filings impact short interest and ownership structure.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>
+              <div><strong>Custom Report Builder</strong><p>Build and export custom reports to share with your board, counsel, or IR team.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE DATA ADVANTAGE (slide 11) -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">The Data Advantage</p>
+            <h2>THE MOST COMPREHENSIVE SHORT DATABASE</h2>
+            <p class="section-subtitle">Multi-source data fusion with proprietary algorithms — the most comprehensive short intelligence database available.</p>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Data Source</th><th>What It Reveals</th><th>Update Frequency</th></tr></thead>
+            <tbody>
+              <tr><td>DTC Participant Data</td><td>Which firms borrow your shares</td><td class="freq">Real-time (15 min)</td></tr>
+              <tr><td>SEC EDGAR Filings</td><td>Institutional ownership changes</td><td class="freq">As filed</td></tr>
+              <tr><td>Options Exchanges</td><td>Synthetic short positions</td><td class="freq">Real-time</td></tr>
+              <tr><td>Social + News Feeds</td><td>FUD campaigns, sentiment</td><td class="freq">Continuous</td></tr>
+            </tbody>
+          </table>
+          <p class="wp-note">Historical database of <b>1,000+ attack patterns</b> · Updated every <b>15 minutes</b> — not 15 days.</p>
+        </div>
+      </section>
+
+      <!-- IMPACT & ROI (slide 12) -->
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Impact &amp; ROI</p>
+            <h2>INTELLIGENCE THAT PAYS FOR ITSELF</h2>
+          </div>
+          <div class="metric-grid m3">
+            <article><strong>3–6 mo</strong><span class="m-label">Early detection window</span><p>Months of preparation time before traditional signals appear.</p></article>
+            <article><strong>40–60%</strong><span class="m-label">Reduced attack vulnerability</span><p>Data-driven defense measurably reduces your exposure.</p></article>
+            <article><strong>$200K+</strong><span class="m-label">Reduced IR / consultant spend</span><p>Replace multiple consultants with one integrated platform.</p></article>
+          </div>
+          <div class="callout-band">Platform cost <strong>$350K/year</strong> → potential value saved <strong>$50M+</strong> for a $500M market-cap company. Insurance against a single attack pays for the platform <strong>142× over.</strong></div>
+        </div>
+      </section>
+
+      <!-- PRICING & DEPLOYMENT (slide 13) -->
+      <section id="pricing" class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Pricing &amp; Deployment</p>
+            <h2>TWO WAYS TO DEPLOY</h2>
+            <p class="section-subtitle">Live in four weeks from signed engagement — pay in cash, or in shares to preserve capital.</p>
+          </div>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <span class="pricing-tag">Option A — Cash</span>
+              <div class="pricing-price">$350,000</div>
+              <p class="pricing-sub">One-time cash payment.</p>
+              <ul>
+                <li>Includes Intelligence + Tokenization bundle</li>
+                <li>12-month full support included</li>
+              </ul>
+            </div>
+            <div class="pricing-card featured">
+              <span class="pricing-tag">Option B — Shares</span>
+              <div class="pricing-price">$500,000</div>
+              <p class="pricing-sub">Paid in your shares at current market price.</p>
+              <ul>
+                <li>No cash outlay — preserve capital</li>
+                <li>Includes Intelligence + Tokenization bundle</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing-include">
+            <strong>Both options include</strong>
+            <ul>
+              <li>Full Intelligence SaaS platform access</li>
+              <li>Tokenization setup via Securitize</li>
+              <li>Onboarding and training</li>
+              <li>12-month support and updates</li>
+              <li>6-K filing support</li>
+              <li>Board briefing included</li>
+              <li>4-week deployment from signed engagement</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY NOW (slide 14) -->
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Why Now</p>
+            <h2>THE THREAT IS ACCELERATING</h2>
+          </div>
+          <div class="metric-grid m3">
+            <article><strong>+30%</strong><span class="m-label">Short attacks increasing YoY</span><p>The threat environment is getting worse, not better.</p></article>
+            <article><strong>SEC</strong><span class="m-label">Regulatory scrutiny rising</span><p>SEC transparency rules proposed — early compliance is an advantage.</p></article>
+            <article><strong>1st</strong><span class="m-label">Mover advantage</span><p>Your competitors are not monitoring — gain the defensive edge now.</p></article>
+          </div>
+          <div class="callout-band"><strong>Intelligence + Tokenization</strong> is the most powerful combination: Intelligence identifies the threat — who is attacking, how, and when — while Tokenization removes the weapon, so shorts lose their ammunition. This is the foundation of the Equity Defense Infrastructure.</div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA (slide 15) -->
+      <section class="cta-band reveal">
+        <div class="container">
+          <p class="eyebrow">Get Started</p>
+          <h2>SEE THE ATTACK BEFORE IT DESTROYS YOU</h2>
+          <p class="section-subtitle">Arm yourself in just <strong>4 weeks</strong> — from signed engagement to live, real-time short attack monitoring.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
+            <a class="button button-secondary" href="./index.html#deployment">See the Full Roadmap</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-simple">
+      <div class="container">
+        <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
+        <nav aria-label="Footer navigation">
+          <a href="./weapon-intelligence.html">Intelligence</a>
+          <a href="./weapon-tokenization.html">Tokenization</a>
+          <a href="./weapon-lending.html">Lending</a>
+          <a href="./weapon-dex-listing.html">DEX Listing</a>
+          <a href="./weapon-ir-market-making.html">IR &amp; MM</a>
+          <a href="./index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
