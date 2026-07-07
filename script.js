@@ -143,6 +143,21 @@ function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
 }
 
+const FREE_EMAIL_DOMAINS = new Set([
+  "gmail.com", "googlemail.com", "yahoo.com", "yahoo.co.uk", "yahoo.co.jp",
+  "ymail.com", "rocketmail.com", "hotmail.com", "hotmail.co.uk", "outlook.com",
+  "live.com", "msn.com", "aol.com", "icloud.com", "me.com", "mac.com",
+  "proton.me", "protonmail.com", "pm.me", "gmx.com", "gmx.net", "mail.com",
+  "zoho.com", "yandex.com", "yandex.ru", "qq.com", "163.com", "126.com",
+  "foxmail.com", "hey.com", "fastmail.com", "tutanota.com", "aim.com",
+]);
+
+// A company/official email = not a free consumer webmail provider.
+function isCorporateEmail(value) {
+  const domain = value.trim().toLowerCase().split("@")[1] || "";
+  return domain !== "" && !FREE_EMAIL_DOMAINS.has(domain);
+}
+
 function setNote(form, message, state) {
   const note = form.querySelector("[data-form-note]");
   if (!note) return;
@@ -188,21 +203,17 @@ if (contactForm) {
     event.preventDefault();
 
     const name = contactForm.querySelector("#cf-name");
+    const title = contactForm.querySelector("#cf-title");
     const company = contactForm.querySelector("#cf-company");
     const email = contactForm.querySelector("#cf-email");
     const message = contactForm.querySelector("#cf-message");
 
     let valid = true;
 
-    for (const field of [name, company, email]) {
+    for (const field of [name, title, company, email]) {
       const empty = field.value.trim() === "";
       field.classList.toggle("is-invalid", empty);
       if (empty) valid = false;
-    }
-
-    if (email.value.trim() !== "" && !isValidEmail(email.value)) {
-      email.classList.add("is-invalid");
-      valid = false;
     }
 
     if (!valid) {
@@ -210,11 +221,33 @@ if (contactForm) {
       return;
     }
 
+    if (!isValidEmail(email.value)) {
+      email.classList.add("is-invalid");
+      setNote(contactForm, "Please enter a valid email address.", "is-error");
+      email.focus();
+      return;
+    }
+
+    // Require an official company email so we can verify the person represents the company.
+    if (!isCorporateEmail(email.value)) {
+      email.classList.add("is-invalid");
+      setNote(
+        contactForm,
+        "Please use your official company email address — we can't accept personal webmail (Gmail, Outlook, etc.).",
+        "is-error"
+      );
+      email.focus();
+      return;
+    }
+
+    email.classList.remove("is-invalid");
+
     const subject = `Free Short Analysis Request — ${company.value.trim()}`;
     const bodyLines = [
       `Name: ${name.value.trim()}`,
+      `Title: ${title.value.trim()}`,
       `Company / Ticker: ${company.value.trim()}`,
-      `Work Email: ${email.value.trim()}`,
+      `Company Email: ${email.value.trim()}`,
       "",
       message.value.trim() || "(No additional message)",
     ];

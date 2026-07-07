@@ -142,12 +142,19 @@
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
           <a href="#problem">Problem</a>
-          <a href="#solution">Solution</a>
-          <a href="#arsenal">Arsenal</a>
+          <div class="nav-dd">
+            <a class="nav-dd-toggle" href="#solution">Arsenal<svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav-dd-menu">
+              <a href="#solution">Arsenal Overview</a>
+              <a href="weapon-intelligence.html">01 · Intelligence</a>
+              <a href="weapon-tokenization.html">02 · Tokenization</a>
+              <a href="weapon-lending.html">03 · Lending</a>
+              <a href="weapon-dex-listing.html">04 · DEX Listing</a>
+              <a href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
+            </div>
+          </div>
           <a href="#deployment">Deployment</a>
           <a href="#why">Why CURRENC</a>
-          <a href="#news">Insights</a>
-          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
           <a class="nav-cta nav-cta-mobile" href="#contact">Free Short Analysis</a>
         </nav>
@@ -787,6 +794,98 @@
         </div>
       </section>
 
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">About</p>
+            <h2>PART OF THE CURRENC GROUP</h2>
+            <p class="section-subtitle">CURRENC Capital is a wholly owned subsidiary of CURRENC Group Inc. (Nasdaq: CURR).</p>
+          </div>
+          <div class="about-grid">
+            <div class="about-lead">
+              <p>We build the <strong>Equity Defense Infrastructure</strong> that protects public companies from short attacks — drawing on the Group's expertise in tokenization, market infrastructure, and capital markets.</p>
+              <p class="about-emphasis">And we didn't build it in theory. <strong>CURRENC Group deployed this system on its own shares first</strong> — making us the first public company to defend itself with the exact platform we now offer to you.</p>
+              <a class="card-link" href="#solution">See how the defense works<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+            </div>
+
+            <div class="about-visual" aria-hidden="true">
+              <div class="about-emblem">
+                <span class="emblem-badge">First to Deploy</span>
+                <div class="emblem-corners"><i></i><i></i><i></i><i></i></div>
+                <img class="emblem-logo" src="./Resources/All%20Logos_Currenc_Logo_dark_bg.png" alt="CURRENC Group" />
+                <span class="emblem-tag">Our own equity — under active defense</span>
+                <svg class="emblem-chart" viewBox="0 0 340 130" focusable="false">
+                  <defs>
+                    <linearGradient id="emblemRed" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#E14B3B" stop-opacity="0.28" />
+                      <stop offset="100%" stop-color="#E14B3B" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="emblemGold" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#C9A227" stop-opacity="0.32" />
+                      <stop offset="100%" stop-color="#C9A227" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <g class="emblem-grid"><path d="M0 33H340M0 66H340M0 99H340" /></g>
+                  <line class="emblem-fair" x1="0" y1="22" x2="340" y2="22" />
+                  <path class="emblem-red-area" d="M0 34 L60 52 L110 44 L165 82 L205 74 L240 100 L240 130 L0 130 Z" />
+                  <path class="emblem-red" d="M0 34 L60 52 L110 44 L165 82 L205 74 L240 100" />
+                  <path class="emblem-gold-area" d="M240 100 C270 104 292 78 316 46 L340 28 L340 130 L240 130 Z" />
+                  <path class="emblem-gold" d="M240 100 C270 104 292 78 316 46 L340 28" />
+                  <line class="emblem-marker" x1="240" y1="6" x2="240" y2="130" />
+                  <circle class="emblem-dot" cx="340" cy="28" r="4" />
+                </svg>
+                <div class="emblem-status"><i class="live-dot"></i>Defense Active · NASDAQ: CURR</div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="about-facts">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg><div><strong>Nasdaq: CURR</strong><span>Publicly listed parent group</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg><div><strong>Wholly Owned Subsidiary</strong><span>of CURRENC Group Inc.</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg><div><strong>Battle-Tested</strong><span>Deployed on our own shares first</span></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PARTNERS ============ -->
+      <section id="partners" class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Partners</p>
+            <h2>BUILT WITH BEST-IN-CLASS PARTNERS</h2>
+            <p class="section-subtitle">Institutional infrastructure across tokenization, liquidity, and market making.</p>
+          </div>
+          <div class="logo-strip">
+            <div class="logo-tile"><img src="./Resources/securitize.png" alt="Securitize" /></div>
+            <div class="logo-tile"><img src="./Resources/jumpTrading.png" alt="Jump Trading" /></div>
+            <div class="logo-tile placeholder"><span>Partner Logo</span></div>
+            <div class="logo-tile placeholder"><span>Partner Logo</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CLIENTS ============ -->
+      <section id="clients" class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Clients</p>
+            <h2>TRUSTED BY PUBLIC COMPANIES</h2>
+            <p class="section-subtitle">Companies deploying the Equity Defense Infrastructure.</p>
+          </div>
+          <div class="logo-strip five">
+            <div class="logo-tile"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
+            <div class="logo-tile"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
+            <div class="logo-tile placeholder"><span>Client Logo</span></div>
+            <div class="logo-tile placeholder"><span>Client Logo</span></div>
+            <div class="logo-tile placeholder"><span>Client Logo</span></div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ PORTAL ============ -->
       <section id="portal" class="section-full portal-section reveal">
         <div class="container portal-grid">
@@ -991,6 +1090,59 @@
         </div>
       </section>
 
+      <!-- ============ ANALYSIS / TOMBSTONES ============ -->
+      <section id="analysis" class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Sample Work</p>
+            <h2>PREVIEW OUR SHORT ANALYSIS</h2>
+            <p class="section-subtitle">A look at the board-ready intelligence we deliver. Request the full, confidential report prepared for your company.</p>
+          </div>
+          <div class="tombstone-grid reveal-stagger">
+            <article class="tombstone">
+              <span class="tomb-badge">Sample</span>
+              <div class="tomb-logo"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
+              <span class="tomb-kicker">Short Analysis Report</span>
+              <h3>CURRENC Group Inc.</h3>
+              <p class="tomb-sub">Nasdaq: CURR</p>
+              <ul class="tomb-metrics">
+                <li><strong>31.8%</strong><span>Short Interest</span></li>
+                <li><strong>74.2%</strong><span>Utilization</span></li>
+              </ul>
+              <span class="tomb-foot">Board-ready · 24 pages · Q2 2026</span>
+              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+            </article>
+            <article class="tombstone">
+              <span class="tomb-badge">Sample</span>
+              <div class="tomb-logo"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
+              <span class="tomb-kicker">Short Analysis Report</span>
+              <h3>Mint Incorporation Ltd.</h3>
+              <p class="tomb-sub">MINT Inc.</p>
+              <ul class="tomb-metrics">
+                <li><strong>28.4%</strong><span>Short Interest</span></li>
+                <li><strong>69.5%</strong><span>Utilization</span></li>
+              </ul>
+              <span class="tomb-foot">Board-ready · 22 pages · Q2 2026</span>
+              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+            </article>
+            <article class="tombstone">
+              <span class="tomb-badge">Sample</span>
+              <div class="tomb-logo tomb-logo-text">Confidential</div>
+              <span class="tomb-kicker">Short Analysis Report</span>
+              <h3>$480M Industrials</h3>
+              <p class="tomb-sub">Nasdaq-listed · Name withheld</p>
+              <ul class="tomb-metrics">
+                <li><strong>42.1%</strong><span>Short Interest</span></li>
+                <li><strong>81.0%</strong><span>Utilization</span></li>
+              </ul>
+              <span class="tomb-foot">Board-ready · 26 pages · Q1 2026</span>
+              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ CONTACT ============ -->
       <section id="contact" class="section-full contact-section reveal">
         <div class="anim-bg" aria-hidden="true"></div>
@@ -1039,12 +1191,16 @@
                   <input type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name" required />
                 </div>
                 <div class="form-field">
+                  <label for="cf-title">Title / Position</label>
+                  <input type="text" id="cf-title" name="title" placeholder="CFO / Board Director" autocomplete="organization-title" required />
+                </div>
+                <div class="form-field">
                   <label for="cf-company">Company / Ticker</label>
                   <input type="text" id="cf-company" name="company" placeholder="Acme Corp (NASDAQ: ACME)" autocomplete="organization" required />
                 </div>
-                <div class="form-field form-field-wide">
-                  <label for="cf-email">Work Email</label>
-                  <input type="email" id="cf-email" name="email" placeholder="jane@acmecorp.com" autocomplete="email" required />
+                <div class="form-field">
+                  <label for="cf-email">Company Email</label>
+                  <input type="email" id="cf-email" name="email" placeholder="jane@yourcompany.com" autocomplete="email" required />
                 </div>
                 <div class="form-field form-field-wide">
                   <label for="cf-message">Message <em>(optional)</em></label>
@@ -1080,18 +1236,21 @@
           </nav>
           <nav class="footer-col" aria-label="Company">
             <strong>Company</strong>
+            <a href="#about">About</a>
             <a href="#why">Why CURRENC</a>
+            <a href="#partners">Partners</a>
+            <a href="#clients">Clients</a>
             <a href="#deployment">Deployment</a>
-            <a href="#news">Insights &amp; News</a>
-            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
           </nav>
           <nav class="footer-col" aria-label="Resources">
             <strong>Resources</strong>
+            <a href="#analysis">Sample Analysis</a>
             <a href="#knowledge">Knowledge Base</a>
+            <a href="#news">Insights &amp; News</a>
+            <a href="#faq">FAQ</a>
             <a href="#portal">Intelligence Portal</a>
             <a href="#subscribe">Newsletter</a>
-            <a href="mailto:tokenize@currencgroup.com">tokenize@currencgroup.com</a>
           </nav>
         </div>
         <div class="footer-legal">

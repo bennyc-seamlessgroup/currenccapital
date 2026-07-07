@@ -18,12 +18,19 @@
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
           <a href="./index.html#problem">Problem</a>
-          <a href="./index.html#solution">Solution</a>
-          <a href="./index.html#arsenal">Arsenal</a>
+          <div class="nav-dd">
+            <a class="nav-dd-toggle" href="./index.html#solution">Arsenal<svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav-dd-menu">
+              <a href="./index.html#solution">Arsenal Overview</a>
+              <a href="weapon-intelligence.html">01 · Intelligence</a>
+              <a href="weapon-tokenization.html">02 · Tokenization</a>
+              <a href="weapon-lending.html">03 · Lending</a>
+              <a href="weapon-dex-listing.html">04 · DEX Listing</a>
+              <a href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
+            </div>
+          </div>
           <a href="./index.html#deployment">Deployment</a>
           <a href="./index.html#why">Why CURRENC</a>
-          <a href="./index.html#news">Insights</a>
-          <a href="./index.html#faq">FAQ</a>
           <a href="./index.html#contact">Contact</a>
           <a class="nav-cta nav-cta-mobile" href="./index.html#contact">Free Short Analysis</a>
         </nav>
@@ -36,7 +43,6 @@
       <section class="page-hero">
         <div class="container">
           <span class="page-hero-num" aria-hidden="true">03</span>
-          <a class="breadcrumb" href="./index.html#solution"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>Back to the Arsenal</a>
           <p class="meta">Weapon 03 · DeFi — Morpho / Euler</p>
           <h1>LENDING <span class="h1-accent">LIQUIDITY WITHOUT DILUTION.</span></h1>
           <p class="hero-subhead">Shareholders pledge tokenized shares as collateral to borrow stablecoins — no dilution, no personal guarantee, no margin calls.</p>

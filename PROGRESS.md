@@ -67,6 +67,34 @@ primary #0F3460 · background #0B1D3A · background-deep #071428 · accent #C9A2
   Final CTA has no pricing — emphasises "Arm yourself in just 4 weeks".
 - The other 4 weapon pages are still generator stubs awaiting real content.
 
+## Nav / chips refinements (done)
+- Top nav trimmed to 5: Problem · Arsenal ▾ · Deployment · Why CURRENC · Contact (+ Free Short Analysis CTA).
+  Insights/FAQ live in the footer now.
+- Arsenal is a dropdown (`.nav-dd` / `.nav-dd-menu`): Arsenal Overview + the 5 weapon pages.
+  Desktop = hover/focus reveal; mobile (<=1024) = expanded inline in the hamburger panel.
+- Hero chips (`.hero-chip`) hidden at <=1280px so they never overlap content on tablet/mobile.
+- "Back to the Arsenal" breadcrumb removed from all weapon pages (nav dropdown replaces it).
+- Nav is applied to index.html + all 5 weapon-*.html (anchors prefixed with ./index.html on weapon pages).
+
+## New landing sections (done)
+- **#about** (dark): "PART OF THE CURRENC GROUP" — subsidiary statement + `.about-grid` (lead text + `.about-facts`).
+- **#partners** (light): `.logo-strip` white tiles — Securitize, Jump Trading + 2 dashed placeholders.
+- **#clients** (dark): `.logo-strip.five` — curren·c (CURRENC Group), MINT Inc + 3 placeholders.
+- **#analysis** (light, before Contact): `.tombstone-grid` financial-tombstone cards (double border, SAMPLE badge,
+  client logo, short-interest/utilization metrics, "Request Full Report" → #contact). CURRENC, MINT, + 1 confidential.
+- Logos in `Resources/`: securitize.png, jumpTrading.png, currenc.png (CURRENC Group), mimi.png (Mint Inc). All logo-on-white → shown on white `.logo-tile`/tombstone.
+- Footer Company/Resources columns updated with About/Partners/Clients/Sample Analysis (kept top nav at 5).
+- New CSS: `.about-*`, `.logo-strip`/`.logo-tile`, `.tombstone*`. Responsive: logo-strip 4/5→3→2, tombstones→1col.
+
+## About emblem + gated contact (done)
+- #about redesigned: `.about-grid` (narrative + gold-emphasis "deployed on its own shares first" + link) beside
+  `.about-emblem` — an animated panel with the CURRENC Group logo (`Resources/All Logos_Currenc_Logo_dark_bg.png`,
+  transparent, white wordmark), "FIRST TO DEPLOY" badge, corner ticks, and a mini attack→deployed→recovery SVG chart
+  (`.emblem-red`/`.emblem-gold`, animates on `.reveal.is-visible`) + "Defense Active" live status. `.about-facts` now a 3-up row below.
+- Contact form: added **Title / Position** field (`#cf-title`, required) and **Company Email** now must be an official
+  company address — `isCorporateEmail()` + `FREE_EMAIL_DOMAINS` set in script.js rejects Gmail/Outlook/etc. with a clear
+  message. Title included in the composed mailto body.
+
 ## Screenshot gotcha
 Preview screenshots go blank when `scrollY` is large / page is very tall. To check a
 deep section: temporarily `display:none` the sections above it via preview_eval, or set
