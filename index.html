@@ -8,7 +8,7 @@
       name="description"
       content="CURRENC Capital provides Equity Defense Infrastructure for public companies facing short seller attacks. Intelligence, Tokenization, Lending, DEX Listing, and IR &amp; Market Making."
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260708d" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -141,155 +141,170 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="#problem">Problem</a>
+          <a data-i18n="common.nav.problem" href="#problem">Problem</a>
           <div class="nav-dd">
-            <a class="nav-dd-toggle" href="#solution">Arsenal<svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="nav-dd-toggle" href="#solution"><span data-i18n="common.nav.arsenal">Arsenal</span><svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div class="nav-dd-menu">
-              <a href="#solution">Arsenal Overview</a>
-              <a href="weapon-intelligence.html">01 · Intelligence</a>
-              <a href="weapon-tokenization.html">02 · Tokenization</a>
-              <a href="weapon-lending.html">03 · Lending</a>
-              <a href="weapon-dex-listing.html">04 · DEX Listing</a>
-              <a href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
+              <a data-i18n="common.nav.arsenal_overview" href="#solution">Arsenal Overview</a>
+              <a data-i18n="common.nav.w01" href="weapon-intelligence.html">01 · Intelligence</a>
+              <a data-i18n="common.nav.w02" href="weapon-tokenization.html">02 · Tokenization</a>
+              <a data-i18n="common.nav.w03" href="weapon-lending.html">03 · Lending</a>
+              <a data-i18n="common.nav.w04" href="weapon-dex-listing.html">04 · DEX Listing</a>
+              <a data-i18n="common.nav.w05" href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
             </div>
           </div>
-          <a href="#deployment">Deployment</a>
-          <a href="#why">Why CURRENC</a>
-          <a href="#contact">Contact</a>
-          <a class="nav-cta nav-cta-mobile" href="#contact">Free Short Analysis</a>
+          <a data-i18n="common.nav.deployment" href="#deployment">Deployment</a>
+          <a data-i18n="common.nav.why" href="#why">Why CURRENC</a>
+          <a class="nav-cta nav-cta-mobile" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
+          <div class="lang-switch lang-switch-mobile">
+            <select class="lang-select" aria-label="Select language">
+              <option value="en">Eng</option>
+              <option value="zh-Hant">繁</option>
+              <option value="zh-Hans">簡</option>
+            </select>
+          </div>
+          
         </nav>
-        <a class="nav-cta nav-cta-desktop" href="#contact">Free Short Analysis</a>
+        <div class="lang-switch lang-switch-desktop">
+          <select class="lang-select" aria-label="Select language">
+            <option value="en">Eng</option>
+            <option value="zh-Hant">繁</option>
+            <option value="zh-Hans">簡</option>
+          </select>
+        </div>
+        
+        <a class="nav-cta nav-cta-desktop" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
       </div>
     </header>
     <div class="nav-scrim" hidden></div>
 
     <main id="top">
       <!-- ============ HERO ============ -->
-      <section class="hero-section" aria-label="Hero">
+      <section class="hero-section hero-v2" aria-label="Hero">
         <div class="hero-bg" aria-hidden="true">
-          <svg class="hero-chart" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <svg class="hero-scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" focusable="false">
             <defs>
-              <radialGradient id="heroRed" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#E14B3B" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="#E14B3B" stop-opacity="0" />
+              <radialGradient id="sceneBase" cx="50%" cy="34%" r="82%">
+                <stop offset="0%" stop-color="#2a0b0b" /><stop offset="42%" stop-color="#140609" /><stop offset="100%" stop-color="#050205" />
               </radialGradient>
-              <radialGradient id="heroGold" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#C9A227" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#C9A227" stop-opacity="0" />
+              <radialGradient id="sceneAttackGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#E14B3B" stop-opacity="0.5" /><stop offset="100%" stop-color="#E14B3B" stop-opacity="0" />
               </radialGradient>
-              <linearGradient id="crashFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#C43B32" stop-opacity="0.28" />
-                <stop offset="100%" stop-color="#C43B32" stop-opacity="0" />
+              <radialGradient id="sceneEmber" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FF6A2A" stop-opacity="0.6" /><stop offset="55%" stop-color="#C4241A" stop-opacity="0.18" /><stop offset="100%" stop-color="#C4241A" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="sceneShieldGold" x1="0" y1="0" x2="0.6" y2="1">
+                <stop offset="0%" stop-color="#F8E7A6" /><stop offset="42%" stop-color="#D6B03C" /><stop offset="100%" stop-color="#9C7616" />
               </linearGradient>
-              <linearGradient id="recoverFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#C9A227" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#C9A227" stop-opacity="0" />
+              <linearGradient id="sceneCrashFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E14B3B" stop-opacity="0.35" /><stop offset="100%" stop-color="#E14B3B" stop-opacity="0" />
               </linearGradient>
-              <filter id="heroGlow" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="7" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
+              <linearGradient id="sceneRecoverFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C9A227" stop-opacity="0.32" /><stop offset="100%" stop-color="#C9A227" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="sceneShine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0" /><stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" /><stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+              </linearGradient>
+              <filter id="sceneGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              <clipPath id="sceneShieldClip"><path d="M820 500 C892 530 940 540 984 550 C980 722 940 820 820 900 C700 820 660 722 656 550 C700 540 748 530 820 500 Z" /></clipPath>
             </defs>
 
-            <circle cx="380" cy="260" r="420" fill="url(#heroRed)" />
-            <circle cx="1380" cy="480" r="420" fill="url(#heroGold)" />
+            <rect width="1600" height="900" fill="url(#sceneBase)" />
+            <circle cx="240" cy="140" r="540" fill="url(#sceneAttackGlow)" />
+            <ellipse class="scene-ember" cx="820" cy="880" rx="720" ry="300" fill="url(#sceneEmber)" />
 
-            <g class="hero-grid-lines">
-              <path d="M100 0V900M260 0V900M420 0V900M580 0V900M740 0V900M900 0V900M1060 0V900M1220 0V900M1380 0V900M1540 0V900" />
-              <path d="M0 140H1600M0 280H1600M0 420H1600M0 560H1600M0 700H1600M0 840H1600" />
+            <g class="scene-grid">
+              <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900" />
+              <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600" />
             </g>
 
-            <path class="hero-shield-mark" d="M1300 190 c85 38 140 52 190 65 -4 195 -60 310 -190 388 -130 -78 -186 -193 -190 -388 50 -13 105 -27 190 -65z" />
-
-            <g class="hero-candles">
-              <path d="M120 150 V330 M96 195 h48 v90 h-48 z" />
-              <path d="M230 210 V370 M206 250 h48 v75 h-48 z" />
-              <path d="M340 190 V350 M316 225 h48 v70 h-48 z" />
-              <path d="M450 280 V460 M426 320 h48 v90 h-48 z" />
-              <path d="M560 260 V430 M536 300 h48 v75 h-48 z" />
-              <path d="M670 360 V540 M646 400 h48 v95 h-48 z" />
-              <path d="M780 340 V510 M756 380 h48 v80 h-48 z" />
-              <path d="M890 440 V620 M866 480 h48 v95 h-48 z" />
-              <path d="M1000 420 V590 M976 460 h48 v80 h-48 z" />
-              <path d="M1110 520 V700 M1086 560 h48 v100 h-48 z" />
+            <g class="scene-rain">
+              <path d="M120 10 l26 46 M146 56 l-15 3 M146 56 l-3 -15" />
+              <path d="M310 -14 l26 46 M336 32 l-15 3 M336 32 l-3 -15" />
+              <path d="M500 26 l26 46 M526 72 l-15 3 M526 72 l-3 -15" />
+              <path d="M690 -6 l26 46 M716 40 l-15 3 M716 40 l-3 -15" />
+              <path d="M880 34 l26 46 M906 80 l-15 3 M906 80 l-3 -15" />
+              <path d="M1080 6 l26 46 M1106 52 l-15 3 M1106 52 l-3 -15" />
+              <path d="M1270 -16 l26 46 M1296 30 l-15 3 M1296 30 l-3 -15" />
+              <path d="M1450 24 l26 46 M1476 70 l-15 3 M1476 70 l-3 -15" />
+              <path d="M980 -28 l26 46 M1006 18 l-15 3 M1006 18 l-3 -15" />
+              <path d="M1180 46 l26 46 M1206 92 l-15 3 M1206 92 l-3 -15" />
+              <path d="M1360 -8 l26 46 M1386 38 l-15 3 M1386 38 l-3 -15" />
             </g>
 
-            <g class="hero-candles hero-candles-gold">
-              <path d="M1250 560 V700 M1226 660 h48 v-70 h-48 z" />
-              <path d="M1360 480 V630 M1336 590 h48 v-80 h-48 z" />
-              <path d="M1470 390 V550 M1446 510 h48 v-90 h-48 z" />
+            <g class="scene-candles-red">
+              <path d="M90 130V300 M75 165h30v100h-30z" />
+              <path d="M180 165V335 M165 200h30v105h-30z" />
+              <path d="M270 150V350 M255 190h30v110h-30z" />
+              <path d="M360 215V420 M345 250h30v120h-30z" />
+              <path d="M450 255V460 M435 290h30v120h-30z" />
+              <path d="M545 300V505 M530 335h30v120h-30z" />
+              <path d="M630 345V565 M615 380h30v130h-30z" />
+              <path d="M740 405V600 M725 440h30v130h-30z" />
+            </g>
+            <g class="scene-candles-gold">
+              <path d="M1000 505V620 M985 540h30v60h-30z" />
+              <path d="M1090 445V565 M1075 470h30v70h-30z" />
+              <path d="M1185 385V505 M1170 410h30v70h-30z" />
+              <path d="M1285 325V445 M1270 350h30v70h-30z" />
+              <path d="M1385 265V385 M1370 290h30v70h-30z" />
             </g>
 
-            <path class="hero-crash-area" d="M0 200 L130 270 L240 235 L360 360 L470 320 L600 450 L720 405 L850 545 L960 500 L1090 640 L1170 600 L1200 660 L1200 900 L0 900 Z" />
-            <g class="hero-crash">
-              <path class="hero-crash-glow" d="M0 200 L130 270 L240 235 L360 360 L470 320 L600 450 L720 405 L850 545 L960 500 L1090 640 L1170 600 L1200 660" />
-              <path class="hero-crash-line" d="M0 200 L130 270 L240 235 L360 360 L470 320 L600 450 L720 405 L850 545 L960 500 L1090 640 L1170 600 L1200 660" />
+            <circle class="scene-halo" cx="820" cy="700" r="300" fill="url(#sceneEmber)" />
+            <circle class="scene-ring" cx="820" cy="700" r="150" />
+            <circle class="scene-ring r2" cx="820" cy="700" r="112" />
+            <circle class="scene-radar" cx="820" cy="700" r="188" />
+            <g class="scene-shield-group">
+              <path class="scene-shield" d="M820 500 C892 530 940 540 984 550 C980 722 940 820 820 900 C700 820 660 722 656 550 C700 540 748 530 820 500 Z" />
+              <g class="scene-column">
+                <rect x="776" y="580" width="88" height="15" />
+                <rect x="788" y="599" width="64" height="8" />
+                <rect x="796" y="611" width="48" height="150" />
+                <path class="scene-flutes" d="M809 615V757 M820 615V757 M831 615V757" />
+                <rect x="774" y="763" width="92" height="14" />
+                <rect x="762" y="781" width="116" height="12" />
+              </g>
+              <g clip-path="url(#sceneShieldClip)">
+                <ellipse class="scene-gloss" cx="760" cy="588" rx="92" ry="48" />
+                <rect class="scene-shine" x="670" y="468" width="120" height="440" fill="url(#sceneShine)" />
+              </g>
             </g>
 
-            <path class="hero-recover-area" d="M1200 660 C1280 690 1330 640 1400 560 C1460 490 1520 430 1600 360 L1600 900 L1200 900 Z" />
-            <g class="hero-recover">
-              <path class="hero-recover-line" d="M1200 660 C1280 690 1330 640 1400 560 C1460 490 1520 430 1600 360" />
-              <path class="hero-recover-arrow" d="M1600 360 L1568 372 M1600 360 L1588 394" />
+            <path class="scene-crash-area" d="M40 170 L150 235 L250 205 L360 330 L470 300 L590 445 L700 420 L780 560 L820 830 L820 900 L40 900 Z" />
+            <g class="scene-crash">
+              <path class="scene-crash-glow" d="M40 170 L150 235 L250 205 L360 330 L470 300 L590 445 L700 420 L780 560 L820 830" />
+              <path class="scene-crash-line" d="M40 170 L150 235 L250 205 L360 330 L470 300 L590 445 L700 420 L780 560 L820 830" />
             </g>
 
-            <g class="hero-impact">
-              <circle class="hero-shock hero-shock-a" cx="1200" cy="660" r="16" />
-              <circle class="hero-shock hero-shock-b" cx="1200" cy="660" r="16" />
+            <path class="scene-recover-area" d="M820 830 L910 640 L1010 680 L1130 520 L1250 560 L1370 380 L1480 420 L1560 205 L1560 900 L820 900 Z" />
+            <g class="scene-recover">
+              <path class="scene-recover-line" d="M820 830 L910 640 L1010 680 L1130 520 L1250 560 L1370 380 L1480 420 L1560 205" />
+              <path class="scene-recover-arrow" d="M1560 205 l-26 8 M1560 205 l-6 -26" />
             </g>
 
-            <g class="hero-particles">
-              <circle cx="220" cy="760" r="4" />
-              <circle cx="420" cy="820" r="3" />
-              <circle cx="640" cy="770" r="3.5" />
-              <circle cx="860" cy="830" r="4" />
-              <circle cx="1050" cy="780" r="3" />
-              <circle cx="1300" cy="820" r="3.5" />
-              <circle cx="1480" cy="760" r="3" />
+            <g class="scene-impact">
+              <circle class="scene-shock a" cx="820" cy="830" r="18" />
+              <circle class="scene-shock b" cx="820" cy="830" r="18" />
             </g>
           </svg>
-          <div class="hero-scrim"></div>
+          <div class="hero-scrim hero-scrim-v2"></div>
         </div>
 
-        <div class="hero-chip hero-chip-danger" aria-hidden="true"><i class="chip-dot"></i>SHORT ATTACK DETECTED</div>
-        <div class="hero-chip hero-chip-gold" aria-hidden="true"><i class="chip-dot"></i>DEFENSE ACTIVE · NASDAQ: CURR</div>
+        <div class="hero-chip hero-chip-danger chip-flash chip-attack" aria-hidden="true"><i class="chip-dot"></i>SHORT ATTACK DETECTED</div>
+        <div class="hero-chip hero-chip-gold chip-flash chip-defense" aria-hidden="true"><i class="chip-dot"></i>DEFENCE ACTIVE · NASDAQ: CURR</div>
 
-        <div class="container hero-content">
-          <p class="hero-kicker reveal">The Equity Defense Infrastructure for Public Companies</p>
-          <h1 class="reveal">
+        <div class="container hero-content-v2 reveal">
+          <p data-i18n="home.sec01.001" class="hero-kicker">The Equity Defense Infrastructure for Public Companies</p>
+          <h1 data-i18n="home.sec01.002">
             YOUR SHARES ARE UNDER ATTACK.
             <span class="h1-accent">WE HELP YOU FIGHT BACK.</span>
           </h1>
-          <p class="hero-subhead reveal">
+          <p data-i18n="home.sec01.003" class="hero-subhead">
             Five integrated weapons to defend your valuation, secure your shares, and unlock 24/7 global liquidity.
           </p>
-          <div class="hero-actions reveal">
-            <a class="button button-primary" href="#contact">Request Free Short Analysis</a>
-            <a class="button button-secondary" href="#solution">Explore the Arsenal</a>
-          </div>
-          <div class="hero-meta reveal" aria-label="Company trust indicators">
-            <span><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>NASDAQ: CURR</span>
-            <span><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>4-week deployment</span>
-            <span><svg class="icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg>No cash outlay option</span>
-          </div>
-        </div>
-
-        <div class="hero-ticker" aria-hidden="true">
-          <div class="ticker-track">
-            <span>1,000+ US companies under active short attack</span><i>◆</i>
-            <span>$4T+ shareholder value destroyed annually</span><i>◆</i>
-            <span>&gt;70% average utilization on attacked stocks</span><i>◆</i>
-            <span>45-day short disclosure delay</span><i>◆</i>
-            <span>18-month average attack duration</span><i>◆</i>
-            <span>NASDAQ: CURR — first company to deploy its own defense</span><i>◆</i>
-            <span>1,000+ US companies under active short attack</span><i>◆</i>
-            <span>$4T+ shareholder value destroyed annually</span><i>◆</i>
-            <span>&gt;70% average utilization on attacked stocks</span><i>◆</i>
-            <span>45-day short disclosure delay</span><i>◆</i>
-            <span>18-month average attack duration</span><i>◆</i>
-            <span>NASDAQ: CURR — first company to deploy its own defense</span><i>◆</i>
+          <div class="hero-actions">
+            <a data-i18n="home.sec01.004" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="home.sec01.005" class="button button-secondary" href="#solution">Explore the Arsenal</a>
           </div>
         </div>
       </section>
@@ -299,31 +314,31 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Framework</p>
-            <h2>EQUITY DEFENSE FRAMEWORK</h2>
-            <p class="section-subtitle">Three moves take you from exposed to defended.</p>
+            <p data-i18n="home.sec02.001" class="eyebrow">The Framework</p>
+            <h2 data-i18n="home.sec02.002">EQUITY DEFENSE FRAMEWORK</h2>
+            <p data-i18n="home.sec02.003" class="section-subtitle">Three moves take you from exposed to defended.</p>
           </div>
           <div class="framework-grid reveal-stagger">
             <a class="framework-card" href="#problem">
-              <span class="framework-num">01</span>
-              <h3>THE PROBLEM</h3>
-              <p>Short sellers are destroying valuations with hidden weapons.</p>
+              <span data-i18n="home.sec02.004" class="framework-num">01</span>
+              <h3 data-i18n="home.sec02.005">THE PROBLEM</h3>
+              <p data-i18n="home.sec02.006">Short sellers are destroying valuations with hidden weapons.</p>
               <span class="framework-arrow" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
               </span>
             </a>
             <a class="framework-card" href="#solution">
-              <span class="framework-num">02</span>
-              <h3>THE SOLUTION</h3>
-              <p>Five integrated weapons to fight back.</p>
+              <span data-i18n="home.sec02.007" class="framework-num">02</span>
+              <h3 data-i18n="home.sec02.008">THE SOLUTION</h3>
+              <p data-i18n="home.sec02.009">Five integrated weapons to fight back.</p>
               <span class="framework-arrow" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
               </span>
             </a>
             <a class="framework-card" href="#deployment">
-              <span class="framework-num">03</span>
-              <h3>DEPLOY &amp; DEFEND</h3>
-              <p>Live in four weeks. No cash outlay option available.</p>
+              <span data-i18n="home.sec02.010" class="framework-num">03</span>
+              <h3 data-i18n="home.sec02.011">DEPLOY &amp; DEFEND</h3>
+              <p data-i18n="home.sec02.012">Live in four weeks. No cash outlay option available.</p>
               <span class="framework-arrow" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
               </span>
@@ -337,63 +352,63 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Threat</p>
-            <h2>THE PROBLEM: DESTROYER OF VALUATION</h2>
-            <p class="section-subtitle">Short sellers are destroying public company valuations with weapons most boards never see.</p>
+            <p data-i18n="home.problem.001" class="eyebrow">The Threat</p>
+            <h2 data-i18n="home.problem.002">THE PROBLEM: DESTROYER OF VALUATION</h2>
+            <p data-i18n="home.problem.003" class="section-subtitle">Short sellers are destroying public company valuations with weapons most boards never see.</p>
           </div>
           <div class="kpi-grid reveal-stagger">
             <article>
               <svg class="icon stat-icon" aria-hidden="true"><use href="#icon-warning"></use></svg>
-              <strong data-count="1000" data-prefix="" data-suffix="+" data-format="comma">1,000+</strong>
-              <span>US public companies under active short attack</span>
+              <strong data-i18n="home.problem.004" data-count="1000" data-prefix="" data-suffix="+" data-format="comma">1,000+</strong>
+              <span data-i18n="home.problem.005">US public companies under active short attack</span>
             </article>
             <article>
               <svg class="icon stat-icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
-              <strong data-count="70" data-prefix="&gt;" data-suffix="%">&gt;70%</strong>
-              <span>Average utilization rate on attacked stocks</span>
+              <strong data-i18n="home.problem.006" data-count="70" data-prefix="&gt;" data-suffix="%">&gt;70%</strong>
+              <span data-i18n="home.problem.007">Average utilization rate on attacked stocks</span>
             </article>
             <article>
               <svg class="icon stat-icon" aria-hidden="true"><use href="#icon-trend-down"></use></svg>
-              <strong data-count="4" data-prefix="$" data-suffix="T+">$4T+</strong>
-              <span>Annual shareholder value destroyed by shorts</span>
+              <strong data-i18n="home.problem.008" data-count="4" data-prefix="$" data-suffix="T+">$4T+</strong>
+              <span data-i18n="home.problem.009">Annual shareholder value destroyed by shorts</span>
             </article>
           </div>
           <div class="reality-block">
-            <h3>THE REALITY</h3>
+            <h3 data-i18n="home.problem.010">THE REALITY</h3>
             <div class="reality-grid reveal-stagger">
-              <div><strong>Short interest &gt;30% · utilization &gt;70%</strong><p>The same shares are borrowed and re-lent multiple times over.</p></div>
-              <div><strong>30–70% below fair value</strong><p>Driven by engineered selling pressure — not by fundamentals.</p></div>
-              <div><strong>18-month average attack</strong><p>Most boards recognize it only after months of damage is done.</p></div>
-              <div><strong>Five hidden weapons</strong><p>A coordinated toolkit most management teams never even see.</p></div>
+              <div><strong data-i18n="home.problem.011">Short interest &gt;30% · utilization &gt;70%</strong><p data-i18n="home.problem.012">The same shares are borrowed and re-lent multiple times over.</p></div>
+              <div><strong data-i18n="home.problem.013">30–70% below fair value</strong><p data-i18n="home.problem.014">Driven by engineered selling pressure — not by fundamentals.</p></div>
+              <div><strong data-i18n="home.problem.015">18-month average attack</strong><p data-i18n="home.problem.016">Most boards recognize it only after months of damage is done.</p></div>
+              <div><strong data-i18n="home.problem.017">Five hidden weapons</strong><p data-i18n="home.problem.018">A coordinated toolkit most management teams never even see.</p></div>
             </div>
           </div>
           <div class="weapons-block">
-            <h3>THE 5 HIDDEN WEAPONS OF SHORT SELLERS</h3>
+            <h3 data-i18n="home.problem.019">THE 5 HIDDEN WEAPONS OF SHORT SELLERS</h3>
             <div class="weapons-list reveal-stagger">
               <div class="weapon-row">
-                <span class="weapon-row-num">01</span>
+                <span data-i18n="home.problem.020" class="weapon-row-num">01</span>
                 <svg class="icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg>
-                <div><strong>Delayed Disclosure</strong><p>A 45-day delay before short positions must be reported. By then, the damage is already done.</p></div>
+                <div><strong data-i18n="home.problem.021">Delayed Disclosure</strong><p data-i18n="home.problem.022">A 45-day delay before short positions must be reported. By then, the damage is already done.</p></div>
               </div>
               <div class="weapon-row">
-                <span class="weapon-row-num">02</span>
+                <span data-i18n="home.problem.023" class="weapon-row-num">02</span>
                 <svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg>
-                <div><strong>Rehypothecation</strong><p>A single share is lent 3–5× through DTC omnibus accounts — one share fuels multiple short positions.</p></div>
+                <div><strong data-i18n="home.problem.024">Rehypothecation</strong><p data-i18n="home.problem.025">A single share is lent 3–5× through DTC omnibus accounts — one share fuels multiple short positions.</p></div>
               </div>
               <div class="weapon-row">
-                <span class="weapon-row-num">03</span>
+                <span data-i18n="home.problem.026" class="weapon-row-num">03</span>
                 <svg class="icon" aria-hidden="true"><use href="#icon-shuffle"></use></svg>
-                <div><strong>Synthetic Short Positions</strong><p>Options market makers manufacture synthetic shorts through put-call parity — invisible to short-interest reports.</p></div>
+                <div><strong data-i18n="home.problem.027">Synthetic Short Positions</strong><p data-i18n="home.problem.028">Options market makers manufacture synthetic shorts through put-call parity — invisible to short-interest reports.</p></div>
               </div>
               <div class="weapon-row">
-                <span class="weapon-row-num">04</span>
+                <span data-i18n="home.problem.029" class="weapon-row-num">04</span>
                 <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
-                <div><strong>Dark Pool Manipulation</strong><p>Off-exchange trading hides true volume, letting shorts avoid detection and steer the price down.</p></div>
+                <div><strong data-i18n="home.problem.030">Dark Pool Manipulation</strong><p data-i18n="home.problem.031">Off-exchange trading hides true volume, letting shorts avoid detection and steer the price down.</p></div>
               </div>
               <div class="weapon-row">
-                <span class="weapon-row-num">05</span>
+                <span data-i18n="home.problem.032" class="weapon-row-num">05</span>
                 <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>
-                <div><strong>FUD Campaigns</strong><p>Coordinated negative media, social posts, and analyst reports timed to align with short positions.</p></div>
+                <div><strong data-i18n="home.problem.033">FUD Campaigns</strong><p data-i18n="home.problem.034">Coordinated negative media, social posts, and analyst reports timed to align with short positions.</p></div>
               </div>
             </div>
           </div>
@@ -405,47 +420,47 @@
         <div class="anim-bg danger" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Stakes</p>
-            <h2>THE COST OF INACTION</h2>
-            <p class="section-subtitle">One $500M company. An 18-month short attack. Here is the damage it does.</p>
+            <p data-i18n="home.sec04.001" class="eyebrow">The Stakes</p>
+            <h2 data-i18n="home.sec04.002">THE COST OF INACTION</h2>
+            <p data-i18n="home.sec04.003" class="section-subtitle">One $500M company. An 18-month short attack. Here is the damage it does.</p>
           </div>
 
           <div class="cost-layout">
             <div class="cost-panel">
               <div class="cap-drain">
                 <div class="cap-head">
-                  <span>Market Capitalization</span>
-                  <span class="cap-values"><b>$500M</b><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg><b class="cap-after">$300M</b></span>
+                  <span data-i18n="home.sec04.004">Market Capitalization</span>
+                  <span data-i18n="home.sec04.005" class="cap-values"><b>$500M</b><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg><b class="cap-after">$300M</b></span>
                 </div>
                 <div class="cap-track">
                   <div class="cap-remain"></div>
-                  <div class="cap-lost"><span class="cap-lost-label">−$200M<br>destroyed</span></div>
+                  <div class="cap-lost"><span data-i18n="home.sec04.006" class="cap-lost-label">−$200M<br>destroyed</span></div>
                 </div>
-                <div class="cap-scale"><span>$0</span><span>$250M</span><span>$500M</span></div>
+                <div class="cap-scale"><span data-i18n="home.sec04.007">$0</span><span data-i18n="home.sec04.008">$250M</span><span data-i18n="home.sec04.009">$500M</span></div>
               </div>
 
               <div class="cost-stats reveal-stagger">
                 <article>
                   <svg class="icon" aria-hidden="true"><use href="#icon-trend-down"></use></svg>
-                  <div><strong data-count="40" data-prefix="-" data-suffix="%">-40%</strong><span>Stock price decline</span></div>
+                  <div><strong data-i18n="home.sec04.010" data-count="40" data-prefix="-" data-suffix="%">-40%</strong><span data-i18n="home.sec04.011">Stock price decline</span></div>
                 </article>
                 <article>
                   <svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
-                  <div><strong data-count="18" data-prefix="" data-suffix=" mo">18 mo</strong><span>Average attack duration</span></div>
+                  <div><strong data-i18n="home.sec04.012" data-count="18" data-prefix="" data-suffix=" mo">18 mo</strong><span data-i18n="home.sec04.013">Average attack duration</span></div>
                 </article>
                 <article>
                   <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
-                  <div><strong data-count="200" data-prefix="$" data-suffix="M">$200M</strong><span>Shareholder value destroyed</span></div>
+                  <div><strong data-i18n="home.sec04.014" data-count="200" data-prefix="$" data-suffix="M">$200M</strong><span data-i18n="home.sec04.015">Shareholder value destroyed</span></div>
                 </article>
                 <article>
                   <svg class="icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg>
-                  <div><strong data-count="2" data-prefix="$" data-suffix="M+">$2M+</strong><span>Direct defensive costs</span></div>
+                  <div><strong data-i18n="home.sec04.016" data-count="2" data-prefix="$" data-suffix="M+">$2M+</strong><span data-i18n="home.sec04.017">Direct defensive costs</span></div>
                 </article>
               </div>
             </div>
 
             <figure class="cost-chart">
-              <figcaption>Share price vs. fair value — 18 months under attack</figcaption>
+              <figcaption data-i18n="home.sec04.018">Share price vs. fair value — 18 months under attack</figcaption>
               <svg viewBox="0 0 640 400" focusable="false" aria-hidden="true">
                 <defs>
                   <linearGradient id="costFill" x1="0" y1="0" x2="0" y2="1">
@@ -489,7 +504,7 @@
                   <text x="590" y="366">Month 18</text>
                 </g>
               </svg>
-              <span class="cost-chart-badge">$60<small>final share price</small></span>
+              <span data-i18n="home.sec04.019" class="cost-chart-badge">$60<small>final share price</small></span>
             </figure>
           </div>
 
@@ -498,14 +513,14 @@
           </blockquote>
 
           <div class="hidden-costs-wrap">
-            <p class="hidden-costs-title">And the damage keeps compounding —</p>
+            <p data-i18n="home.sec04.020" class="hidden-costs-title">And the damage keeps compounding —</p>
             <ul class="hidden-costs">
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Management distraction</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Talent flight</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Acquisition vulnerability</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Customer &amp; partner confidence erosion</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Higher cost of capital</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Shareholder litigation</li>
+              <li data-i18n="home.sec04.021"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Management distraction</li>
+              <li data-i18n="home.sec04.022"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Talent flight</li>
+              <li data-i18n="home.sec04.023"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Acquisition vulnerability</li>
+              <li data-i18n="home.sec04.024"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Customer &amp; partner confidence erosion</li>
+              <li data-i18n="home.sec04.025"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Higher cost of capital</li>
+              <li data-i18n="home.sec04.026"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Shareholder litigation</li>
             </ul>
           </div>
         </div>
@@ -516,45 +531,45 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Defense Architecture</p>
-            <h2>THE SOLUTION: 5 MODULAR WEAPONS</h2>
-            <p class="section-subtitle">The world's first Equity Defense Infrastructure — five integrated weapons that work alone or together.</p>
+            <p data-i18n="home.solution.001" class="eyebrow">Defense Architecture</p>
+            <h2 data-i18n="home.solution.002">THE SOLUTION: 5 MODULAR WEAPONS</h2>
+            <p data-i18n="home.solution.003" class="section-subtitle">The world's first Equity Defense Infrastructure — five integrated weapons that work alone or together.</p>
           </div>
           <div class="arsenal-band">
             <div class="solution-cards reveal-stagger">
               <article>
-                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-radar"></use></svg><span>01</span></div>
-                <h3>INTELLIGENCE</h3>
-                <p class="meta">SaaS Platform</p>
-                <p>Real-time short monitoring, DTC participant data, borrowed-share analytics, utilization heat maps, synthetic position detection.</p>
+                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-radar"></use></svg><span data-i18n="home.solution.004">01</span></div>
+                <h3 data-i18n="home.solution.005">INTELLIGENCE</h3>
+                <p data-i18n="home.solution.006" class="meta">SaaS Platform</p>
+                <p data-i18n="home.solution.007">Real-time short monitoring, DTC participant data, borrowed-share analytics, utilization heat maps, synthetic position detection.</p>
                 <a class="card-link" href="./weapon-intelligence.html">View Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
               </article>
               <article>
-                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-coin"></use></svg><span>02</span></div>
-                <h3>TOKENIZATION</h3>
-                <p class="meta">TaaS / Securitize</p>
-                <p>Convert shares to ERC-1400 tokens. Remove from lending pools. Enable 24/7 trading and instant settlement.</p>
+                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-coin"></use></svg><span data-i18n="home.solution.008">02</span></div>
+                <h3 data-i18n="home.solution.009">TOKENIZATION</h3>
+                <p data-i18n="home.solution.010" class="meta">TaaS / Securitize</p>
+                <p data-i18n="home.solution.011">Convert shares to ERC-1400 tokens. Remove from lending pools. Enable 24/7 trading and instant settlement.</p>
                 <a class="card-link" href="./weapon-tokenization.html">View Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
               </article>
               <article>
-                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-bank"></use></svg><span>03</span></div>
-                <h3>LENDING</h3>
-                <p class="meta">DeFi Protocols</p>
-                <p>Shareholders pledge tokenized shares as collateral to borrow stablecoins without dilution or margin calls.</p>
+                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-bank"></use></svg><span data-i18n="home.solution.012">03</span></div>
+                <h3 data-i18n="home.solution.013">LENDING</h3>
+                <p data-i18n="home.solution.014" class="meta">DeFi Protocols</p>
+                <p data-i18n="home.solution.015">Shareholders pledge tokenized shares as collateral to borrow stablecoins without dilution or margin calls.</p>
                 <a class="card-link" href="./weapon-lending.html">View Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
               </article>
               <article>
-                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-globe"></use></svg><span>04</span></div>
-                <h3>DEX LISTING</h3>
-                <p class="meta">Jupiter via Jump</p>
-                <p>24/7 global trading on Jupiter with institutional-grade liquidity.</p>
+                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-globe"></use></svg><span data-i18n="home.solution.016">04</span></div>
+                <h3 data-i18n="home.solution.017">DEX LISTING</h3>
+                <p data-i18n="home.solution.018" class="meta">Jupiter via Jump</p>
+                <p data-i18n="home.solution.019">24/7 global trading on Jupiter with institutional-grade liquidity.</p>
                 <a class="card-link" href="./weapon-dex-listing.html">View Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
               </article>
               <article>
-                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg><span>05</span></div>
-                <h3>IR &amp; MARKET MAKING</h3>
-                <p class="meta">DLK + Jump</p>
-                <p>Strategic IR and continuous market making with tight spreads and deep liquidity.</p>
+                <div class="card-top"><svg class="icon weapon-icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg><span data-i18n="home.solution.020">05</span></div>
+                <h3 data-i18n="home.solution.021">IR &amp; MARKET MAKING</h3>
+                <p data-i18n="home.solution.022" class="meta">DLK + Jump</p>
+                <p data-i18n="home.solution.023">Strategic IR and continuous market making with tight spreads and deep liquidity.</p>
                 <a class="card-link" href="./weapon-ir-market-making.html">View Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
               </article>
             </div>
@@ -567,109 +582,109 @@
       <section id="arsenal" class="section-full section-light weapons-detail reveal">
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Weapons Detail</p>
-            <h2>FIVE MODULAR WEAPONS. ONE INTEGRATED DEFENSE SYSTEM.</h2>
-            <p class="section-subtitle">Deploy any weapon on its own, or run the full arsenal together.</p>
+            <p data-i18n="home.arsenal.001" class="eyebrow">Weapons Detail</p>
+            <h2 data-i18n="home.arsenal.002">FIVE MODULAR WEAPONS. ONE INTEGRATED DEFENSE SYSTEM.</h2>
+            <p data-i18n="home.arsenal.003" class="section-subtitle">Deploy any weapon on its own, or run the full arsenal together.</p>
           </div>
           <div class="weapon-interface">
             <div class="weapon-tabs" role="tablist" aria-label="Weapon details">
-              <button class="weapon-tab active" type="button" role="tab" aria-selected="true" aria-controls="weapon-panel-1" data-weapon="1"><svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>01 Intelligence</button>
-              <button class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-2" data-weapon="2"><svg class="icon" aria-hidden="true"><use href="#icon-coin"></use></svg>02 Tokenization</button>
-              <button class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-3" data-weapon="3"><svg class="icon" aria-hidden="true"><use href="#icon-bank"></use></svg>03 Lending</button>
-              <button class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-4" data-weapon="4"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>04 DEX Listing</button>
-              <button class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-5" data-weapon="5"><svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>05 IR &amp; Market Making</button>
+              <button data-i18n="home.arsenal.004" class="weapon-tab active" type="button" role="tab" aria-selected="true" aria-controls="weapon-panel-1" data-weapon="1"><svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>01 Intelligence</button>
+              <button data-i18n="home.arsenal.005" class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-2" data-weapon="2"><svg class="icon" aria-hidden="true"><use href="#icon-coin"></use></svg>02 Tokenization</button>
+              <button data-i18n="home.arsenal.006" class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-3" data-weapon="3"><svg class="icon" aria-hidden="true"><use href="#icon-bank"></use></svg>03 Lending</button>
+              <button data-i18n="home.arsenal.007" class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-4" data-weapon="4"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>04 DEX Listing</button>
+              <button data-i18n="home.arsenal.008" class="weapon-tab" type="button" role="tab" aria-selected="false" aria-controls="weapon-panel-5" data-weapon="5"><svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>05 IR &amp; Market Making</button>
             </div>
             <div class="weapon-panels">
               <article class="weapon-panel active" id="weapon-panel-1" role="tabpanel" data-weapon-panel="1">
-                <h3>WEAPON 1 — INTELLIGENCE (SaaS)</h3>
-                <p>Real-time short monitoring platform — the only system that sees attacks before they destroy value.</p>
+                <h3 data-i18n="home.arsenal.009">WEAPON 1 — INTELLIGENCE (SaaS)</h3>
+                <p data-i18n="home.arsenal.010">Real-time short monitoring platform — the only system that sees attacks before they destroy value.</p>
                 <ul>
-                  <li>DTC Participant borrowing data</li>
-                  <li>Borrowed-share analytics</li>
-                  <li>Utilization rate heat maps</li>
-                  <li>Synthetic position detection</li>
-                  <li>Early warning alerts (15–30 days)</li>
-                  <li>Cost-to-borrow tracking</li>
-                  <li>Dark pool monitoring</li>
-                  <li>FUD campaign detection</li>
-                  <li>Peer benchmarking</li>
-                  <li>Board-ready monthly reports</li>
+                  <li data-i18n="home.arsenal.011">DTC Participant borrowing data</li>
+                  <li data-i18n="home.arsenal.012">Borrowed-share analytics</li>
+                  <li data-i18n="home.arsenal.013">Utilization rate heat maps</li>
+                  <li data-i18n="home.arsenal.014">Synthetic position detection</li>
+                  <li data-i18n="home.arsenal.015">Early warning alerts (15–30 days)</li>
+                  <li data-i18n="home.arsenal.016">Cost-to-borrow tracking</li>
+                  <li data-i18n="home.arsenal.017">Dark pool monitoring</li>
+                  <li data-i18n="home.arsenal.018">FUD campaign detection</li>
+                  <li data-i18n="home.arsenal.019">Peer benchmarking</li>
+                  <li data-i18n="home.arsenal.020">Board-ready monthly reports</li>
                 </ul>
                 <footer>
-                  <span>Bundled with Tokenization · 4-week deploy</span>
+                  <span data-i18n="home.arsenal.021">Bundled with Tokenization · 4-week deploy</span>
                   <a class="card-link" href="./weapon-intelligence.html">Full Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
                 </footer>
               </article>
               <article class="weapon-panel" id="weapon-panel-2" role="tabpanel" data-weapon-panel="2">
-                <h3>WEAPON 2 — TOKENIZATION</h3>
-                <p>Partner — Securitize. Convert your shares to ERC-1400 security tokens — remove them from global lending pools, enable 24/7 trading.</p>
+                <h3 data-i18n="home.arsenal.022">WEAPON 2 — TOKENIZATION</h3>
+                <p data-i18n="home.arsenal.023">Partner — Securitize. Convert your shares to ERC-1400 security tokens — remove them from global lending pools, enable 24/7 trading.</p>
                 <ul>
-                  <li>Remove shares from lending pools</li>
-                  <li>Real-time ownership visibility</li>
-                  <li>Programmable compliance</li>
-                  <li>Instant settlement T+0</li>
-                  <li>24/7 global trading access</li>
-                  <li>Reduced transfer agent costs</li>
-                  <li>New DeFi-native investor base</li>
-                  <li>SEC-compliant via Securitize</li>
+                  <li data-i18n="home.arsenal.024">Remove shares from lending pools</li>
+                  <li data-i18n="home.arsenal.025">Real-time ownership visibility</li>
+                  <li data-i18n="home.arsenal.026">Programmable compliance</li>
+                  <li data-i18n="home.arsenal.027">Instant settlement T+0</li>
+                  <li data-i18n="home.arsenal.028">24/7 global trading access</li>
+                  <li data-i18n="home.arsenal.029">Reduced transfer agent costs</li>
+                  <li data-i18n="home.arsenal.030">New DeFi-native investor base</li>
+                  <li data-i18n="home.arsenal.031">SEC-compliant via Securitize</li>
                 </ul>
                 <footer>
-                  <span>First FINRA-approved broker-dealer for tokenized securities · ATS registered · $1B+ tokenized</span>
+                  <span data-i18n="home.arsenal.032">First FINRA-approved broker-dealer for tokenized securities · ATS registered · $1B+ tokenized</span>
                   <a class="card-link" href="./weapon-tokenization.html">Full Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
                 </footer>
               </article>
               <article class="weapon-panel" id="weapon-panel-3" role="tabpanel" data-weapon-panel="3">
-                <h3>WEAPON 3 — LENDING</h3>
-                <p>Morpho / Euler. Shareholders pledge tokenized shares as collateral — no dilution, no personal guarantee, no margin calls.</p>
+                <h3 data-i18n="home.arsenal.033">WEAPON 3 — LENDING</h3>
+                <p data-i18n="home.arsenal.034">Morpho / Euler. Shareholders pledge tokenized shares as collateral — no dilution, no personal guarantee, no margin calls.</p>
                 <ul>
-                  <li>Shares tokenized via Securitize</li>
-                  <li>Shareholder connects wallets to lending protocols</li>
-                  <li>Deposit tokenized shares as collateral</li>
-                  <li>Borrow up to 50–70% LTV in USDC</li>
-                  <li>Use USDC for any purpose</li>
-                  <li>Repay anytime to reclaim shares</li>
-                  <li>LTV: 30–40%</li>
-                  <li>Interest: 4–12% APR</li>
-                  <li>No hypothecation</li>
+                  <li data-i18n="home.arsenal.035">Shares tokenized via Securitize</li>
+                  <li data-i18n="home.arsenal.036">Shareholder connects wallets to lending protocols</li>
+                  <li data-i18n="home.arsenal.037">Deposit tokenized shares as collateral</li>
+                  <li data-i18n="home.arsenal.038">Borrow up to 50–70% LTV in USDC</li>
+                  <li data-i18n="home.arsenal.039">Use USDC for any purpose</li>
+                  <li data-i18n="home.arsenal.040">Repay anytime to reclaim shares</li>
+                  <li data-i18n="home.arsenal.041">LTV: 30–40%</li>
+                  <li data-i18n="home.arsenal.042">Interest: 4–12% APR</li>
+                  <li data-i18n="home.arsenal.043">No hypothecation</li>
                 </ul>
                 <footer>
-                  <span>Powered by Morpho / Euler lending protocols</span>
+                  <span data-i18n="home.arsenal.044">Powered by Morpho / Euler lending protocols</span>
                   <a class="card-link" href="./weapon-lending.html">Full Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
                 </footer>
               </article>
               <article class="weapon-panel" id="weapon-panel-4" role="tabpanel" data-weapon-panel="4">
-                <h3>WEAPON 4 — DEX LISTING</h3>
-                <p>SECZ + Jump + Jupiter. List tokenized shares on Jupiter — Solana's #1 DEX aggregator with $64B/month in volume.</p>
+                <h3 data-i18n="home.arsenal.045">WEAPON 4 — DEX LISTING</h3>
+                <p data-i18n="home.arsenal.046">SECZ + Jump + Jupiter. List tokenized shares on Jupiter — Solana's #1 DEX aggregator with $64B/month in volume.</p>
                 <ul>
-                  <li>$64B/mo Jupiter swap volume</li>
-                  <li>86.4% Solana aggregator share</li>
-                  <li>500K+ Active traders</li>
-                  <li>Jump PropAMM institutional-grade pricing, 100ms updates</li>
-                  <li>24/7/365 trading</li>
-                  <li>Global access</li>
-                  <li>T+0 settlement</li>
+                  <li data-i18n="home.arsenal.047">$64B/mo Jupiter swap volume</li>
+                  <li data-i18n="home.arsenal.048">86.4% Solana aggregator share</li>
+                  <li data-i18n="home.arsenal.049">500K+ Active traders</li>
+                  <li data-i18n="home.arsenal.050">Jump PropAMM institutional-grade pricing, 100ms updates</li>
+                  <li data-i18n="home.arsenal.051">24/7/365 trading</li>
+                  <li data-i18n="home.arsenal.052">Global access</li>
+                  <li data-i18n="home.arsenal.053">T+0 settlement</li>
                 </ul>
                 <footer>
-                  <span>Institutional liquidity by Jump Trading</span>
+                  <span data-i18n="home.arsenal.054">Institutional liquidity by Jump Trading</span>
                   <a class="card-link" href="./weapon-dex-listing.html">Full Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
                 </footer>
               </article>
               <article class="weapon-panel" id="weapon-panel-5" role="tabpanel" data-weapon-panel="5">
-                <h3>WEAPON 5 — IR &amp; MARKET MAKING</h3>
-                <p>DLK + Jump. Strategic investor relations and market making around tokenized equity.</p>
+                <h3 data-i18n="home.arsenal.055">WEAPON 5 — IR &amp; MARKET MAKING</h3>
+                <p data-i18n="home.arsenal.056">DLK + Jump. Strategic investor relations and market making around tokenized equity.</p>
                 <ul>
-                  <li>Tokenization-aware messaging strategy</li>
-                  <li>Investor targeting DeFi + TradFi</li>
-                  <li>Roadshow and conference management</li>
-                  <li>Board education on tokenized equity</li>
-                  <li>Crisis communications</li>
-                  <li>PropAMM operation on Jupiter / BisonFi</li>
-                  <li>24/7 continuous quote updates</li>
-                  <li>Deep liquidity at best bid/ask</li>
-                  <li>Cross-market arbitrage NASDAQ to DEX</li>
+                  <li data-i18n="home.arsenal.057">Tokenization-aware messaging strategy</li>
+                  <li data-i18n="home.arsenal.058">Investor targeting DeFi + TradFi</li>
+                  <li data-i18n="home.arsenal.059">Roadshow and conference management</li>
+                  <li data-i18n="home.arsenal.060">Board education on tokenized equity</li>
+                  <li data-i18n="home.arsenal.061">Crisis communications</li>
+                  <li data-i18n="home.arsenal.062">PropAMM operation on Jupiter / BisonFi</li>
+                  <li data-i18n="home.arsenal.063">24/7 continuous quote updates</li>
+                  <li data-i18n="home.arsenal.064">Deep liquidity at best bid/ask</li>
+                  <li data-i18n="home.arsenal.065">Cross-market arbitrage NASDAQ to DEX</li>
                 </ul>
                 <footer>
-                  <span>Strategic IR by DLK · Market making by Jump</span>
+                  <span data-i18n="home.arsenal.066">Strategic IR by DLK · Market making by Jump</span>
                   <a class="card-link" href="./weapon-ir-market-making.html">Full Details<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
                 </footer>
               </article>
@@ -683,18 +698,18 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Value Chain</p>
-            <h2>INTEGRATED EQUITY DEFENSE FLOW</h2>
-            <p class="section-subtitle">Each weapon strengthens the next — from detection to durable valuation.</p>
+            <p data-i18n="home.sec07.001" class="eyebrow">The Value Chain</p>
+            <h2 data-i18n="home.sec07.002">INTEGRATED EQUITY DEFENSE FLOW</h2>
+            <p data-i18n="home.sec07.003" class="section-subtitle">Each weapon strengthens the next — from detection to durable valuation.</p>
           </div>
           <div class="flow-diagram reveal-stagger">
-            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-radar"></use></svg><span>1</span><strong>Intelligence</strong><p>Identifies short attack threats in real-time</p></article>
-            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-coin"></use></svg><span>2</span><strong>Tokenization</strong><p>Secures shares on blockchain via Securitize</p></article>
-            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-bank"></use></svg><span>3</span><strong>Lending</strong><p>Unlocks liquidity without dilution</p></article>
-            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-globe"></use></svg><span>4</span><strong>DEX Listing</strong><p>Expands to 24/7 global market access</p></article>
-            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg><span>5</span><strong>IR &amp; MM</strong><p>Defends and grows valuation</p></article>
+            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-radar"></use></svg><span data-i18n="home.sec07.004">1</span><strong data-i18n="home.sec07.005">Intelligence</strong><p data-i18n="home.sec07.006">Identifies short attack threats in real-time</p></article>
+            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-coin"></use></svg><span data-i18n="home.sec07.007">2</span><strong data-i18n="home.sec07.008">Tokenization</strong><p data-i18n="home.sec07.009">Secures shares on blockchain via Securitize</p></article>
+            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-bank"></use></svg><span data-i18n="home.sec07.010">3</span><strong data-i18n="home.sec07.011">Lending</strong><p data-i18n="home.sec07.012">Unlocks liquidity without dilution</p></article>
+            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-globe"></use></svg><span data-i18n="home.sec07.013">4</span><strong data-i18n="home.sec07.014">DEX Listing</strong><p data-i18n="home.sec07.015">Expands to 24/7 global market access</p></article>
+            <article><svg class="icon flow-icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg><span data-i18n="home.sec07.016">5</span><strong data-i18n="home.sec07.017">IR &amp; MM</strong><p data-i18n="home.sec07.018">Defends and grows valuation</p></article>
           </div>
-          <p class="flow-note">
+          <p data-i18n="home.sec07.019" class="flow-note">
             Start with Intelligence + Tokenization, then add Lending, DEX Listing, and IR &amp; Market Making as you go.
           </p>
         </div>
@@ -705,52 +720,52 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Deployment</p>
-            <h2>YOUR ROADMAP TO DEFENSE</h2>
-            <p class="section-subtitle">From signed engagement to live defense in four weeks — a clear, staged rollout you control at every step.</p>
+            <p data-i18n="home.deployment.001" class="eyebrow">Deployment</p>
+            <h2 data-i18n="home.deployment.002">YOUR ROADMAP TO DEFENSE</h2>
+            <p data-i18n="home.deployment.003" class="section-subtitle">From signed engagement to live defense in four weeks — a clear, staged rollout you control at every step.</p>
           </div>
           <div class="timeline">
             <div class="timeline-rail"><span class="timeline-fill"></span></div>
             <div class="timeline-item tl-left">
               <div class="timeline-node"><svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg></div>
               <div class="timeline-card">
-                <div class="timeline-top"><span class="timeline-step">Step 01</span><span class="timeline-time">4 weeks</span></div>
-                <h3>Intelligence + Tokenization</h3>
-                <p>Switch on real-time short monitoring and move your shares off the global lending market — the foundation of every defense.</p>
-                <span class="timeline-prereq">Starts immediately · no prerequisite</span>
+                <div class="timeline-top"><span data-i18n="home.deployment.004" class="timeline-step">Step 01</span><span data-i18n="home.deployment.005" class="timeline-time">4 weeks</span></div>
+                <h3 data-i18n="home.deployment.006">Intelligence + Tokenization</h3>
+                <p data-i18n="home.deployment.007">Switch on real-time short monitoring and move your shares off the global lending market — the foundation of every defense.</p>
+                <span data-i18n="home.deployment.008" class="timeline-prereq">Starts immediately · no prerequisite</span>
               </div>
             </div>
             <div class="timeline-item tl-right">
               <div class="timeline-node"><svg class="icon" aria-hidden="true"><use href="#icon-bank"></use></svg></div>
               <div class="timeline-card">
-                <div class="timeline-top"><span class="timeline-step">Step 02</span><span class="timeline-time">2–3 weeks</span></div>
-                <h3>Lending Protocols</h3>
-                <p>Unlock stablecoin liquidity against your tokenized shares — no dilution, no personal guarantee, no margin calls.</p>
-                <span class="timeline-prereq">After Step 01</span>
+                <div class="timeline-top"><span data-i18n="home.deployment.009" class="timeline-step">Step 02</span><span data-i18n="home.deployment.010" class="timeline-time">2–3 weeks</span></div>
+                <h3 data-i18n="home.deployment.011">Lending Protocols</h3>
+                <p data-i18n="home.deployment.012">Unlock stablecoin liquidity against your tokenized shares — no dilution, no personal guarantee, no margin calls.</p>
+                <span data-i18n="home.deployment.013" class="timeline-prereq">After Step 01</span>
               </div>
             </div>
             <div class="timeline-item tl-left">
               <div class="timeline-node"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></div>
               <div class="timeline-card">
-                <div class="timeline-top"><span class="timeline-step">Step 03</span><span class="timeline-time">3–4 weeks</span></div>
-                <h3>DEX Listing</h3>
-                <p>Open your equity to 24/7 global trading on Jupiter, backed by Jump's institutional-grade liquidity.</p>
-                <span class="timeline-prereq">After Step 01</span>
+                <div class="timeline-top"><span data-i18n="home.deployment.014" class="timeline-step">Step 03</span><span data-i18n="home.deployment.015" class="timeline-time">3–4 weeks</span></div>
+                <h3 data-i18n="home.deployment.016">DEX Listing</h3>
+                <p data-i18n="home.deployment.017">Open your equity to 24/7 global trading on Jupiter, backed by Jump's institutional-grade liquidity.</p>
+                <span data-i18n="home.deployment.018" class="timeline-prereq">After Step 01</span>
               </div>
             </div>
             <div class="timeline-item tl-right">
               <div class="timeline-node"><svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg></div>
               <div class="timeline-card">
-                <div class="timeline-top"><span class="timeline-step">Step 04</span><span class="timeline-time">Ongoing</span></div>
-                <h3>IR &amp; Market Making</h3>
-                <p>Keep markets orderly and the narrative on your side — continuous IR and market making around your tokenized equity.</p>
-                <span class="timeline-prereq">After Steps 01 &amp; 03</span>
+                <div class="timeline-top"><span data-i18n="home.deployment.019" class="timeline-step">Step 04</span><span data-i18n="home.deployment.020" class="timeline-time">Ongoing</span></div>
+                <h3 data-i18n="home.deployment.021">IR &amp; Market Making</h3>
+                <p data-i18n="home.deployment.022">Keep markets orderly and the narrative on your side — continuous IR and market making around your tokenized equity.</p>
+                <span data-i18n="home.deployment.023" class="timeline-prereq">After Steps 01 &amp; 03</span>
               </div>
             </div>
           </div>
           <div class="notes">
-            <p><svg class="icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg>No cash outlay option — pay in shares at current market price.</p>
-            <p><svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>Every step can be taken independently.</p>
+            <p data-i18n="home.deployment.024"><svg class="icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg>No cash outlay option — pay in shares at current market price.</p>
+            <p data-i18n="home.deployment.025"><svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>Every step can be taken independently.</p>
           </div>
         </div>
       </section>
@@ -760,35 +775,35 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Edge</p>
-            <h2>WHY CURRENC CAPITAL</h2>
-            <p class="section-subtitle">The only firm that has defended its own equity with the exact system it sells.</p>
+            <p data-i18n="home.why.001" class="eyebrow">The Edge</p>
+            <h2 data-i18n="home.why.002">WHY CURRENC CAPITAL</h2>
+            <p data-i18n="home.why.003" class="section-subtitle">The only firm that has defended its own equity with the exact system it sells.</p>
           </div>
           <div class="why-grid reveal-stagger">
             <article class="why-card">
-              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-ticker"></use></svg><span class="why-index">01</span></div>
-              <h3>NASDAQ-Listed</h3>
-              <p>We deployed this on ourselves first. CURRENC (NASDAQ: CURR) is the first public company to run its own Equity Defense Infrastructure.</p>
+              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-ticker"></use></svg><span data-i18n="home.why.004" class="why-index">01</span></div>
+              <h3 data-i18n="home.why.005">NASDAQ-Listed</h3>
+              <p data-i18n="home.why.006">We deployed this on ourselves first. CURRENC (NASDAQ: CURR) is the first public company to run its own Equity Defense Infrastructure.</p>
             </article>
             <article class="why-card">
-              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-layers"></use></svg><span class="why-index">02</span></div>
-              <h3>The Only 5-Weapon Platform</h3>
-              <p>No one else unifies Intelligence, Tokenization, Lending, DEX Listing, and IR &amp; Market Making into a single defense system.</p>
+              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-layers"></use></svg><span data-i18n="home.why.007" class="why-index">02</span></div>
+              <h3 data-i18n="home.why.008">The Only 5-Weapon Platform</h3>
+              <p data-i18n="home.why.009">No one else unifies Intelligence, Tokenization, Lending, DEX Listing, and IR &amp; Market Making into a single defense system.</p>
             </article>
             <article class="why-card">
-              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg><span class="why-index">03</span></div>
-              <h3>Institutional Partners</h3>
-              <p>Built on best-in-class infrastructure: Securitize, Jump Trading, DLK, Morpho, and Euler — leaders in every vertical.</p>
+              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg><span data-i18n="home.why.010" class="why-index">03</span></div>
+              <h3 data-i18n="home.why.011">Institutional Partners</h3>
+              <p data-i18n="home.why.012">Built on best-in-class infrastructure: Securitize, Jump Trading, DLK, Morpho, and Euler — leaders in every vertical.</p>
             </article>
             <article class="why-card">
-              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg><span class="why-index">04</span></div>
-              <h3>No Cash Outlay</h3>
-              <p>Pay in shares at market price and keep your cash where it belongs — funding operations and growth.</p>
+              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg><span data-i18n="home.why.013" class="why-index">04</span></div>
+              <h3 data-i18n="home.why.014">No Cash Outlay</h3>
+              <p data-i18n="home.why.015">Pay in shares at market price and keep your cash where it belongs — funding operations and growth.</p>
             </article>
             <article class="why-card">
-              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-rocket"></use></svg><span class="why-index">05</span></div>
-              <h3>4-Week Deployment</h3>
-              <p>From signed engagement to live defense in four weeks — the fastest deployment in the industry.</p>
+              <div class="why-head"><svg class="icon why-icon" aria-hidden="true"><use href="#icon-rocket"></use></svg><span data-i18n="home.why.016" class="why-index">05</span></div>
+              <h3 data-i18n="home.why.017">4-Week Deployment</h3>
+              <p data-i18n="home.why.018">From signed engagement to live defense in four weeks — the fastest deployment in the industry.</p>
             </article>
           </div>
         </div>
@@ -799,23 +814,23 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">About</p>
-            <h2>PART OF THE CURRENC GROUP</h2>
-            <p class="section-subtitle">CURRENC Capital is a wholly owned subsidiary of CURRENC Group Inc. (Nasdaq: CURR).</p>
+            <p data-i18n="home.about.001" class="eyebrow">About</p>
+            <h2 data-i18n="home.about.002">PART OF THE CURRENC GROUP</h2>
+            <p data-i18n="home.about.003" class="section-subtitle">CURRENC Capital is a wholly owned subsidiary of CURRENC Group Inc. (Nasdaq: CURR).</p>
           </div>
           <div class="about-grid">
             <div class="about-lead">
-              <p>We build the <strong>Equity Defense Infrastructure</strong> that protects public companies from short attacks — drawing on the Group's expertise in tokenization, market infrastructure, and capital markets.</p>
-              <p class="about-emphasis">And we didn't build it in theory. <strong>CURRENC Group deployed this system on its own shares first</strong> — making us the first public company to defend itself with the exact platform we now offer to you.</p>
+              <p data-i18n="home.about.004">We build the <strong>Equity Defense Infrastructure</strong> that protects public companies from short attacks — drawing on the Group's expertise in tokenization, market infrastructure, and capital markets.</p>
+              <p data-i18n="home.about.005" class="about-emphasis">And we didn't build it in theory. <strong>CURRENC Group deployed this system on its own shares first</strong> — making us the first public company to defend itself with the exact platform we now offer to you.</p>
               <a class="card-link" href="#solution">See how the defense works<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
             </div>
 
             <div class="about-visual" aria-hidden="true">
               <div class="about-emblem">
-                <span class="emblem-badge">First to Deploy</span>
+                <span data-i18n="home.about.006" class="emblem-badge">First to Deploy</span>
                 <div class="emblem-corners"><i></i><i></i><i></i><i></i></div>
                 <img class="emblem-logo" src="./Resources/All%20Logos_Currenc_Logo_dark_bg.png" alt="CURRENC Group" />
-                <span class="emblem-tag">Our own equity — under active defense</span>
+                <span data-i18n="home.about.007" class="emblem-tag">Our own equity — under active defense</span>
                 <svg class="emblem-chart" viewBox="0 0 340 130" focusable="false">
                   <defs>
                     <linearGradient id="emblemRed" x1="0" y1="0" x2="0" y2="1">
@@ -842,9 +857,9 @@
           </div>
 
           <ul class="about-facts">
-            <li><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg><div><strong>Nasdaq: CURR</strong><span>Publicly listed parent group</span></div></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg><div><strong>Wholly Owned Subsidiary</strong><span>of CURRENC Group Inc.</span></div></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg><div><strong>Battle-Tested</strong><span>Deployed on our own shares first</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg><div><strong data-i18n="home.about.008">Nasdaq: CURR</strong><span data-i18n="home.about.009">Publicly listed parent group</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg><div><strong data-i18n="home.about.010">Wholly Owned Subsidiary</strong><span data-i18n="home.about.011">of CURRENC Group Inc.</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg><div><strong data-i18n="home.about.012">Battle-Tested</strong><span data-i18n="home.about.013">Deployed on our own shares first</span></div></li>
           </ul>
         </div>
       </section>
@@ -854,15 +869,15 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Partners</p>
-            <h2>BUILT WITH BEST-IN-CLASS PARTNERS</h2>
-            <p class="section-subtitle">Institutional infrastructure across tokenization, liquidity, and market making.</p>
+            <p data-i18n="home.partners.001" class="eyebrow">Partners</p>
+            <h2 data-i18n="home.partners.002">BUILT WITH BEST-IN-CLASS PARTNERS</h2>
+            <p data-i18n="home.partners.003" class="section-subtitle">Institutional infrastructure across tokenization, liquidity, and market making.</p>
           </div>
           <div class="logo-strip">
             <div class="logo-tile"><img src="./Resources/securitize.png" alt="Securitize" /></div>
             <div class="logo-tile"><img src="./Resources/jumpTrading.png" alt="Jump Trading" /></div>
-            <div class="logo-tile placeholder"><span>Partner Logo</span></div>
-            <div class="logo-tile placeholder"><span>Partner Logo</span></div>
+            <div class="logo-tile placeholder"><span data-i18n="home.partners.004">Partner Logo</span></div>
+            <div class="logo-tile placeholder"><span data-i18n="home.partners.005">Partner Logo</span></div>
           </div>
         </div>
       </section>
@@ -872,16 +887,16 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Clients</p>
-            <h2>TRUSTED BY PUBLIC COMPANIES</h2>
-            <p class="section-subtitle">Companies deploying the Equity Defense Infrastructure.</p>
+            <p data-i18n="home.clients.001" class="eyebrow">Clients</p>
+            <h2 data-i18n="home.clients.002">TRUSTED BY PUBLIC COMPANIES</h2>
+            <p data-i18n="home.clients.003" class="section-subtitle">Companies deploying the Equity Defense Infrastructure.</p>
           </div>
           <div class="logo-strip five">
             <div class="logo-tile"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
             <div class="logo-tile"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
-            <div class="logo-tile placeholder"><span>Client Logo</span></div>
-            <div class="logo-tile placeholder"><span>Client Logo</span></div>
-            <div class="logo-tile placeholder"><span>Client Logo</span></div>
+            <div class="logo-tile placeholder"><span data-i18n="home.clients.004">Client Logo</span></div>
+            <div class="logo-tile placeholder"><span data-i18n="home.clients.005">Client Logo</span></div>
+            <div class="logo-tile placeholder"><span data-i18n="home.clients.006">Client Logo</span></div>
           </div>
         </div>
       </section>
@@ -890,12 +905,12 @@
       <section id="portal" class="section-full portal-section reveal">
         <div class="container portal-grid">
           <div>
-            <p class="eyebrow">Portal Platform</p>
-            <h2>SEE THE ATTACK BEFORE IT HITS</h2>
-            <p class="section-subtitle">
+            <p data-i18n="home.portal.001" class="eyebrow">Portal Platform</p>
+            <h2 data-i18n="home.portal.002">SEE THE ATTACK BEFORE IT HITS</h2>
+            <p data-i18n="home.portal.003" class="section-subtitle">
               The CURRENC Intelligence Portal gives you real-time visibility into short interest, utilization, borrowed-share analytics, tokenized share activity, and board-ready alerts.
             </p>
-            <a class="button button-secondary" href="./weapon-intelligence.html">Explore Intelligence Portal</a>
+            <a data-i18n="home.portal.004" class="button button-secondary" href="./weapon-intelligence.html">Explore Intelligence Portal</a>
           </div>
           <div class="portal-mockup" aria-hidden="true">
             <div class="mockup-bar">
@@ -904,10 +919,10 @@
               <i class="live-dot"></i>
             </div>
             <div class="mockup-grid">
-              <div><strong>Short Interest</strong><span data-count="31.8" data-prefix="" data-suffix="%">31.8%</span></div>
-              <div><strong>Utilization</strong><span data-count="74.2" data-prefix="" data-suffix="%">74.2%</span></div>
-              <div><strong>Borrowed Shares</strong><span class="rising"><svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>Rising</span></div>
-              <div><strong>Board Alert</strong><span class="live"><i class="live-dot"></i>Active</span></div>
+              <div><strong data-i18n="home.portal.005">Short Interest</strong><span data-i18n="home.portal.006" data-count="31.8" data-prefix="" data-suffix="%">31.8%</span></div>
+              <div><strong data-i18n="home.portal.007">Utilization</strong><span data-i18n="home.portal.008" data-count="74.2" data-prefix="" data-suffix="%">74.2%</span></div>
+              <div><strong data-i18n="home.portal.009">Borrowed Shares</strong><span data-i18n="home.portal.010" class="rising"><svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>Rising</span></div>
+              <div><strong data-i18n="home.portal.011">Board Alert</strong><span data-i18n="home.portal.012" class="live"><i class="live-dot"></i>Active</span></div>
             </div>
             <div class="mockup-chart">
               <svg viewBox="0 0 640 240" preserveAspectRatio="none" focusable="false" aria-hidden="true">
@@ -932,11 +947,11 @@
                 <path class="pchart-gold" d="M400 176 L450 160 L500 120 L560 96 L640 56" />
                 <circle class="pchart-dot" cx="640" cy="56" r="5" />
               </svg>
-              <span class="pchart-label">CURRENC DEPLOYED</span>
+              <span data-i18n="home.portal.013" class="pchart-label">CURRENC DEPLOYED</span>
             </div>
             <div class="mockup-footer">
-              <span>Live monitoring · 15–30 day early warning</span>
-              <span>Board report ready</span>
+              <span data-i18n="home.portal.014">Live monitoring · 15–30 day early warning</span>
+              <span data-i18n="home.portal.015">Board report ready</span>
             </div>
           </div>
         </div>
@@ -947,31 +962,31 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Insights &amp; News</p>
-            <h2>LATEST FROM CURRENC</h2>
-            <p class="section-subtitle">Market intelligence, product updates, and company announcements.</p>
+            <p data-i18n="home.news.001" class="eyebrow">Insights &amp; News</p>
+            <h2 data-i18n="home.news.002">LATEST FROM CURRENC</h2>
+            <p data-i18n="home.news.003" class="section-subtitle">Market intelligence, product updates, and company announcements.</p>
           </div>
           <div class="news-grid reveal-stagger">
             <article class="news-card">
               <div class="news-tag">Press Release</div>
               <time datetime="2026-06-24">June 24, 2026</time>
-              <h3>CURRENC Launches Intelligence Portal 2.0 With Synthetic Short Detection</h3>
-              <p>The upgraded platform now flags options-driven synthetic short positions invisible to standard short interest reports.</p>
-              <span class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <h3 data-i18n="home.news.004">CURRENC Launches Intelligence Portal 2.0 With Synthetic Short Detection</h3>
+              <p data-i18n="home.news.005">The upgraded platform now flags options-driven synthetic short positions invisible to standard short interest reports.</p>
+              <span data-i18n="home.news.006" class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
             <article class="news-card">
               <div class="news-tag">Market Insight</div>
               <time datetime="2026-06-10">June 10, 2026</time>
-              <h3>Short Interest Hits Record Highs Across Small-Cap Sector</h3>
-              <p>Utilization rates above 80% are now common on attacked names — our analysts break down the borrowing data behind the trend.</p>
-              <span class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <h3 data-i18n="home.news.007">Short Interest Hits Record Highs Across Small-Cap Sector</h3>
+              <p data-i18n="home.news.008">Utilization rates above 80% are now common on attacked names — our analysts break down the borrowing data behind the trend.</p>
+              <span data-i18n="home.news.009" class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
             <article class="news-card">
               <div class="news-tag">Company News</div>
               <time datetime="2026-05-28">May 28, 2026</time>
-              <h3>First End-to-End Tokenized Equity Defense Deployment Completed</h3>
-              <p>From intelligence onboarding to DEX listing in under 10 weeks — a milestone for the five-weapon defense platform.</p>
-              <span class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <h3 data-i18n="home.news.010">First End-to-End Tokenized Equity Defense Deployment Completed</h3>
+              <p data-i18n="home.news.011">From intelligence onboarding to DEX listing in under 10 weeks — a milestone for the five-weapon defense platform.</p>
+              <span data-i18n="home.news.012" class="card-link is-soon">Read More<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
           </div>
         </div>
@@ -982,38 +997,38 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Knowledge Base</p>
-            <h2>UNDERSTAND THE BATTLEFIELD</h2>
-            <p class="section-subtitle">Guides, explainers, and reference material for boards and executives facing short attacks.</p>
+            <p data-i18n="home.knowledge.001" class="eyebrow">Knowledge Base</p>
+            <h2 data-i18n="home.knowledge.002">UNDERSTAND THE BATTLEFIELD</h2>
+            <p data-i18n="home.knowledge.003" class="section-subtitle">Guides, explainers, and reference material for boards and executives facing short attacks.</p>
           </div>
           <div class="kb-grid reveal-stagger">
             <article class="kb-card">
               <svg class="icon kb-icon" aria-hidden="true"><use href="#icon-doc"></use></svg>
-              <span class="kb-type">Whitepaper</span>
-              <h3>The Board's Guide to Equity Defense</h3>
-              <p>A 20-page playbook covering detection, response, and the tokenization defense strategy.</p>
-              <span class="card-link is-soon">Download<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <span data-i18n="home.knowledge.004" class="kb-type">Whitepaper</span>
+              <h3 data-i18n="home.knowledge.005">The Board's Guide to Equity Defense</h3>
+              <p data-i18n="home.knowledge.006">A 20-page playbook covering detection, response, and the tokenization defense strategy.</p>
+              <span data-i18n="home.knowledge.007" class="card-link is-soon">Download<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
             <article class="kb-card">
               <svg class="icon kb-icon" aria-hidden="true"><use href="#icon-book"></use></svg>
-              <span class="kb-type">Explainer</span>
-              <h3>Rehypothecation: How One Share Becomes Five</h3>
-              <p>Inside the DTC omnibus system that lets a single share back multiple short positions.</p>
-              <span class="card-link is-soon">Read Guide<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <span data-i18n="home.knowledge.008" class="kb-type">Explainer</span>
+              <h3 data-i18n="home.knowledge.009">Rehypothecation: How One Share Becomes Five</h3>
+              <p data-i18n="home.knowledge.010">Inside the DTC omnibus system that lets a single share back multiple short positions.</p>
+              <span data-i18n="home.knowledge.011" class="card-link is-soon">Read Guide<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
             <article class="kb-card">
               <svg class="icon kb-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
-              <span class="kb-type">Handbook</span>
-              <h3>Tokenized Equity Compliance Handbook</h3>
-              <p>SEC and FINRA considerations for tokenizing public company shares via a registered ATS.</p>
-              <span class="card-link is-soon">Read Guide<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <span data-i18n="home.knowledge.012" class="kb-type">Handbook</span>
+              <h3 data-i18n="home.knowledge.013">Tokenized Equity Compliance Handbook</h3>
+              <p data-i18n="home.knowledge.014">SEC and FINRA considerations for tokenizing public company shares via a registered ATS.</p>
+              <span data-i18n="home.knowledge.015" class="card-link is-soon">Read Guide<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
             <article class="kb-card">
               <svg class="icon kb-icon" aria-hidden="true"><use href="#icon-list"></use></svg>
-              <span class="kb-type">Glossary</span>
-              <h3>40 Short-Attack Terms Every CFO Should Know</h3>
-              <p>From cost-to-borrow to FTDs — the vocabulary of engineered selling pressure, decoded.</p>
-              <span class="card-link is-soon">Browse Terms<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+              <span data-i18n="home.knowledge.016" class="kb-type">Glossary</span>
+              <h3 data-i18n="home.knowledge.017">40 Short-Attack Terms Every CFO Should Know</h3>
+              <p data-i18n="home.knowledge.018">From cost-to-borrow to FTDs — the vocabulary of engineered selling pressure, decoded.</p>
+              <span data-i18n="home.knowledge.019" class="card-link is-soon">Browse Terms<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
             </article>
           </div>
         </div>
@@ -1023,45 +1038,45 @@
       <section id="faq" class="section-full section-light reveal">
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">FAQ</p>
-            <h2>FREQUENTLY ASKED QUESTIONS</h2>
-            <p class="section-subtitle">What boards and executives ask us most.</p>
+            <p data-i18n="home.faq.001" class="eyebrow">FAQ</p>
+            <h2 data-i18n="home.faq.002">FREQUENTLY ASKED QUESTIONS</h2>
+            <p data-i18n="home.faq.003" class="section-subtitle">What boards and executives ask us most.</p>
           </div>
           <div class="faq-list">
             <details class="faq-item" open>
-              <summary>How do I know if my company is under a short attack?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.001">How do I know if my company is under a short attack?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>Watch for short interest above 30%, utilization above 70%, spiking cost-to-borrow, unusual dark pool volume, and coordinated negative media. Our Intelligence platform detects these signals 15–30 days before the damage becomes visible in your stock price.</p>
+                <p data-i18n="home.faq.004">Watch for short interest above 30%, utilization above 70%, spiking cost-to-borrow, unusual dark pool volume, and coordinated negative media. Our Intelligence platform detects these signals 15–30 days before the damage becomes visible in your stock price.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary>Is tokenizing our shares SEC-compliant?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.002">Is tokenizing our shares SEC-compliant?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>Yes. Tokenization is executed through Securitize — the first FINRA-approved broker-dealer for tokenized securities, with a registered ATS and over $1B tokenized. ERC-1400 security tokens carry programmable, auto-enforced compliance.</p>
+                <p data-i18n="home.faq.005">Yes. Tokenization is executed through Securitize — the first FINRA-approved broker-dealer for tokenized securities, with a registered ATS and over $1B tokenized. ERC-1400 security tokens carry programmable, auto-enforced compliance.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary>Do we need to tokenize all of our shares?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.003">Do we need to tokenize all of our shares?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>No. Most companies start with insider and treasury blocks. Every share you tokenize is a share removed from the global lending pool — reducing the ammunition available to short sellers. Each weapon is modular and can be deployed independently.</p>
+                <p data-i18n="home.faq.006">No. Most companies start with insider and treasury blocks. Every share you tokenize is a share removed from the global lending pool — reducing the ammunition available to short sellers. Each weapon is modular and can be deployed independently.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary>How fast can we deploy?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.004">How fast can we deploy?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>Intelligence + Tokenization go live in 4 weeks from signed engagement. Lending protocols add 2–3 weeks, DEX listing 3–4 weeks, and IR &amp; Market Making runs as an ongoing engagement.</p>
+                <p data-i18n="home.faq.007">Intelligence + Tokenization go live in 4 weeks from signed engagement. Lending protocols add 2–3 weeks, DEX listing 3–4 weeks, and IR &amp; Market Making runs as an ongoing engagement.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary>What if we can't spare the cash right now?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.005">What if we can't spare the cash right now?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>We offer a no-cash-outlay option — pay in shares at the current market price. Companies under attack need every dollar for operations; our pricing is built around that reality.</p>
+                <p data-i18n="home.faq.008">We offer a no-cash-outlay option — pay in shares at the current market price. Companies under attack need every dollar for operations; our pricing is built around that reality.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary>Does a DEX listing affect our NASDAQ listing?<span class="faq-marker" aria-hidden="true"></span></summary>
+              <summary data-i18n="home.faqq.006">Does a DEX listing affect our NASDAQ listing?<span class="faq-marker" aria-hidden="true"></span></summary>
               <div class="faq-body">
-                <p>No — it's complementary. Your NASDAQ listing continues unchanged while tokenized shares trade 24/7 on Jupiter. Jump Trading's cross-market arbitrage keeps pricing in parity between venues.</p>
+                <p data-i18n="home.faq.009">No — it's complementary. Your NASDAQ listing continues unchanged while tokenized shares trade 24/7 on Jupiter. Jump Trading's cross-market arbitrage keeps pricing in parity between venues.</p>
               </div>
             </details>
           </div>
@@ -1073,19 +1088,19 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container subscribe-grid">
           <div>
-            <p class="eyebrow">Newsletter</p>
-            <h2>STAY AHEAD OF THE SHORTS</h2>
-            <p class="section-subtitle">Intelligence briefings, market alerts, and product updates — straight to your inbox. No spam, unsubscribe anytime.</p>
+            <p data-i18n="home.subscribe.001" class="eyebrow">Newsletter</p>
+            <h2 data-i18n="home.subscribe.002">STAY AHEAD OF THE SHORTS</h2>
+            <p data-i18n="home.subscribe.003" class="section-subtitle">Intelligence briefings, market alerts, and product updates — straight to your inbox. No spam, unsubscribe anytime.</p>
           </div>
           <form class="subscribe-form" id="subscribe-form" novalidate>
             <div class="subscribe-row">
-              <label class="visually-hidden" for="subscribe-email">Work email</label>
-              <input type="email" id="subscribe-email" name="email" placeholder="Your work email" autocomplete="email" required />
-              <button class="button button-primary" type="submit">
+              <label data-i18n="home.subscribe.004" class="visually-hidden" for="subscribe-email">Work email</label>
+              <input data-i18n-placeholder="home.subscribe.007.ph" type="email" id="subscribe-email" name="email" placeholder="Your work email" autocomplete="email" required />
+              <button data-i18n="home.subscribe.005" class="button button-primary" type="submit">
                 Subscribe<svg class="icon" aria-hidden="true"><use href="#icon-send"></use></svg>
               </button>
             </div>
-            <p class="form-note" data-form-note>Join executives from 200+ public companies.</p>
+            <p data-i18n="home.subscribe.006" class="form-note" data-form-note>Join executives from 200+ public companies.</p>
           </form>
         </div>
       </section>
@@ -1095,126 +1110,54 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Sample Work</p>
-            <h2>PREVIEW OUR SHORT ANALYSIS</h2>
-            <p class="section-subtitle">A look at the board-ready intelligence we deliver. Request the full, confidential report prepared for your company.</p>
+            <p data-i18n="home.analysis.001" class="eyebrow">Sample Work</p>
+            <h2 data-i18n="home.analysis.002">PREVIEW OUR SHORT ANALYSIS</h2>
+            <p data-i18n="home.analysis.003" class="section-subtitle">A look at the board-ready intelligence we deliver. Request the full, confidential report prepared for your company.</p>
           </div>
           <div class="tombstone-grid reveal-stagger">
             <article class="tombstone">
-              <span class="tomb-badge">Sample</span>
+              <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
               <div class="tomb-logo"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
-              <span class="tomb-kicker">Short Analysis Report</span>
-              <h3>CURRENC Group Inc.</h3>
-              <p class="tomb-sub">Nasdaq: CURR</p>
+              <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+              <h3 data-i18n="home.analysis.006">CURRENC Group Inc.</h3>
+              <p data-i18n="home.analysis.007" class="tomb-sub">Nasdaq: CURR</p>
               <ul class="tomb-metrics">
-                <li><strong>31.8%</strong><span>Short Interest</span></li>
-                <li><strong>74.2%</strong><span>Utilization</span></li>
+                <li data-i18n="home.analysis.008"><strong>31.8%</strong><span>Short Interest</span></li>
+                <li data-i18n="home.analysis.009"><strong>74.2%</strong><span>Utilization</span></li>
               </ul>
-              <span class="tomb-foot">Board-ready · 24 pages · Q2 2026</span>
-              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              <span data-i18n="home.analysis.010" class="tomb-foot">Board-ready · 24 pages · Q2 2026</span>
+              <a class="card-link" href="./short-analysis.html">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
             </article>
             <article class="tombstone">
-              <span class="tomb-badge">Sample</span>
+              <span data-i18n="home.analysis.011" class="tomb-badge">Sample</span>
               <div class="tomb-logo"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
-              <span class="tomb-kicker">Short Analysis Report</span>
-              <h3>Mint Incorporation Ltd.</h3>
-              <p class="tomb-sub">MINT Inc.</p>
+              <span data-i18n="home.analysis.012" class="tomb-kicker">Short Analysis Report</span>
+              <h3 data-i18n="home.analysis.013">Mint Incorporation Ltd.</h3>
+              <p data-i18n="home.analysis.014" class="tomb-sub">MINT Inc.</p>
               <ul class="tomb-metrics">
-                <li><strong>28.4%</strong><span>Short Interest</span></li>
-                <li><strong>69.5%</strong><span>Utilization</span></li>
+                <li data-i18n="home.analysis.015"><strong>28.4%</strong><span>Short Interest</span></li>
+                <li data-i18n="home.analysis.016"><strong>69.5%</strong><span>Utilization</span></li>
               </ul>
-              <span class="tomb-foot">Board-ready · 22 pages · Q2 2026</span>
-              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              <span data-i18n="home.analysis.017" class="tomb-foot">Board-ready · 22 pages · Q2 2026</span>
+              <a class="card-link" href="./short-analysis.html">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
             </article>
             <article class="tombstone">
-              <span class="tomb-badge">Sample</span>
+              <span data-i18n="home.analysis.018" class="tomb-badge">Sample</span>
               <div class="tomb-logo tomb-logo-text">Confidential</div>
-              <span class="tomb-kicker">Short Analysis Report</span>
-              <h3>$480M Industrials</h3>
-              <p class="tomb-sub">Nasdaq-listed · Name withheld</p>
+              <span data-i18n="home.analysis.019" class="tomb-kicker">Short Analysis Report</span>
+              <h3 data-i18n="home.analysis.020">$480M Industrials</h3>
+              <p data-i18n="home.analysis.021" class="tomb-sub">Nasdaq-listed · Name withheld</p>
               <ul class="tomb-metrics">
-                <li><strong>42.1%</strong><span>Short Interest</span></li>
-                <li><strong>81.0%</strong><span>Utilization</span></li>
+                <li data-i18n="home.analysis.022"><strong>42.1%</strong><span>Short Interest</span></li>
+                <li data-i18n="home.analysis.023"><strong>81.0%</strong><span>Utilization</span></li>
               </ul>
-              <span class="tomb-foot">Board-ready · 26 pages · Q1 2026</span>
-              <a class="card-link" href="#contact">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              <span data-i18n="home.analysis.024" class="tomb-foot">Board-ready · 26 pages · Q1 2026</span>
+              <a class="card-link" href="./short-analysis.html">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ============ CONTACT ============ -->
-      <section id="contact" class="section-full contact-section reveal">
-        <div class="anim-bg" aria-hidden="true"></div>
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">Get Started</p>
-            <h2>TAKE BACK CONTROL OF YOUR EQUITY</h2>
-            <p class="section-subtitle">Start with a free, confidential Short Analysis Report on your company. We respond within one business day.</p>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-info">
-              <div class="contact-row">
-                <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
-                <div>
-                  <strong>Email</strong>
-                  <a href="mailto:tokenize@currencgroup.com">tokenize@currencgroup.com</a>
-                </div>
-              </div>
-              <div class="contact-row">
-                <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
-                <div>
-                  <strong>Listed</strong>
-                  <span>NASDAQ: CURR</span>
-                </div>
-              </div>
-              <div class="contact-row">
-                <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
-                <div>
-                  <strong>Confidential</strong>
-                  <span>Your inquiry is covered by NDA on request. No obligation.</span>
-                </div>
-              </div>
-              <div class="contact-row">
-                <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
-                <div>
-                  <strong>Response Time</strong>
-                  <span>Within 1 business day</span>
-                </div>
-              </div>
-            </div>
-            <form class="contact-form" id="contact-form" novalidate>
-              <h3>REQUEST YOUR FREE SHORT ANALYSIS</h3>
-              <div class="form-grid">
-                <div class="form-field">
-                  <label for="cf-name">Full Name</label>
-                  <input type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name" required />
-                </div>
-                <div class="form-field">
-                  <label for="cf-title">Title / Position</label>
-                  <input type="text" id="cf-title" name="title" placeholder="CFO / Board Director" autocomplete="organization-title" required />
-                </div>
-                <div class="form-field">
-                  <label for="cf-company">Company / Ticker</label>
-                  <input type="text" id="cf-company" name="company" placeholder="Acme Corp (NASDAQ: ACME)" autocomplete="organization" required />
-                </div>
-                <div class="form-field">
-                  <label for="cf-email">Company Email</label>
-                  <input type="email" id="cf-email" name="email" placeholder="jane@yourcompany.com" autocomplete="email" required />
-                </div>
-                <div class="form-field form-field-wide">
-                  <label for="cf-message">Message <em>(optional)</em></label>
-                  <textarea id="cf-message" name="message" rows="4" placeholder="Tell us about your situation — short interest, utilization, recent price action..."></textarea>
-                </div>
-              </div>
-              <button class="button button-primary" type="submit">
-                Request Free Short Analysis<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-              </button>
-              <p class="form-note" data-form-note>Confidential · No obligation · Board-ready report</p>
-            </form>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- ============ FOOTER ============ -->
@@ -1223,43 +1166,45 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
-            <p>The Equity Defense Infrastructure for Public Companies.</p>
+            <p data-i18n="home.foot.001">The Equity Defense Infrastructure for Public Companies.</p>
             <span class="footer-ticker"><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>NASDAQ: CURR</span>
           </div>
           <nav class="footer-col" aria-label="Platform">
-            <strong>Platform</strong>
-            <a href="./weapon-intelligence.html">Intelligence</a>
-            <a href="./weapon-tokenization.html">Tokenization</a>
-            <a href="./weapon-lending.html">Lending</a>
-            <a href="./weapon-dex-listing.html">DEX Listing</a>
-            <a href="./weapon-ir-market-making.html">IR &amp; Market Making</a>
+            <strong data-i18n="home.foot.002">Platform</strong>
+            <a data-i18n="common.footer.intel" href="./weapon-intelligence.html">Intelligence</a>
+            <a data-i18n="common.footer.token" href="./weapon-tokenization.html">Tokenization</a>
+            <a data-i18n="common.footer.lend" href="./weapon-lending.html">Lending</a>
+            <a data-i18n="common.footer.dex" href="./weapon-dex-listing.html">DEX Listing</a>
+            <a data-i18n="common.footer.irmm_full" href="./weapon-ir-market-making.html">IR &amp; Market Making</a>
           </nav>
           <nav class="footer-col" aria-label="Company">
-            <strong>Company</strong>
-            <a href="#about">About</a>
-            <a href="#why">Why CURRENC</a>
-            <a href="#partners">Partners</a>
-            <a href="#clients">Clients</a>
-            <a href="#deployment">Deployment</a>
-            <a href="#contact">Contact</a>
+            <strong data-i18n="home.foot.003">Company</strong>
+            <a data-i18n="home.foot.004" href="#about">About</a>
+            <a data-i18n="common.nav.why" href="#why">Why CURRENC</a>
+            <a data-i18n="home.foot.005" href="#partners">Partners</a>
+            <a data-i18n="home.foot.006" href="#clients">Clients</a>
+            <a data-i18n="common.nav.deployment" href="#deployment">Deployment</a>
+            <a data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
           </nav>
           <nav class="footer-col" aria-label="Resources">
-            <strong>Resources</strong>
-            <a href="#analysis">Sample Analysis</a>
-            <a href="#knowledge">Knowledge Base</a>
-            <a href="#news">Insights &amp; News</a>
-            <a href="#faq">FAQ</a>
-            <a href="#portal">Intelligence Portal</a>
-            <a href="#subscribe">Newsletter</a>
+            <strong data-i18n="home.foot.007">Resources</strong>
+            <a data-i18n="home.foot.008" href="#analysis">Sample Analysis</a>
+            <a data-i18n="home.foot.009" href="#knowledge">Knowledge Base</a>
+            <a data-i18n="home.foot.010" href="#news">Insights &amp; News</a>
+            <a data-i18n="home.foot.011" href="#faq">FAQ</a>
+            <a data-i18n="home.foot.012" href="#portal">Intelligence Portal</a>
+            <a data-i18n="home.foot.013" href="#subscribe">Newsletter</a>
           </nav>
         </div>
         <div class="footer-legal">
-          <span>© 2026 CURRENC Capital. All rights reserved.</span>
-          <span>This website is for informational purposes only and does not constitute investment advice or an offer of securities.</span>
+          <span data-i18n="home.foot.014">© 2026 CURRENC Capital. All rights reserved.</span>
+          <span data-i18n="home.foot.015">This website is for informational purposes only and does not constitute investment advice or an offer of securities.</span>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./translations.js?v=20260708d"></script>
+    <script src="./i18n.js?v=20260708d"></script>
+    <script src="./script.js?v=20260708d"></script>
   </body>
 </html>

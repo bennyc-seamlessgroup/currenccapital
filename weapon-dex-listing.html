@@ -4,10 +4,131 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DEX Listing | CURRENC Capital</title>
-    <meta name="description" content="List your tokenized shares on Jupiter — Solana's #1 DEX aggregator with $64B/month in volume." />
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="description" content="24/7 global trading on Jupiter. Institutional market making by Jump, regulatory infrastructure by Securitize." />
+    <link rel="stylesheet" href="./styles.css?v=20260708d" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-radar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          <path d="M12 3v3M21 12h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-coin" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-bank" viewBox="0 0 24 24">
+          <path d="M12 3 3 8h18L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 10h16M6 10v8M10.3 10v8M13.7 10v8M18 10v8M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" />
+        </symbol>
+        <symbol id="icon-megaphone" viewBox="0 0 24 24">
+          <path d="M3 10v4h3l8 4.5V5.5L6 10H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M15 9.2a4 4 0 010 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-ticker" viewBox="0 0 24 24">
+          <path d="M3 16.5l5.5-6 4 3.5L21 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="21" cy="5" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-no-cash" viewBox="0 0 24 24">
+          <rect x="2.5" y="6.5" width="19" height="12" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12.5" r="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M4 20L20 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-building" viewBox="0 0 24 24">
+          <path d="M4 21V7.2L12 3l8 4.2V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9.5 21v-5.5h5V21M3 21h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-warning" viewBox="0 0 24 24">
+          <path d="M12 3 22 20H2L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-gauge" viewBox="0 0 24 24">
+          <path d="M4 16a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M12 16l4.2-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="12" cy="16" r="1.3" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-trend-down" viewBox="0 0 24 24">
+          <path d="M3 6l6.5 6.5 4-4L21 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 10.5V17h-6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-trend-up" viewBox="0 0 24 24">
+          <path d="M3 17.5l6.5-6.5 4 4L21 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 6.5h6V12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-hourglass" viewBox="0 0 24 24">
+          <path d="M6 3h12M6 21h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M7 3c0 5 5 5.4 5 9s-5 4-5 9M17 3c0 5-5 5.4-5 9s5 4 5 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-layers" viewBox="0 0 24 24">
+          <path d="M12 2 2 7.5l10 5 10-5L12 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M2 12.3l10 5 10-5M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-shuffle" viewBox="0 0 24 24">
+          <path d="M17 3h4v4M3 21 21 3M21 17v4h-4M14.5 14.5 21 21M3 3l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24">
+          <path d="M20.5 13.4A8.5 8.5 0 1110.6 3.5a7 7 0 009.9 9.9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+          <path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
+        </symbol>
+        <symbol id="icon-badge-check" viewBox="0 0 24 24">
+          <path d="M12 2.5 15 4.6 18.8 5 18 8.8 19 12l-1 3.2.8 3.8-3.8.4L12 21.5 9 19.4l-3.8-.4.8-3.8L5 12l1-3.2L5.2 5 9 4.6 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+          <path d="M8.5 12.3l2.3 2.3 4.7-4.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-rocket" viewBox="0 0 24 24">
+          <path d="M14.5 4.5c3 .3 5 2.3 5.3 5.3-3.6.9-7.5 5.2-9.6 9.4l-3-3c4.2-2.1 8.5-6 9.4-9.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4.8 19.2c.6-2.2 1.8-3.6 3.6-4M4.8 19.2c2.2-.6 3.6-1.8 4-3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="15" cy="9" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-dollar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 6.5v11M15 9.6c0-1.5-1.4-2.6-3-2.6s-3 1-3 2.4 1.3 2 3 2.6 3 1.1 3 2.6-1.4 2.4-3 2.4-3-1.1-3-2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+          <rect x="2.5" y="5" width="19" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-doc" viewBox="0 0 24 24">
+          <path d="M6 2.5h8L19 7.5V21.5H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M14 2.5v5h5M9 12h7M9 15.5h7M9 8.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-book" viewBox="0 0 24 24">
+          <path d="M4 4.5A2.5 2.5 0 016.5 2H20v17.5H6.5A2.5 2.5 0 004 22z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20M8 6.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-list" viewBox="0 0 24 24">
+          <path d="M8 6h13M8 12h13M8 18h13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-send" viewBox="0 0 24 24">
+          <path d="M21 3 3 10.5l7 2.5 2.5 7L21 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M10 13 21 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+          <path d="M12 2.5c2.6 1.2 4.6 1.7 7 2.2-.1 6.3-2 10.6-7 13.8-5-3.2-6.9-7.5-7-13.8 2.4-.5 4.4-1 7-2.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9 11.5l2.2 2.2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+      </defs>
+    </svg>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="CURRENC Capital home">
@@ -17,38 +138,52 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="./index.html#problem">Problem</a>
+          <a data-i18n="common.nav.problem" href="./index.html#problem">Problem</a>
           <div class="nav-dd">
-            <a class="nav-dd-toggle" href="./index.html#solution">Arsenal<svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="nav-dd-toggle" href="./index.html#solution"><span data-i18n="common.nav.arsenal">Arsenal</span><svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div class="nav-dd-menu">
-              <a href="./index.html#solution">Arsenal Overview</a>
-              <a href="weapon-intelligence.html">01 · Intelligence</a>
-              <a href="weapon-tokenization.html">02 · Tokenization</a>
-              <a href="weapon-lending.html">03 · Lending</a>
-              <a href="weapon-dex-listing.html">04 · DEX Listing</a>
-              <a href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
+              <a data-i18n="common.nav.arsenal_overview" href="./index.html#solution">Arsenal Overview</a>
+              <a data-i18n="common.nav.w01" href="weapon-intelligence.html">01 · Intelligence</a>
+              <a data-i18n="common.nav.w02" href="weapon-tokenization.html">02 · Tokenization</a>
+              <a data-i18n="common.nav.w03" href="weapon-lending.html">03 · Lending</a>
+              <a data-i18n="common.nav.w04" href="weapon-dex-listing.html">04 · DEX Listing</a>
+              <a data-i18n="common.nav.w05" href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
             </div>
           </div>
-          <a href="./index.html#deployment">Deployment</a>
-          <a href="./index.html#why">Why CURRENC</a>
-          <a href="./index.html#contact">Contact</a>
-          <a class="nav-cta nav-cta-mobile" href="./index.html#contact">Free Short Analysis</a>
+          <a data-i18n="common.nav.deployment" href="./index.html#deployment">Deployment</a>
+          <a data-i18n="common.nav.why" href="./index.html#why">Why CURRENC</a>
+          <a class="nav-cta nav-cta-mobile" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
+          <div class="lang-switch lang-switch-mobile">
+            <select class="lang-select" aria-label="Select language">
+              <option value="en">Eng</option>
+              <option value="zh-Hant">繁</option>
+              <option value="zh-Hans">簡</option>
+            </select>
+          </div>
+          
         </nav>
-        <a class="nav-cta nav-cta-desktop" href="./index.html#contact">Free Short Analysis</a>
+        <div class="lang-switch lang-switch-desktop">
+          <select class="lang-select" aria-label="Select language">
+            <option value="en">Eng</option>
+            <option value="zh-Hant">繁</option>
+            <option value="zh-Hans">簡</option>
+          </select>
+        </div>
+        
+        <a class="nav-cta nav-cta-desktop" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
       </div>
     </header>
     <div class="nav-scrim" hidden></div>
-
     <main>
       <section class="page-hero">
         <div class="container">
-          <span class="page-hero-num" aria-hidden="true">04</span>
-          <p class="meta">Weapon 04 · SECZ + Jump + Jupiter</p>
-          <h1>DEX LISTING <span class="h1-accent">YOUR EQUITY, TRADING 24/7/365.</span></h1>
-          <p class="hero-subhead">List your tokenized shares on Jupiter — Solana's #1 DEX aggregator with $64B/month in volume.</p>
+          <span data-i18n="dex.sec01.001" class="page-hero-num" aria-hidden="true">04</span>
+          <p data-i18n="dex.sec01.002" class="meta">Weapon 04 · DEX Listing</p>
+          <h1 data-i18n="dex.sec01.003">DEX LISTING <span class="h1-accent">24/7 GLOBAL TRADING ON JUPITER.</span></h1>
+          <p data-i18n="dex.sec01.004" class="hero-subhead">Institutional market making by Jump. Regulatory infrastructure by Securitize. Trading that never closes.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
-            <a class="button button-secondary" href="./index.html#deployment">See Deployment Timeline</a>
+            <a data-i18n="dex.sec01.005" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="dex.sec01.006" class="button button-secondary" href="#opportunity">See the Opportunity</a>
           </div>
         </div>
       </section>
@@ -57,72 +192,365 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">By the Numbers</p>
-            <h2>THE LIQUIDITY VENUE — JUPITER</h2>
+            <p data-i18n="dex.sec02.001" class="eyebrow">24/7 Global Trading</p>
+            <h2 data-i18n="dex.sec02.002">THE DEX OPPORTUNITY, AT A GLANCE</h2>
+            <p data-i18n="dex.sec02.003" class="section-subtitle">Jupiter is Solana's #1 DEX aggregator — already moving billions in volume every month.</p>
           </div>
-          <div class="stats-band">
-            <article>
-              <strong>$64B</strong>
-              <span>Monthly swap volume on Jupiter</span>
+          <div class="metric-grid m4">
+            <article><strong data-i18n="dex.sec02.004">$64B</strong><span data-i18n="dex.sec02.005" class="m-label">Monthly swap volume</span><p data-i18n="dex.sec02.006">Routed through Jupiter on Solana.</p></article>
+            <article><strong data-i18n="dex.sec02.007">86.4%</strong><span data-i18n="dex.sec02.008" class="m-label">Aggregator share</span><p data-i18n="dex.sec02.009">Of all Solana DEX volume.</p></article>
+            <article><strong data-i18n="dex.sec02.010">500K+</strong><span data-i18n="dex.sec02.011" class="m-label">Active monthly traders</span><p data-i18n="dex.sec02.012">A market you have never reached.</p></article>
+            <article><strong data-i18n="dex.sec02.013">$2.2M/wk</strong><span data-i18n="dex.sec02.014" class="m-label">Fees at peak</span><p data-i18n="dex.sec02.015">Generated across the ecosystem.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.problem.001" class="eyebrow">The Problem</p>
+            <h2 data-i18n="dex.problem.002">LIMITED MARKET ACCESS &amp; HOURS</h2>
+            <p data-i18n="dex.problem.003" class="section-subtitle">Traditional exchanges cap your market access, your hours, and your investor base.</p>
+          </div>
+          <div class="detail-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+              <div><strong data-i18n="dex.problem.004">Trading Hours</strong><p data-i18n="dex.problem.005">9:30am–4:00pm ET only.</p></div>
             </article>
-            <article>
-              <strong>86.4%</strong>
-              <span>Share of Solana aggregator volume</span>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
+              <div><strong data-i18n="dex.problem.006">Trading Days</strong><p data-i18n="dex.problem.007">5 days per week.</p></div>
             </article>
-            <article>
-              <strong>500K+</strong>
-              <span>Active traders on the platform</span>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="dex.problem.008">Investor Base</strong><p data-i18n="dex.problem.009">Primarily US-only.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg>
+              <div><strong data-i18n="dex.problem.010">Settlement</strong><p data-i18n="dex.problem.011">T+1 (next day).</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+              <div><strong data-i18n="dex.problem.012">Intermediary Costs</strong><p data-i18n="dex.problem.013">5–20 bps per trade.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>
+              <div><strong data-i18n="dex.problem.014">Access Barriers</strong><p data-i18n="dex.problem.015">Brokerage accounts, minimums, and KYC required at every venue.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-no-cash"></use></svg>
+              <div><strong data-i18n="dex.problem.016">Prime Broker Deposits</strong><p data-i18n="dex.problem.017">Many small-cap stocks can't even be deposited with a prime broker. When they can, expect high custody costs plus deposit and trading limits.</p></div>
+            </article>
+          </div>
+          <div class="callout-band">You're missing <strong data-i18n="dex.problem.018">70% of potential trading hours</strong> (16 hours/day × 7 days = 112 hours vs. 32.5 exchange hours). Billions of potential investors — DeFi-native, global retail, crypto funds — have zero access to your stock.</div>
+        </div>
+      </section>
+
+      <section id="opportunity" class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.opportunity.001" class="eyebrow">The Opportunity</p>
+            <h2 data-i18n="dex.opportunity.002">THE DEX OPPORTUNITY</h2>
+            <p data-i18n="dex.opportunity.003" class="section-subtitle">Everything traditional exchanges restrict, DeFi unlocks.</p>
+          </div>
+          <div class="feature-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+              <div><strong data-i18n="dex.opportunity.004">24/7/365 Trading</strong><p data-i18n="dex.opportunity.005">Not limited to exchange hours — trade any time, any day.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="dex.opportunity.006">Global Access</strong><p data-i18n="dex.opportunity.007">Anyone with internet access can trade — no brokerage required.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg>
+              <div><strong data-i18n="dex.opportunity.008">T+0 Settlement</strong><p data-i18n="dex.opportunity.009">Instant settlement, not next-day.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+              <div><strong data-i18n="dex.opportunity.010">Lower Fees</strong><p data-i18n="dex.opportunity.011">0.1–0.3% swap fees vs. 5–20 bps on traditional venues.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+              <div><strong data-i18n="dex.opportunity.012">Programmable Liquidity</strong><p data-i18n="dex.opportunity.013">AMMs provide continuous, on-chain quotes.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>
+              <div><strong data-i18n="dex.opportunity.014">DeFi-Native Investors</strong><p data-i18n="dex.opportunity.015">An entirely new investor base your stock has never reached.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+              <div><strong data-i18n="dex.opportunity.016">Non-Custodial</strong><p data-i18n="dex.opportunity.017">Investors control their own assets at all times.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-send"></use></svg>
+              <div><strong data-i18n="dex.opportunity.018">Peer-to-Peer Transfers</strong><p data-i18n="dex.opportunity.019">Send shares wallet-to-wallet, instantly, with no intermediary.</p></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="benefits" class="section-full section-light reveal">
+      <section id="solution" class="section-full section-light reveal">
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Key Benefits</p>
-            <h2>WHY LIST ON A DEX</h2>
-            <p class="section-subtitle">Institutional pricing, retail-global reach.</p>
+            <p data-i18n="dex.solution.001" class="eyebrow">The Solution</p>
+            <h2 data-i18n="dex.solution.002">DEX LISTING OVERVIEW</h2>
+            <p data-i18n="dex.solution.003" class="section-subtitle">A three-way partnership: Securitize (regulatory) + Jump (market making) + Jupiter (DEX aggregator).</p>
+          </div>
+          <div class="feature-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+              <div><strong data-i18n="dex.solution.004">Securitize</strong><ul class="tick-list">
+                <li data-i18n="dex.solution.005">Regulatory wrapper</li>
+                <li data-i18n="dex.solution.006">FINRA broker-dealer + ATS</li>
+                <li data-i18n="dex.solution.007">KYC / AML</li>
+                <li data-i18n="dex.solution.008">Transfer agent</li>
+              </ul></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+              <div><strong data-i18n="dex.solution.009">Jump</strong><ul class="tick-list">
+                <li data-i18n="dex.solution.010">PropAMM market making</li>
+                <li data-i18n="dex.solution.011">BisonFi on Jupiter</li>
+                <li data-i18n="dex.solution.012">24/7 liquidity</li>
+                <li data-i18n="dex.solution.013">Cross-market arbitrage</li>
+              </ul></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="dex.solution.014">Jupiter</strong><ul class="tick-list">
+                <li data-i18n="dex.solution.015">DEX aggregation</li>
+                <li data-i18n="dex.solution.016">Trade routing</li>
+                <li data-i18n="dex.solution.017">500K+ traders</li>
+                <li data-i18n="dex.solution.018">$64B/mo volume</li>
+              </ul></div>
+            </article>
+          </div>
+          <div class="wp-cols">
+            <div class="wp-col">
+              <h3 data-i18n="dex.solution.019">For the Issuer</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.solution.020">24/7 liquidity</li>
+                <li data-i18n="dex.solution.021">Tight spreads</li>
+                <li data-i18n="dex.solution.022">Global access</li>
+                <li data-i18n="dex.solution.023">Instant settlement</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3 data-i18n="dex.solution.024">For Investors</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.solution.025">Access to your stock 24/7</li>
+                <li data-i18n="dex.solution.026">Low fees</li>
+                <li data-i18n="dex.solution.027">No brokerage required</li>
+                <li data-i18n="dex.solution.028">Fully non-custodial</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec06.001" class="eyebrow">The Aggregator</p>
+            <h2 data-i18n="dex.sec06.002">THE JUPITER ECOSYSTEM</h2>
+            <p data-i18n="dex.sec06.003" class="section-subtitle">Solana's #1 DEX aggregator — the router that connects your tokenized shares to the entire DeFi market.</p>
+          </div>
+          <div class="wp-cols" style="grid-template-columns: 1fr;">
+            <div class="wp-col" style="max-width:860px; margin:0 auto;">
+              <h3 data-i18n="dex.sec06.004">How It Routes</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec06.005">Metis Routing Engine — finds the best price across all venues</li>
+                <li data-i18n="dex.sec06.006">Jupiter Z — RFQ for large institutional orders</li>
+                <li data-i18n="dex.sec06.007">Routes across Raydium, Orca, Meteora, and PropAMMs</li>
+                <li data-i18n="dex.sec06.008">API access for algorithmic traders</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout-band">Jupiter doesn't just list your token — it distributes it across the entire Solana DeFi ecosystem. Any of its <strong data-i18n="dex.sec06.009">500K+ monthly traders</strong> can discover and trade your tokenized shares without knowing you exist. Jump's PropAMM plugs directly into Jupiter's router, so your liquidity becomes part of the global flow.</div>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec07.001" class="eyebrow">The Regulatory Framework</p>
+            <h2 data-i18n="dex.sec07.002">THE SECURITIZE PARTNERSHIP</h2>
+            <p data-i18n="dex.sec07.003" class="section-subtitle">First FINRA-approved broker-dealer for tokenized securities (May 2026) — ATS registered, NYSE Digital transfer agent.</p>
+          </div>
+          <div class="wp-cols">
+            <div class="wp-col">
+              <h3 data-i18n="dex.sec07.004">Registrations</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec07.005">Broker-dealer registration (SEC / FINRA)</li>
+                <li data-i18n="dex.sec07.006">Alternative Trading System (ATS)</li>
+                <li data-i18n="dex.sec07.007">Transfer agent functions</li>
+                <li data-i18n="dex.sec07.008">KYC / AML via Securitize iD</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3 data-i18n="dex.sec07.009">Compliance</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec07.010">Investor accreditation verification</li>
+                <li data-i18n="dex.sec07.011">Smart contract transfer restrictions</li>
+                <li data-i18n="dex.sec07.012">ERC-1400 / ERC-3643 compliance</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout-band">Securitize handles all regulation — BD, ATS, KYC, custody. Jump focuses purely on market-making technology. Jupiter provides non-custodial trade routing. <strong data-i18n="dex.sec07.013">No single entity bears all the regulatory burden</strong> — each partner does what they do best.</div>
+          <table class="data-table" style="margin-top:40px;">
+            <thead><tr><th data-i18n="dex.sec07.014">Requirement</th><th data-i18n="dex.sec07.015">What It Is</th><th data-i18n="dex.sec07.016">Handled By</th><th data-i18n="dex.sec07.017">Status</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="dex.sec07.018">Broker-Dealer Registration</td><td data-i18n="dex.sec07.019">SEC/FINRA licensed to effect securities transactions</td><td data-i18n="dex.sec07.020">Securitize</td><td data-i18n="dex.sec07.021" class="freq">✓ Active</td></tr>
+              <tr><td data-i18n="dex.sec07.022">ATS Registration</td><td data-i18n="dex.sec07.023">Alternative Trading System for secondary trading</td><td data-i18n="dex.sec07.024">Securitize</td><td data-i18n="dex.sec07.025" class="freq">✓ Active</td></tr>
+              <tr><td data-i18n="dex.sec07.026">Transfer Agent</td><td data-i18n="dex.sec07.027">Maintains shareholder records and processes transfers</td><td data-i18n="dex.sec07.028">Securitize</td><td data-i18n="dex.sec07.029" class="freq">✓ Active</td></tr>
+              <tr><td data-i18n="dex.sec07.030">KYC / AML</td><td data-i18n="dex.sec07.031">Investor identity verification and anti-money laundering</td><td data-i18n="dex.sec07.032">Securitize iD</td><td data-i18n="dex.sec07.033" class="freq">✓ Active</td></tr>
+              <tr><td data-i18n="dex.sec07.034">Token Compliance</td><td data-i18n="dex.sec07.035">ERC-1400 / ERC-3643 transfer restrictions, holding periods</td><td data-i18n="dex.sec07.036">Smart contracts</td><td data-i18n="dex.sec07.037" class="freq">✓ On-chain</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec08.001" class="eyebrow">Market-Making Compliance</p>
+            <h2 data-i18n="dex.sec08.002">JUMP'S REGULATORY POSITION</h2>
+          </div>
+          <table class="data-table">
+            <thead><tr><th data-i18n="dex.sec08.003">Activity</th><th data-i18n="dex.sec08.004">License Requirement</th><th data-i18n="dex.sec08.005">How Addressed</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="dex.sec08.006">Operating PropAMM</td><td data-i18n="dex.sec08.007">Market-making function on a regulated venue</td><td data-i18n="dex.sec08.008">Covered under Securitize's broker-dealer wrapper</td></tr>
+              <tr><td data-i18n="dex.sec08.009">Liquidity on Jupiter</td><td data-i18n="dex.sec08.010">Non-custodial trade routing</td><td data-i18n="dex.sec08.011">Jupiter never takes custody of tokens</td></tr>
+              <tr><td data-i18n="dex.sec08.012">Cross-Market Arbitrage</td><td data-i18n="dex.sec08.013">Standard proprietary trading</td><td data-i18n="dex.sec08.014">Jump is a registered broker-dealer</td></tr>
+              <tr><td data-i18n="dex.sec08.015">Custody of Tokens</td><td data-i18n="dex.sec08.016">Qualified custodian status</td><td data-i18n="dex.sec08.017">Securitize provides custody</td></tr>
+            </tbody>
+          </table>
+          <div class="callout-band">Securitize's broker-dealer rails provide the regulatory wrapper, while Jump focuses purely on market-making technology. <strong data-i18n="dex.sec08.018">This three-way structure is why the partnership works.</strong></div>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec09.001" class="eyebrow">Investor Requirements</p>
+            <h2 data-i18n="dex.sec09.002">WHO CAN TRADE, AND HOW IT'S ENFORCED</h2>
+            <p data-i18n="dex.sec09.003" class="section-subtitle">For investors trading tokenized shares on Jupiter — enforced through Securitize iD and smart contracts.</p>
+          </div>
+          <div class="wp-cols" style="grid-template-columns: 1fr;">
+            <div class="wp-col" style="max-width:860px; margin:0 auto;">
+              <h3 data-i18n="dex.sec09.004">Investor Requirements</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec09.005">KYC / AML via Securitize iD</li>
+                <li data-i18n="dex.sec09.006">Accredited investor (Reg D) or non-US investor (Reg S)</li>
+                <li data-i18n="dex.sec09.007">Eligible securities wallet</li>
+                <li data-i18n="dex.sec09.008">DTC-registered digital wallet</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-heading centered" style="margin-top:56px;">
+            <h3 data-i18n="dex.sec09.009" style="font-size:1.3rem; color:var(--ink);">Token-Level Compliance</h3>
           </div>
           <div class="detail-grid reveal-stagger">
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Jump PropAMM</strong>
-                <p>Proprietary market making with institutional-grade pricing and 100ms quote updates.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+              <div><strong data-i18n="dex.sec09.010">Auto-Block Non-KYC Transfers</strong><p data-i18n="dex.sec09.011">Smart contract checks the Securitize iD registry before allowing any transfer. Non-verified wallets are automatically blocked.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>24/7/365 Trading</strong>
-                <p>Not limited to 9:30am–4pm ET — your equity is always accessible.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg>
+              <div><strong data-i18n="dex.sec09.012">Holding Period Enforcement</strong><p data-i18n="dex.sec09.013">Reg S Category 3 requires a 1-year holding period — enforced at the protocol level, with no exceptions possible.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Global Access</strong>
-                <p>Reach DeFi-native investors who will never open a TradFi brokerage account.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="dex.sec09.014">Jurisdiction Restrictions</strong><p data-i18n="dex.sec09.015">Tokens can be restricted by investor jurisdiction — US investors are automatically blocked from Reg S tokens, all enforced on-chain.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>T+0 Settlement</strong>
-                <p>Instant, atomic settlement — not T+1.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>
+              <div><strong data-i18n="dex.sec09.016">Accreditation Per Transfer</strong><p data-i18n="dex.sec09.017">Every transfer verifies investor accreditation status in real time. Lapsed accreditation blocks the transfer.</p></div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec10.001" class="eyebrow">The Value Chain</p>
+            <h2 data-i18n="dex.sec10.002">THE COMPLETE VALUE CHAIN</h2>
+          </div>
+          <p data-i18n="dex.sec10.003" class="wp-lead">CURRENC (Issuer) → Securitize (Tokenize, ERC-1400) → Jump (BisonFi PropAMM) → Jupiter (Route &amp; Execute) → <b>Global Investors</b> (24/7 Trading)</p>
+          <div class="wp-cols">
+            <div class="wp-col">
+              <h3 data-i18n="dex.sec10.004">For the Issuer</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec10.005">24/7 liquidity</li>
+                <li data-i18n="dex.sec10.006">Tight spreads — target 5–10 bps</li>
+                <li data-i18n="dex.sec10.007">Global access</li>
+                <li data-i18n="dex.sec10.008">Instant settlement</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3 data-i18n="dex.sec10.009">For Investors</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec10.010">Low fees</li>
+                <li data-i18n="dex.sec10.011">No brokerage required</li>
+                <li data-i18n="dex.sec10.012">Fully non-custodial</li>
+                <li data-i18n="dex.sec10.013">24/7 access</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout-band">Two separate volume universes: NASDAQ volume (consolidated tape) and Jupiter volume (on-chain only) — traditional platforms don't display DEX volume automatically.</div>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="dex.sec11.001" class="eyebrow">Proof &amp; What's Next</p>
+            <h2 data-i18n="dex.sec11.002">CASE STUDY &amp; VISION</h2>
+          </div>
+          <div class="detail-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
+              <div><strong data-i18n="dex.sec11.003">CURRENC Capital (CURR)</strong><p data-i18n="dex.sec11.004">First-mover: our own tokenized shares trade 24/7 on Jupiter. We eat our own cooking — every client gets the same infrastructure we use ourselves.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>
+              <div><strong data-i18n="dex.sec11.005">Projected Impact — $500M Company</strong><p data-i18n="dex.sec11.006">Traditional daily volume of $2–5M could grow to a combined $5–15M across NASDAQ + Jupiter, reaching 500K+ DeFi-native traders with continuous on-chain price discovery.</p></div>
+            </article>
+          </div>
+          <div class="wp-cols" style="grid-template-columns: 1fr; margin-top:40px;">
+            <div class="wp-col" style="max-width:860px; margin:0 auto;">
+              <h3 data-i18n="dex.sec11.007">Future Vision</h3>
+              <ul class="tick-list">
+                <li data-i18n="dex.sec11.008">Consolidated tape may include on-chain volume — a 2–5 year regulatory horizon</li>
+                <li data-i18n="dex.sec11.009">Today: treat NASDAQ and Jupiter as separate but complementary venues</li>
+                <li data-i18n="dex.sec11.010">Data aggregation: a combined volume tracker on your IR website bridges the gap</li>
+                <li data-i18n="dex.sec11.011">Regulatory clarity improving — Broker-Dealer Tokenization Act, SEC FinHub engagement</li>
+                <li data-i18n="dex.sec11.012">Institutional adoption accelerating — every major bank is exploring tokenized securities</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="cta-band reveal">
         <div class="container">
-          <h2>MEET THE $2T+ CRYPTO INVESTOR BASE WHERE THEY ALREADY TRADE.</h2>
+          <p data-i18n="dex.sec12.001" class="eyebrow">Get Started</p>
+          <h2 data-i18n="dex.sec12.002">TRADE 24/7. GLOBALLY. ON YOUR TERMS.</h2>
+          <p data-i18n="dex.sec12.003" class="section-subtitle">List your tokenized shares on Jupiter and reach an entirely new class of investor.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
+            <a data-i18n="dex.sec12.004" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="dex.sec12.005" class="button button-secondary" href="./index.html#deployment">See the Full Roadmap</a>
           </div>
         </div>
       </section>
@@ -132,16 +560,18 @@
       <div class="container">
         <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
         <nav aria-label="Footer navigation">
-          <a href="./weapon-intelligence.html">Intelligence</a>
-          <a href="./weapon-tokenization.html">Tokenization</a>
-          <a href="./weapon-lending.html">Lending</a>
-          <a href="./weapon-dex-listing.html">DEX Listing</a>
-          <a href="./weapon-ir-market-making.html">IR &amp; MM</a>
-          <a href="./index.html#contact">Contact</a>
+          <a data-i18n="common.footer.intel" href="./weapon-intelligence.html">Intelligence</a>
+          <a data-i18n="common.footer.token" href="./weapon-tokenization.html">Tokenization</a>
+          <a data-i18n="common.footer.lend" href="./weapon-lending.html">Lending</a>
+          <a data-i18n="common.footer.dex" href="./weapon-dex-listing.html">DEX Listing</a>
+          <a data-i18n="common.footer.irmm" href="./weapon-ir-market-making.html">IR &amp; MM</a>
+          <a data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
         </nav>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./translations.js?v=20260708d"></script>
+    <script src="./i18n.js?v=20260708d"></script>
+    <script src="./script.js?v=20260708d"></script>
   </body>
 </html>

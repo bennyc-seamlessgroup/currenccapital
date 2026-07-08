@@ -3,11 +3,132 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tokenization (TaaS) | CURRENC Capital</title>
-    <meta name="description" content="Convert your shares to ERC-1400 security tokens — remove them from global lending pools and enable 24/7 trading." />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Tokenization (TaaS) | CURRENC Capital x Securitize</title>
+    <meta name="description" content="Turn your stock into a token. Tokenization-as-a-Service with Securitize — SEC-compliant, FINRA-approved, four weeks to go-live." />
+    <link rel="stylesheet" href="./styles.css?v=20260708d" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-radar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          <path d="M12 3v3M21 12h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-coin" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-bank" viewBox="0 0 24 24">
+          <path d="M12 3 3 8h18L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 10h16M6 10v8M10.3 10v8M13.7 10v8M18 10v8M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" />
+        </symbol>
+        <symbol id="icon-megaphone" viewBox="0 0 24 24">
+          <path d="M3 10v4h3l8 4.5V5.5L6 10H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M15 9.2a4 4 0 010 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-ticker" viewBox="0 0 24 24">
+          <path d="M3 16.5l5.5-6 4 3.5L21 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="21" cy="5" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-no-cash" viewBox="0 0 24 24">
+          <rect x="2.5" y="6.5" width="19" height="12" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="12" cy="12.5" r="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M4 20L20 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-building" viewBox="0 0 24 24">
+          <path d="M4 21V7.2L12 3l8 4.2V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9.5 21v-5.5h5V21M3 21h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-warning" viewBox="0 0 24 24">
+          <path d="M12 3 22 20H2L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-gauge" viewBox="0 0 24 24">
+          <path d="M4 16a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M12 16l4.2-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="12" cy="16" r="1.3" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-trend-down" viewBox="0 0 24 24">
+          <path d="M3 6l6.5 6.5 4-4L21 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 10.5V17h-6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-trend-up" viewBox="0 0 24 24">
+          <path d="M3 17.5l6.5-6.5 4 4L21 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 6.5h6V12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-hourglass" viewBox="0 0 24 24">
+          <path d="M6 3h12M6 21h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M7 3c0 5 5 5.4 5 9s-5 4-5 9M17 3c0 5-5 5.4-5 9s5 4 5 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-layers" viewBox="0 0 24 24">
+          <path d="M12 2 2 7.5l10 5 10-5L12 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M2 12.3l10 5 10-5M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-shuffle" viewBox="0 0 24 24">
+          <path d="M17 3h4v4M3 21 21 3M21 17v4h-4M14.5 14.5 21 21M3 3l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24">
+          <path d="M20.5 13.4A8.5 8.5 0 1110.6 3.5a7 7 0 009.9 9.9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+          <path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
+        </symbol>
+        <symbol id="icon-badge-check" viewBox="0 0 24 24">
+          <path d="M12 2.5 15 4.6 18.8 5 18 8.8 19 12l-1 3.2.8 3.8-3.8.4L12 21.5 9 19.4l-3.8-.4.8-3.8L5 12l1-3.2L5.2 5 9 4.6 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+          <path d="M8.5 12.3l2.3 2.3 4.7-4.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-rocket" viewBox="0 0 24 24">
+          <path d="M14.5 4.5c3 .3 5 2.3 5.3 5.3-3.6.9-7.5 5.2-9.6 9.4l-3-3c4.2-2.1 8.5-6 9.4-9.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4.8 19.2c.6-2.2 1.8-3.6 3.6-4M4.8 19.2c2.2-.6 3.6-1.8 4-3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <circle cx="15" cy="9" r="1.4" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="icon-dollar" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 6.5v11M15 9.6c0-1.5-1.4-2.6-3-2.6s-3 1-3 2.4 1.3 2 3 2.6 3 1.1 3 2.6-1.4 2.4-3 2.4-3-1.1-3-2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+          <rect x="2.5" y="5" width="19" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-doc" viewBox="0 0 24 24">
+          <path d="M6 2.5h8L19 7.5V21.5H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M14 2.5v5h5M9 12h7M9 15.5h7M9 8.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-book" viewBox="0 0 24 24">
+          <path d="M4 4.5A2.5 2.5 0 016.5 2H20v17.5H6.5A2.5 2.5 0 004 22z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20M8 6.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-list" viewBox="0 0 24 24">
+          <path d="M8 6h13M8 12h13M8 18h13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-send" viewBox="0 0 24 24">
+          <path d="M21 3 3 10.5l7 2.5 2.5 7L21 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M10 13 21 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+          <path d="M12 2.5c2.6 1.2 4.6 1.7 7 2.2-.1 6.3-2 10.6-7 13.8-5-3.2-6.9-7.5-7-13.8 2.4-.5 4.4-1 7-2.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M9 11.5l2.2 2.2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+      </defs>
+    </svg>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="CURRENC Capital home">
@@ -17,24 +138,39 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="./index.html#problem">Problem</a>
+          <a data-i18n="common.nav.problem" href="./index.html#problem">Problem</a>
           <div class="nav-dd">
-            <a class="nav-dd-toggle" href="./index.html#solution">Arsenal<svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="nav-dd-toggle" href="./index.html#solution"><span data-i18n="common.nav.arsenal">Arsenal</span><svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div class="nav-dd-menu">
-              <a href="./index.html#solution">Arsenal Overview</a>
-              <a href="weapon-intelligence.html">01 · Intelligence</a>
-              <a href="weapon-tokenization.html">02 · Tokenization</a>
-              <a href="weapon-lending.html">03 · Lending</a>
-              <a href="weapon-dex-listing.html">04 · DEX Listing</a>
-              <a href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
+              <a data-i18n="common.nav.arsenal_overview" href="./index.html#solution">Arsenal Overview</a>
+              <a data-i18n="common.nav.w01" href="weapon-intelligence.html">01 · Intelligence</a>
+              <a data-i18n="common.nav.w02" href="weapon-tokenization.html">02 · Tokenization</a>
+              <a data-i18n="common.nav.w03" href="weapon-lending.html">03 · Lending</a>
+              <a data-i18n="common.nav.w04" href="weapon-dex-listing.html">04 · DEX Listing</a>
+              <a data-i18n="common.nav.w05" href="weapon-ir-market-making.html">05 · IR &amp; Market Making</a>
             </div>
           </div>
-          <a href="./index.html#deployment">Deployment</a>
-          <a href="./index.html#why">Why CURRENC</a>
-          <a href="./index.html#contact">Contact</a>
-          <a class="nav-cta nav-cta-mobile" href="./index.html#contact">Free Short Analysis</a>
+          <a data-i18n="common.nav.deployment" href="./index.html#deployment">Deployment</a>
+          <a data-i18n="common.nav.why" href="./index.html#why">Why CURRENC</a>
+          <a class="nav-cta nav-cta-mobile" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
+          <div class="lang-switch lang-switch-mobile">
+            <select class="lang-select" aria-label="Select language">
+              <option value="en">Eng</option>
+              <option value="zh-Hant">繁</option>
+              <option value="zh-Hans">簡</option>
+            </select>
+          </div>
+          
         </nav>
-        <a class="nav-cta nav-cta-desktop" href="./index.html#contact">Free Short Analysis</a>
+        <div class="lang-switch lang-switch-desktop">
+          <select class="lang-select" aria-label="Select language">
+            <option value="en">Eng</option>
+            <option value="zh-Hant">繁</option>
+            <option value="zh-Hans">簡</option>
+          </select>
+        </div>
+        
+        <a class="nav-cta nav-cta-desktop" data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
       </div>
     </header>
     <div class="nav-scrim" hidden></div>
@@ -42,81 +178,280 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <span class="page-hero-num" aria-hidden="true">02</span>
-          <p class="meta">Weapon 02 · TaaS — Partner: Securitize</p>
-          <h1>TOKENIZATION <span class="h1-accent">TAKE YOUR SHARES OFF THE BATTLEFIELD.</span></h1>
-          <p class="hero-subhead">Convert your shares to ERC-1400 security tokens — remove them from global lending pools and enable 24/7 trading.</p>
+          <span data-i18n="token.sec01.001" class="page-hero-num" aria-hidden="true">02</span>
+          <p data-i18n="token.sec01.002" class="meta">Weapon 02 · TaaS — Partner: Securitize</p>
+          <h1 data-i18n="token.sec01.003">TOKENIZATION <span class="h1-accent">TURN YOUR STOCK INTO A TOKEN.</span></h1>
+          <p data-i18n="token.sec01.004" class="hero-subhead">Tokenization-as-a-Service. SEC-compliant. FINRA-approved. Four weeks to go-live.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
-            <a class="button button-secondary" href="./index.html#deployment">See Deployment Timeline</a>
+            <a data-i18n="token.sec01.005" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="token.sec01.006" class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
           </div>
         </div>
       </section>
 
-      <section id="benefits" class="section-full section-light reveal">
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec02.001" class="eyebrow">Tokenization-as-a-Service</p>
+            <h2 data-i18n="token.sec02.002">SECURITIZE HIGHLIGHTS</h2>
+            <p data-i18n="token.sec02.003" class="section-subtitle">The only tokenization partner with a regulator-cleared track record.</p>
+          </div>
+          <ul class="wp-highlights">
+            <li data-i18n="token.sec02.004"><svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>First FINRA-approved BD for tokens</li>
+            <li data-i18n="token.sec02.005"><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>ATS registered</li>
+            <li data-i18n="token.sec02.006"><svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>$1B+ tokenized assets</li>
+            <li data-i18n="token.sec02.007"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>ERC-1400 / ERC-3643 compliant</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="problem" class="section-full section-light reveal">
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">Key Benefits</p>
-            <h2>WHY TOKENIZE</h2>
-            <p class="section-subtitle">Eight advantages, one compliant standard.</p>
+            <p data-i18n="token.problem.001" class="eyebrow">The Problem</p>
+            <h2 data-i18n="token.problem.002">YOUR SHARES ARE TRAPPED</h2>
+            <p data-i18n="token.problem.003" class="section-subtitle">Traditional share infrastructure enables short attacks — the system was built for liquidity, not issuer protection.</p>
           </div>
           <div class="detail-grid reveal-stagger">
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Remove Shares From Lending Pools</strong>
-                <p>Tokenized shares cannot be borrowed and re-lent — every token starves the short attack.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+              <div><strong data-i18n="token.problem.004">Street Name = No Control</strong><p data-i18n="token.problem.005">Shares held in street name can be re-lent without your consent or knowledge.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Real-Time Ownership Visibility</strong>
-                <p>Know exactly who holds your equity at any moment, on-chain.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg>
+              <div><strong data-i18n="token.problem.006">45-Day Disclosure Delay</strong><p data-i18n="token.problem.007">By the time short interest data is public, the attack has been underway for weeks.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Programmable Compliance</strong>
-                <p>Transfer restrictions and investor rules are auto-enforced in the token itself.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg>
+              <div><strong data-i18n="token.problem.008">Infinite Rehypothecation</strong><p data-i18n="token.problem.009">DTC omnibus accounts enable a single share to be lent 3–5×, creating phantom supply.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Instant Settlement (T+0)</strong>
-                <p>No two-day settlement window for shorts to exploit.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>
+              <div><strong data-i18n="token.problem.010">Settlement Fails</strong><p data-i18n="token.problem.011">Failed trades create phantom shares that inflate float and dilute ownership records.</p></div>
+            </article>
+          </div>
+          <div class="callout-band">CEOs and boards have <strong data-i18n="token.problem.012">no control</strong> over who borrows their shares, how many times they're re-lent, or when the attack will come.</div>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec04.001" class="eyebrow">The Opportunity</p>
+            <h2 data-i18n="token.sec04.002">BLOCKCHAIN FIXES WHAT'S BROKEN</h2>
+            <p data-i18n="token.sec04.003" class="section-subtitle">Every failure point in traditional share infrastructure has a blockchain-native fix.</p>
+          </div>
+          <div class="feature-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>
+              <div><strong data-i18n="token.sec04.004">Direct Ownership</strong><p data-i18n="token.sec04.005">Blockchain registry replaces street name. Every holder known, every transfer tracked.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>24/7 Global Trading Access</strong>
-                <p>Your equity trades around the clock, not just 9:30–4:00 ET.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>
+              <div><strong data-i18n="token.sec04.006">Real-Time Tracking</strong><p data-i18n="token.sec04.007">No 45-day delay. See ownership changes as they happen, on-chain.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Reduced Transfer Agent Costs</strong>
-                <p>On-chain registry replaces legacy transfer agent overhead.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+              <div><strong data-i18n="token.sec04.008">Smart Contract Restrictions</strong><p data-i18n="token.sec04.009">Programmable rules prevent unauthorized lending, auto-enforced on every transfer.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>New DeFi-Native Investor Base</strong>
-                <p>Reach a $2T+ pool of crypto-native capital that never opens a TradFi brokerage.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg>
+              <div><strong data-i18n="token.sec04.010">Instant Settlement</strong><p data-i18n="token.sec04.011">T+0 on-chain settlement. No more T+1 delays or settlement fails.</p></div>
             </article>
             <article class="detail-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>SEC-Compliant via Securitize</strong>
-                <p>Executed through a FINRA-approved broker-dealer with a registered ATS.</p>
-              </div>
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="token.sec04.012">24/7 Global Trading</strong><p data-i18n="token.sec04.013">Not limited to 9:30–4:00 ET. Trade around the clock with global investors.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>
+              <div><strong data-i18n="token.sec04.014">Programmable Compliance</strong><p data-i18n="token.sec04.015">KYC, holding periods, and jurisdiction rules — all enforced automatically by smart contracts.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform" class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.platform.001" class="eyebrow">The Platform</p>
+            <h2 data-i18n="token.platform.002">TaaS PLATFORM OVERVIEW</h2>
+            <p data-i18n="token.platform.003" class="section-subtitle">Convert your shares into regulated security tokens (ERC-1400 / ERC-3643) — maintain full SEC compliance while unlocking blockchain benefits.</p>
+          </div>
+          <div class="wp-cols">
+            <div class="wp-col">
+              <h3 data-i18n="token.platform.004">The Technology</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.platform.005">ERC-1400 / ERC-3643 security tokens</li>
+                <li data-i18n="token.platform.006">Full SEC compliance maintained</li>
+                <li data-i18n="token.platform.007">Smart contract transfer restrictions</li>
+                <li data-i18n="token.platform.008">Blockchain benefits with investor protections</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3 data-i18n="token.platform.009">The Partnership</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.platform.010">Partnership with Securitize (SECZ)</li>
+                <li data-i18n="token.platform.011">First FINRA-approved broker-dealer for tokens</li>
+                <li data-i18n="token.platform.012">Bundled with the Intelligence platform</li>
+                <li data-i18n="token.platform.013">6-K filing support throughout</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-heading centered" style="margin-top:64px;">
+            <p data-i18n="token.platform.014" class="eyebrow">Before &amp; After</p>
+            <h2 data-i18n="token.platform.015">WHAT CHANGES AFTER TOKENIZATION</h2>
+          </div>
+          <div class="compare-grid">
+            <div class="compare-col bad">
+              <h3 data-i18n="token.platform.016"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>Before</h3>
+              <ul>
+                <li data-i18n="token.platform.017"><span class="cx">✕</span>Street name ownership</li>
+                <li data-i18n="token.platform.018"><span class="cx">✕</span>45-day data delay</li>
+                <li data-i18n="token.platform.019"><span class="cx">✕</span>Shares freely re-lent</li>
+                <li data-i18n="token.platform.020"><span class="cx">✕</span>T+1 settlement</li>
+                <li data-i18n="token.platform.021"><span class="cx">✕</span>9:30–4 ET trading</li>
+                <li data-i18n="token.platform.022"><span class="cx">✕</span>US investors only</li>
+              </ul>
+            </div>
+            <div class="compare-col good">
+              <h3 data-i18n="token.platform.023"><svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>After</h3>
+              <ul>
+                <li data-i18n="token.platform.024"><span class="ck">✓</span>Direct blockchain ownership</li>
+                <li data-i18n="token.platform.025"><span class="ck">✓</span>Real-time visibility</li>
+                <li data-i18n="token.platform.026"><span class="ck">✓</span>Smart contract restricted</li>
+                <li data-i18n="token.platform.027"><span class="ck">✓</span>T+0 settlement</li>
+                <li data-i18n="token.platform.028"><span class="ck">✓</span>24/7 global trading</li>
+                <li data-i18n="token.platform.029"><span class="ck">✓</span>Global investor access</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec06.001" class="eyebrow">The Partner</p>
+            <h2 data-i18n="token.sec06.002">THE SECURITIZE PARTNERSHIP</h2>
+            <p data-i18n="token.sec06.003" class="section-subtitle">First FINRA-approved broker-dealer cleared to custody tokenized securities (May 2026).</p>
+          </div>
+          <div class="stats-band reveal-stagger">
+            <article><strong data-i18n="token.sec06.004">1st</strong><span data-i18n="token.sec06.005">FINRA-approved broker-dealer for tokenized securities</span></article>
+            <article><strong data-i18n="token.sec06.006">ATS</strong><span data-i18n="token.sec06.007">Registered Alternative Trading System</span></article>
+            <article><strong data-i18n="token.sec06.008">$1B+</strong><span data-i18n="token.sec06.009">In securities already tokenized</span></article>
+          </div>
+          <div class="wp-cols" style="margin-top:56px;">
+            <div class="wp-col">
+              <h3 data-i18n="token.sec06.010">Credentials</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.sec06.011">FINRA-registered broker-dealer</li>
+                <li data-i18n="token.sec06.012">ATS (Alternative Trading System)</li>
+                <li data-i18n="token.sec06.013">Digital transfer agent — NYSE Digital</li>
+                <li data-i18n="token.sec06.014">KYC / AML via Securitize iD</li>
+                <li data-i18n="token.sec06.015">Investor accreditation verification</li>
+              </ul>
+            </div>
+            <div class="wp-col">
+              <h3 data-i18n="token.sec06.016">Compliance</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.sec06.017">Smart contract transfer restrictions</li>
+                <li data-i18n="token.sec06.018">ERC-1400 / ERC-3643 compliant</li>
+                <li data-i18n="token.sec06.019">6-K filing support</li>
+                <li data-i18n="token.sec06.020">$1B+ in tokenized assets issued</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout-band">Securitize's institutional clients include <strong data-i18n="token.sec06.021">KKR, Hamilton Lane, and Apollo</strong> — the same infrastructure now available to your company.</div>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec07.001" class="eyebrow">The Process</p>
+            <h2 data-i18n="token.sec07.002">FOUR WEEKS TO GO-LIVE</h2>
+            <p data-i18n="token.sec07.003" class="section-subtitle">From legal structuring to trading — a clear, staged rollout.</p>
+          </div>
+          <ol class="steps-list">
+            <li><div><div class="step-head"><strong data-i18n="token.sec07.004">Legal Structuring</strong><span data-i18n="token.sec07.005" class="step-week">Week 1–2</span></div><p data-i18n="token.sec07.006">SEC advisory, board resolution, legal documentation, and regulatory pathway selection.</p></div></li>
+            <li><div><div class="step-head"><strong data-i18n="token.sec07.007">Smart Contract</strong><span data-i18n="token.sec07.008" class="step-week">Week 2–3</span></div><p data-i18n="token.sec07.009">ERC-1400 / ERC-3643 configuration, compliance rules programming, and token parameters.</p></div></li>
+            <li><div><div class="step-head"><strong data-i18n="token.sec07.010">Issuance</strong><span data-i18n="token.sec07.011" class="step-week">Week 3–4</span></div><p data-i18n="token.sec07.012">Token issuance and investor onboarding via Securitize iD KYC, plus wallet setup.</p></div></li>
+            <li><div><div class="step-head"><strong data-i18n="token.sec07.013">Go-Live</strong><span data-i18n="token.sec07.014" class="step-week">Week 4</span></div><p data-i18n="token.sec07.015">Trading begins, with full 6-K filing support throughout.</p></div></li>
+          </ol>
+          <div class="wp-cols" style="margin-top:56px; grid-template-columns: 1fr;">
+            <div class="wp-col" style="max-width:860px; margin:0 auto;">
+              <h3 data-i18n="token.sec07.016">Ongoing Support</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.sec07.017">Full 6-K filing support for all tokenization events</li>
+                <li data-i18n="token.sec07.018">SEC advisory on regulatory questions</li>
+                <li data-i18n="token.sec07.019">Investor onboarding and wallet support</li>
+                <li data-i18n="token.sec07.020">Smart contract monitoring and updates</li>
+                <li data-i18n="token.sec07.021">Transfer agent services via Securitize</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec08.001" class="eyebrow">Compliance</p>
+            <h2 data-i18n="token.sec08.002">REGULATORY FRAMEWORK</h2>
+            <p data-i18n="token.sec08.003" class="section-subtitle">Full SEC and FINRA compliance through Securitize's regulated infrastructure.</p>
+          </div>
+          <table class="data-table">
+            <thead><tr><th data-i18n="token.sec08.004">Requirement</th><th data-i18n="token.sec08.005">How It's Addressed</th><th data-i18n="token.sec08.006">Status</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="token.sec08.007">SEC Registration</td><td data-i18n="token.sec08.008">Securitize BD registration covers token issuance</td><td data-i18n="token.sec08.009"><span class="ck">✓ Compliant</span></td></tr>
+              <tr><td data-i18n="token.sec08.010">FINRA Oversight</td><td data-i18n="token.sec08.011">Securitize is a FINRA-registered broker-dealer</td><td data-i18n="token.sec08.012"><span class="ck">✓ Compliant</span></td></tr>
+              <tr><td data-i18n="token.sec08.013">ATS Registration</td><td data-i18n="token.sec08.014">Securitize Markets ATS for secondary trading</td><td data-i18n="token.sec08.015"><span class="ck">✓ Compliant</span></td></tr>
+              <tr><td data-i18n="token.sec08.016">Transfer Agent</td><td data-i18n="token.sec08.017">Securitize serves as digital transfer agent</td><td data-i18n="token.sec08.018"><span class="ck">✓ Compliant</span></td></tr>
+              <tr><td data-i18n="token.sec08.019">Investor Eligibility</td><td data-i18n="token.sec08.020">Reg D (accredited US) or Reg S (non-US)</td><td data-i18n="token.sec08.021"><span class="ck">✓ Compliant</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec09.001" class="eyebrow">Benefits for Issuers</p>
+            <h2 data-i18n="token.sec09.002">WHAT YOUR COMPANY GAINS</h2>
+          </div>
+          <div class="feature-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+              <div><strong data-i18n="token.sec09.003">Remove From Lending Pools</strong><p data-i18n="token.sec09.004">Tokenized shares exit traditional lending pools, reducing your short attack surface.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>
+              <div><strong data-i18n="token.sec09.005">Real-Time Visibility</strong><p data-i18n="token.sec09.006">See exactly who owns your shares, in what quantities, updated in real-time.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>
+              <div><strong data-i18n="token.sec09.007">Programmable Compliance</strong><p data-i18n="token.sec09.008">Auto-enforced rules — holding periods, transfer restrictions, KYC on every transaction.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+              <div><strong data-i18n="token.sec09.009">Reduced Costs</strong><p data-i18n="token.sec09.010">Lower transfer agent costs, streamlined compliance, less administrative overhead.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="token.sec09.011">New Investor Base</strong><p data-i18n="token.sec09.012">Access DeFi-native and global investors who never open a traditional brokerage.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>
+              <div><strong data-i18n="token.sec09.013">Future-Proof</strong><p data-i18n="token.sec09.014">Blockchain-based infrastructure positions your company for the future of capital markets.</p></div>
             </article>
           </div>
         </div>
@@ -126,31 +461,117 @@
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p class="eyebrow">The Partner</p>
-            <h2>THE TOKENIZATION LEADER — SECURITIZE</h2>
+            <p data-i18n="token.sec10.001" class="eyebrow">Benefits for Shareholders</p>
+            <h2 data-i18n="token.sec10.002">WHAT YOUR INVESTORS GAIN</h2>
           </div>
-          <div class="stats-band">
-            <article>
-              <strong>1st</strong>
-              <span>FINRA-approved broker-dealer for tokenized securities</span>
+          <div class="feature-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg>
+              <div><strong data-i18n="token.sec10.003">Direct Ownership</strong><p data-i18n="token.sec10.004">Blockchain-verified ownership, not held in street name — full transparency and control.</p></div>
             </article>
-            <article>
-              <strong>ATS</strong>
-              <span>Registered Alternative Trading System</span>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+              <div><strong data-i18n="token.sec10.005">24/7 Trading Access</strong><p data-i18n="token.sec10.006">Trade anytime, not just 9:30am–4:00pm ET. Global market access around the clock.</p></div>
             </article>
-            <article>
-              <strong>$1B+</strong>
-              <span>In securities already tokenized</span>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg>
+              <div><strong data-i18n="token.sec10.007">Instant Settlement</strong><p data-i18n="token.sec10.008">T+0 settlement on-chain. No more T+1 waiting periods or settlement risk.</p></div>
             </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-bank"></use></svg>
+              <div><strong data-i18n="token.sec10.009">DeFi Lending Collateral</strong><p data-i18n="token.sec10.010">Pledge tokenized shares as collateral to borrow stablecoins — unlock liquidity without selling.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="token.sec10.011">Global Market Access</strong><p data-i18n="token.sec10.012">Non-US investors can access your stock through Reg S tokenized offerings.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+              <div><strong data-i18n="token.sec10.013">Reduced Custody Costs</strong><p data-i18n="token.sec10.014">Blockchain-based custody eliminates many traditional intermediary fees.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.pricing.001" class="eyebrow">Pricing &amp; Deployment</p>
+            <h2 data-i18n="token.pricing.002">TWO WAYS TO DEPLOY</h2>
+            <p data-i18n="token.pricing.003" class="section-subtitle">Live in four weeks from signed engagement — pay in cash, or in shares to preserve capital.</p>
+          </div>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <span data-i18n="token.pricing.004" class="pricing-tag">Option A — Cash</span>
+              <div class="pricing-price">$350,000</div>
+              <p data-i18n="token.pricing.005" class="pricing-sub">One-time cash payment.</p>
+              <ul>
+                <li data-i18n="token.pricing.006">Intelligence (SaaS) + Tokenization (TaaS) bundled</li>
+                <li data-i18n="token.pricing.007">12-month support, 6-K filing support</li>
+              </ul>
+            </div>
+            <div class="pricing-card featured">
+              <span data-i18n="token.pricing.008" class="pricing-tag">Option B — Shares</span>
+              <div class="pricing-price">$500,000</div>
+              <p data-i18n="token.pricing.009" class="pricing-sub">Paid in your shares at current market price.</p>
+              <ul>
+                <li data-i18n="token.pricing.010">No cash outlay — preserve capital</li>
+                <li data-i18n="token.pricing.011">Intelligence (SaaS) + Tokenization (TaaS) bundled</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing-include">
+            <strong data-i18n="token.pricing.012">Both options include</strong>
+            <ul>
+              <li data-i18n="token.pricing.013">4-week deployment from signed engagement</li>
+              <li data-i18n="token.pricing.014">Onboarding, training, and go-live support</li>
+              <li data-i18n="token.pricing.015">12-month support and updates</li>
+              <li data-i18n="token.pricing.016">6-K filing support throughout</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-full section-light reveal">
+        <div class="anim-bg light" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="token.sec12.001" class="eyebrow">Proof It Works</p>
+            <h2 data-i18n="token.sec12.002">TRACK RECORD</h2>
+          </div>
+          <div class="detail-grid reveal-stagger">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
+              <div><strong data-i18n="token.sec12.003">CURRENC Capital (Nasdaq: CURR)</strong><p data-i18n="token.sec12.004">We've tokenized our own shares — first-mover advantage, and living proof the system works. Our tokenized shares trade alongside our Nasdaq listing.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+              <div><strong data-i18n="token.sec12.005">Securitize Ecosystem</strong><p data-i18n="token.sec12.006">Securitize has tokenized $1B+ in assets, including KKR, Hamilton Lane, and Apollo — with a growing pipeline of public companies exploring tokenization.</p></div>
+            </article>
+          </div>
+          <div class="wp-cols" style="margin-top:56px; grid-template-columns: 1fr;">
+            <div class="wp-col" style="max-width:860px; margin:0 auto;">
+              <h3 data-i18n="token.sec12.007">Regulatory Environment</h3>
+              <ul class="tick-list">
+                <li data-i18n="token.sec12.008">Broker-Dealer Tokenization Act introduced in Congress (Dec 2024)</li>
+                <li data-i18n="token.sec12.009">SEC FinHub actively engaging with tokenization projects</li>
+                <li data-i18n="token.sec12.010">Regulatory clarity improving — early movers gain the advantage</li>
+                <li data-i18n="token.sec12.011">Institutional adoption accelerating — BlackRock, Franklin Templeton tokenizing</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="cta-band reveal">
         <div class="container">
-          <h2>EVERY TOKENIZED SHARE IS A SHARE SHORTS CAN'T BORROW.</h2>
+          <p data-i18n="token.sec13.001" class="eyebrow">Get Started</p>
+          <h2 data-i18n="token.sec13.002">TURN YOUR STOCK INTO A TOKEN. SECURE YOUR SHARES.</h2>
+          <p data-i18n="token.sec13.003" class="section-subtitle">Go from paper certificate to programmable, defended equity in just four weeks.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html#contact">Request Free Short Analysis</a>
+            <a data-i18n="token.sec13.004" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="token.sec13.005" class="button button-secondary" href="./index.html#deployment">See the Full Roadmap</a>
           </div>
         </div>
       </section>
@@ -160,16 +581,18 @@
       <div class="container">
         <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
         <nav aria-label="Footer navigation">
-          <a href="./weapon-intelligence.html">Intelligence</a>
-          <a href="./weapon-tokenization.html">Tokenization</a>
-          <a href="./weapon-lending.html">Lending</a>
-          <a href="./weapon-dex-listing.html">DEX Listing</a>
-          <a href="./weapon-ir-market-making.html">IR &amp; MM</a>
-          <a href="./index.html#contact">Contact</a>
+          <a data-i18n="common.footer.intel" href="./weapon-intelligence.html">Intelligence</a>
+          <a data-i18n="common.footer.token" href="./weapon-tokenization.html">Tokenization</a>
+          <a data-i18n="common.footer.lend" href="./weapon-lending.html">Lending</a>
+          <a data-i18n="common.footer.dex" href="./weapon-dex-listing.html">DEX Listing</a>
+          <a data-i18n="common.footer.irmm" href="./weapon-ir-market-making.html">IR &amp; MM</a>
+          <a data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
         </nav>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./translations.js?v=20260708d"></script>
+    <script src="./i18n.js?v=20260708d"></script>
+    <script src="./script.js?v=20260708d"></script>
   </body>
 </html>

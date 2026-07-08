@@ -260,3 +260,17 @@ if (contactForm) {
     setNote(contactForm, "Opening your email client — send the drafted message to complete your request.", "is-success");
   });
 }
+
+/* ============ Report page sticky CTA bar ============ */
+
+const reportSticky = document.getElementById("report-sticky");
+
+if (reportSticky) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      reportSticky.classList.toggle("visible", window.scrollY > 600);
+    },
+    { passive: true }
+  );
+}

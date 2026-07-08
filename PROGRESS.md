@@ -95,6 +95,163 @@ primary #0F3460 · background #0B1D3A · background-deep #071428 · accent #C9A2
   company address — `isCorporateEmail()` + `FREE_EMAIL_DOMAINS` set in script.js rejects Gmail/Outlook/etc. with a clear
   message. Title included in the composed mailto body.
 
+## Hero shield + About + Contact (done)
+- Hero SVG (`.hero-chart`): big shiny gold **defense shield** (`.hero-shield` + `#shieldGold` gradient,
+  column emblem, `.shield-shine` sweep, `.hero-shield-ring` pulses, `.hero-shield-radar`, `.hero-shield-halo`)
+  centered ~(1300,500). Crash line falls INTO it (ends 1160,600); recovery launches OUT to the top-right (from 1440,560).
+  Keyframes: heroShieldBreathe/heroRing/heroHaloPulse/heroRadarSpin/heroShieldShine. `.h1-accent` has a dark
+  text-shadow so the gold headline stays legible where it crosses the shield.
+- Nav trimmed to 5 items with an **Arsenal dropdown** (`.nav-dd`) linking the 5 weapon pages; hero chips hidden ≤1280px.
+- About (`#about`): uses `Resources/All Logos_Currenc_Logo_dark_bg.png` in an `.about-emblem` card with a
+  red-crash→gold-recovery `.emblem-chart` ("deployed on our own shares first").
+- Contact form: adds **Title / Position** (`#cf-title`, required) and requires a corporate **Company Email**
+  (script.js rejects webmail domains — gmail/outlook/etc. — via the free-domain list).
+
+## Two homepage versions
+- **index.html** — NEW cinematic hero (`.hero-v2` / `.hero-scene`): full-bleed dangerous red scene
+  (raining red arrows, red crash candles left, gold recovery candles right, ember glow, big glowing gold
+  shield + column at the V dip). Centered headline; flashing `.chip-attack` (SHORT ATTACK DETECTED, top-left)
+  and `.chip-defense` (DEFENCE ACTIVE, lower-right) via `chipFlash`. Hero regen: rerun the inline python that
+  builds candles/arrows/shield (shield centred ~820,700; dip 820,830). Mobile: kicker hidden, stronger
+  `.hero-scrim-v2`, smaller h1.
+- **index-alt.html** — the PREVIOUS shield hero (text-left, gold shield right on navy), FROZEN. It links
+  **styles-alt.css** (a copy), so editing styles.css does NOT affect it. Don't rerun gen scripts against it.
+- Both share script.js and the weapon pages (weapon pages link styles.css / their own page-hero).
+
+## short-analysis.html — $12K report landing page (done)
+- Homepage's `#contact` section (TAKE BACK CONTROL OF YOUR EQUITY) was REMOVED entirely from
+  index.html. All CTAs that pointed to `#contact` (nav CTA, hero button, tombstone "Request Full
+  Report" links, footer) now point to `./short-analysis.html`. Nav CTA renamed to
+  **"Get My $12K Report"** everywhere (index + all weapon pages).
+- `short-analysis.html` is a full standalone page (own copy of the icon sprite, same
+  header/footer conventions as weapon pages) with: hero (two-col, left copy + right
+  `.report-card` preview — reuses `.mockup-chart`/`pchart-*` animation exactly, just relabeled
+  "SQUEEZE RISK RISING"), stat strip, "What's Inside" 6-card grid (`.report-item`), an animated
+  **squeeze-scenario bar chart** (`.scenario-panel`/`.scenario-row`/`.scenario-fill`, width
+  animates via `--pct` custom prop on `.reveal.is-visible`), a comparables `.data-table` with a
+  `.highlight` row, `.steps-list` (reused), testimonials (`.testi-*`), FAQ (reused pattern), and
+  the exact same `.contact-form`/`#contact-form` markup as the old homepage contact section
+  (same `cf-name/cf-title/cf-company/cf-email/cf-message` IDs — script.js's corporate-email
+  validation and mailto-compose work unchanged). Adds a `.report-sticky` bottom bar that appears
+  after `scrollY > 600` (JS in script.js, guarded by `if (reportSticky)` so it's a no-op elsewhere).
+- **Cache-busting**: all HTML files now load `styles.css?v=20260708b` / `script.js?v=20260708b`
+  (and `index-alt.html` loads `styles-alt.css?v=...`). Bump this version string after future CSS/JS
+  edits if a change doesn't seem to show up — the python http.server sends no explicit
+  Cache-Control, so browsers can serve a stale copy across reloads without a version bump.
+- Gotcha found & noted: synthetic `element.click()` on a `<summary>` via `preview_eval` does NOT
+  reliably trigger the native `<details>` "toggle" event bookkeeping in this environment (so the
+  FAQ close-others script.js logic looks broken under synthetic `.click()`). Always verify
+  accordion/details behavior with the real `preview_click` tool, not `el.click()` in eval.
+
+## weapon-tokenization.html (full content, done)
+- Built from the client's PPTX (`Resources/3 TOKENIZATION — ...pptx x SECURITIZE`), same pattern as
+  weapon-intelligence.html (own copy of the icon sprite embedded). 13 sections. **Slide 13 (a stray
+  internal note "CURR to provide – minting, burning, bridging…", about DEX not Tokenization) was
+  intentionally dropped** — it wasn't polished content and belongs on the DEX-listing page, not here.
+- Flow: hero → Securitize highlights → Problem ("Your Shares Are Trapped", 4 detail-cards + callout)
+  → Opportunity (6-card feature-grid) → Platform Overview (`wp-cols` tech/partnership + a
+  `.compare-grid` **Before/After** table — before/after comparisons map naturally onto the
+  bad/good `.compare-col` pattern built for the Intelligence page) → Securitize Partnership
+  (stats-band + wp-cols credentials + callout) → "Four Weeks to Go-Live" process (`.steps-list`
+  with a new `.step-week` badge class) → Regulatory Framework (`.data-table` with `.ck` green
+  checks) → Benefits for Issuers / Benefits for Shareholders (two feature-grids) → Pricing →
+  Track Record → final CTA.
+- New CSS: `.step-week` badge on `.steps-list` (small gold-bordered pill for "Week 1–2" etc).
+- **Gotcha hit while building this**: `.pricing-card`/`.pricing-include` are DARK-section-only
+  components (no light variant) — placing them in a `.section-light` produces washed-out,
+  low-contrast text. Always wrap pricing in `section-dark` + `<div class="anim-bg">` (not
+  `anim-bg light`). Fixed here; keep in mind for future weapon pages (dex-listing, ir-market-making).
+- Bumped cache-busting version to `?v=20260708c` across ALL html files (was `...b`) since styles.css
+  changed. Bump again next time CSS/JS changes and don't seem to show up.
+
+## weapon-lending.html (full content, done)
+- Built from the client's PPTX (`4 LENDING PROTOCOLS...pptx`), same embedded-sprite pattern.
+  12 sections. **Slide 14 "Arranger Fee Structure" dropped entirely** (client request) — also
+  removed the "$50K or 3% arranger fee" bullet from the Key Highlights strip so no fee/pricing
+  language survives anywhere on the page.
+- **Protocol names scrubbed**: the deck names Morpho/Euler/Loopscale throughout — client asked
+  to genericize since the site doesn't publicly name them yet. Replaced with "leading DeFi lending
+  protocols" / "a partner lending protocol" everywhere. The old "THE PARTNERSHIP ECOSYSTEM" slide
+  (3 named-protocol cards + CURRENC arranger card) was rewritten as generic capability categories
+  — "Customizable Risk Pools", "Flexible Market Design", "Solana-Native Efficiency" — + CURRENC
+  Arranger card, kept as a `.detail-grid` 2×2 so the visual structure survived the de-branding.
+- **LTV fixed to 30–40%** ("Depends on shares volatility and liquidity") in the Terms & Economics
+  table — the deck had it as 50–70% there (inconsistent with every other slide, which already said
+  30–40%). Also renamed "Margin Loan" → "Traditional Stock Loan" everywhere it appears (Liquidity
+  Trap table + Case Study), removed the "Margin calls: Yes" line from the Case Study lists (which
+  was contradictory — DeFi's whole pitch is *no* margin calls), and added rehypothecation as an
+  explicit compare-row on both sides.
+- **Case study math corrected**: source deck computed the DeFi loan amount ($12.5M–$17.5M) using
+  the wrong 50–70% LTV while its own header said "Max LTV: 30–40%". Recomputed against 30–40% of
+  the $25M position → **$7.5M–$10M**, and reframed the result line honestly around "traditional
+  stock loans are often unavailable to small-cap CEOs" (the deck's own caveat) rather than an
+  inflated same-vs-same liquidity-increase percentage.
+- Reused `.compare-grid`/`.compare-col` (light-only, confirmed no dark override exists) for BOTH
+  the Traditional-vs-DeFi comparison and the Case Study — same component, two placements.
+
+## weapon-dex-listing.html (full content, done)
+- Built from the client's PPTX (`5 DEX LISTING...pptx`, 19 slides), same embedded-sprite/
+  Python-generator pattern as the prior three weapon pages. 12 sections, no unbalanced
+  dark/light run (5 dark / 5 light + fixed hero/CTA).
+- **Two client-requested additions**: (1) a new "Prime Broker Deposits" card under
+  "Limited Market Access & Hours" — many small-cap stocks can't be deposited into a prime
+  broker at all, and when they can, expect high custody costs plus deposit/trading limits
+  (7th card in that section's `.detail-grid`, odd count is fine — grid just leaves the last
+  row half-empty). (2) a new "Peer-to-Peer Transfers" card under "The DEX Opportunity" —
+  wallet-to-wallet direct transfer, no intermediary (8th card in that `.feature-grid`).
+- **Three omissions per client request**: slide 9 "The Jump Partnership — PropAMM", slide 16
+  "Pricing & Economics", and slide 17 "Capital & Liquidity Requirements" were dropped entirely
+  — none of their content appears anywhere on the page (confirmed via grep).
+- **Fee/revenue line-items scrubbed from "DEX Listing Overview"**: removed "For Jump: Spread
+  capture + swap fees + arbitrage revenue" and "Listing fee: $50,000–100,000 (one-time)" per
+  request, keeping only the "For the Issuer" / "For Investors" benefit lines. Extended this
+  same fee-transparency logic (not explicitly requested, but consistent with dropping Pricing/
+  Capital-Requirements/Jump-Partnership) to also drop the "For Jump: bid-ask spread capture…"
+  line from the Value Chain's revenue-flows content, and the "Listing fee: $50–100K" mention
+  from the final CTA slide — so the shipped page has zero fee/revenue-sharing disclosure
+  anywhere, not just on the three explicitly-omitted slides.
+- **De-duplicated repeated stats**: the source deck repeats the same ~4 Jupiter numbers
+  ($64B volume, 86.4% share, 500K+ traders) across slides 2, 5, and 8. Consolidated into a
+  single "At a Glance" `.metric-grid` right after the hero (using the fullest figure set,
+  including "$2.2M/wk fees at peak" from slide 8), then kept slide 5's *qualitative* advantages
+  (24/7, global access, etc. + the new P2P point) as "The DEX Opportunity" feature-grid, and
+  slide 8's *qualitative* routing description (Metis engine, Jupiter Z, etc.) as "The Jupiter
+  Ecosystem" — so no numeric stat is printed twice on the page.
+- **Merged near-duplicate regulatory content**: slide 13's short "Token-Level Compliance"
+  bullet list was superseded by slide 14's richer 4-item elaboration of the exact same points
+  (Auto-Block Non-KYC Transfers, Holding Period Enforcement, Jurisdiction Restrictions,
+  Accreditation Per Transfer) — used slide 14's version as a `.detail-grid` 2×2 and kept only
+  slide 13's "Investor Requirements" list as a separate tick-list, dropping the shorter duplicate.
+- Flow: hero → At a Glance (`.metric-grid.m4`, dark) → Problem "Limited Market Access & Hours"
+  (`.detail-grid` 7 cards + callout, light) → "The DEX Opportunity" (`.feature-grid` 8 cards,
+  dark) → "DEX Listing Overview" (3 partner cards w/ nested `.tick-list` + `.wp-cols` issuer/
+  investor benefits, light) → "The Jupiter Ecosystem" (`.wp-cols` + callout, light) →
+  "The Securitize Partnership" (`.wp-cols` + callout + `.data-table` License & Regulatory
+  Requirements, dark) → "Jump's Regulatory Position" (`.data-table` + callout, dark) →
+  Investor & Token-Level Compliance (`.wp-cols` + `.detail-grid` 2×2, light) → "The Complete
+  Value Chain" (`.wp-lead` flow + `.wp-cols` + callout, dark) → "Case Study & Vision"
+  (`.detail-grid` + `.wp-cols` tick-list, light) → final CTA (no pricing mentioned).
+- New markup pattern used here for the first time: `.detail-card` with a nested `<ul
+  class="tick-list">` instead of a `<p>` description (used in the 3-partner cards) — confirmed
+  via computed-style checks that `.tick-list` renders fine nested inside `.feature-grid`'s
+  `.detail-card`, no CSS collision.
+- Verified: content-QA greps clean (no leftover Jump-Partnership/Pricing/Capital-Requirements
+  text, no "listing fee" or "for jump:" anywhere, no lorem/TODO), zero console errors, no
+  horizontal overflow at 375px or 1440px, `.data-table` sections both confirmed dark-section
+  (white text on navy bg) via computed style, nav dropdown click-tested.
+
+## Component light/dark compatibility (reference — check before reusing on a new page)
+- **DARK-ONLY** (no light override exists — will wash out/low-contrast on `section-light`):
+  `.data-table`, `.pricing-card` / `.pricing-include`, `.wp-highlights` (hardcoded white text).
+- **LIGHT-ONLY** (no dark override — low-contrast on `section-dark`): `.steps-list` (strong uses
+  `var(--primary)` navy unconditionally), `.compare-grid` / `.compare-col` (li uses
+  `var(--muted-light)` unconditionally).
+- **BOTH** (has an explicit `.section-dark`/`.section-light` override, or safely inherits ambient
+  section color): `.detail-card`/`.detail-grid`/`.feature-grid`, `.tick-list`, `.wp-cols`,
+  `.callout-band`, `.stats-band`, `.metric-grid`, `.wp-lead`.
+- When placing one of these on a new weapon page, pick the section's `section-light`/`section-dark`
+  class to match the LEAST flexible component in it — don't just default to light or dark.
+
 ## Screenshot gotcha
 Preview screenshots go blank when `scrollY` is large / page is very tall. To check a
 deep section: temporarily `display:none` the sections above it via preview_eval, or set
