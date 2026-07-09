@@ -256,3 +256,85 @@ primary #0F3460 · background #0B1D3A · background-deep #071428 · accent #C9A2
 Preview screenshots go blank when `scrollY` is large / page is very tall. To check a
 deep section: temporarily `display:none` the sections above it via preview_eval, or set
 `document.body.style.transform='translateY(-Npx)'`, screenshot, then restore + reload.
+The glitch can also trigger at shallow scroll depths after a long session with many DOM
+mutations — if a screenshot looks squished into a small box, verify via DOM/computed-style
+(`el.textContent`, `body.scrollWidth` vs `window.innerWidth`) instead of trusting the image.
+
+## Homepage content realignment (Kimi reference + optimization guide)
+Boss provided a docx conversion-copy guide and an 11-page PDF export of a Kimi-generated
+homepage mockup. Direction: pull **content/structure ideas only**, not the Kimi page's
+navy/teal visual theme — keep our palette. Changes made to `index.html`:
+- **Cut** (redundant or superseded): Framework 3-tile overview, Weapons Detail tabbed
+  deep-dive (same content already lives on the 5 `weapon-*.html` pages, linked via each
+  Solution card's "View Details"), Value Chain diagram (redundant with the Solution
+  section's `.arsenal-ribbon` tagline), standalone About section (its one fact — CURRENC
+  Group subsidiary — folded into Why CURRENC's NASDAQ-Listed card).
+- **Trimmed**: Why CURRENC from 5 cards to 3 proof-focused ones (NASDAQ-Listed, Operational
+  Proof, Regulatory First-Mover) — dropped the pricing/speed cards as redundant with
+  Deployment/Investment sections.
+- **Added**: hero ticker marquee (scrolling `TICKER SHORT PRESSURE DETECTED`), Portal
+  custody-layer stats (Prime Broker Holdings/Tokenized On-Chain/DeFi Collateral/Real
+  Tradable Float — `home.portal.016-023`), Deployment weekly-process framing
+  (Discovery/Legal/Technical/Go-Live, `home.deployment.026+`), a 3-entry-point final CTA
+  band replacing the old single-path one, and a condensed Investment/Pricing section on
+  the homepage (`#investment`, reuses the Cash $350K/Shares $500K copy from
+  `weapon-intelligence.html`).
+- **New dedicated pages**, linked from the existing footer Resources column:
+  `faq.html`, `knowledge.html`, `insights.html`, `sample-reports.html` — each fully
+  data-i18n tagged and translated, following the same header/footer/sprite pattern as
+  the weapon pages.
+- Per user follow-up: Problem section content replaced with the Kimi reference's tighter
+  4-stat-card version (`$4T+`/`70%`/`45`/`0%`); Portal section gained a "See Live
+  Dashboard" button (`home.portal.023`, links to `https://ssma-livid.vercel.app/`,
+  opens in new tab); final CTA headline changed to "STOP FIGHTING WITH ONE HAND TIED
+  BEHIND YOUR BACK" / "Short sellers have weapons you don't. Until now."
+
+## Hero typography/CSS unification (post Kimi-realignment)
+The `hero_only.html` concept hero (dark attack-scene image, split 4-span headline in
+Anton/Oswald/Libre Baskerville) was integrated into `index.html` in an earlier session as
+an inline `<style>` block with its own font stack — this caused a visible font mismatch
+with the rest of the site (flagged by user: the subhead read in a serif font unlike
+anywhere else). Resolved by:
+- Reverting the hero `<h1>` to the site's standard single-element `h1` + `.h1-accent`
+  pattern (same as every other page), reusing the already-translated `home.sec01.002`
+  key instead of the untranslated 4-span split — this simultaneously fixed a real i18n
+  gap (the split spans had no `data-i18n` at all).
+- Reusing `.hero-kicker` / `.hero-subhead` / `.hero-actions` / `.button.button-primary`
+  /`.button.button-secondary` (all already defined, used everywhere else) instead of
+  bespoke `.meta`/`.subhead`/`.btn` classes — this removed the Anton/Oswald/Libre
+  Baskerville Google Fonts dependency entirely.
+- Moved the remaining bespoke hero CSS (background scene, image, ticker marquee, knife
+  divider) from an inline `<style>` block in `index.html`'s `<head>` into `styles.css`
+  under `/* HERO (attack scene, homepage) */`.
+- Added `--black` (`#0A0A0D`) and `--black-deep` (`#030304`, matches the hero exactly)
+  theme tokens to `:root`, and pointed the hero's background gradient at them — this is
+  the one **contained, low-risk** move made in response to "consider black as a theme
+  color instead of white in some sections." A full light-section-to-black reskin was
+  **not** done — `.section-light` (cream `--light-bg`) sections have components
+  documented as LIGHT-ONLY (`.steps-list`, `.compare-grid`) that would need individual
+  contrast rework across every weapon page; that's a bigger call flagged back to the user
+  rather than done unilaterally.
+- Deleted ~450 lines of now-dead CSS in the same pass: the old `.hero-section`/`.hero-v2`
+  cinematic-scene rules, `.framework-*`, `.weapon-tabs`/`.weapon-panel`/`.weapon-interface`,
+  `.flow-diagram`, `.about-*`/`.emblem-*`, `.kpi-grid`, `.reality-*`, `.weapons-block`/
+  `.weapon-row*`, `.breadcrumb`, plus their now-orphaned `@keyframes` and the scattered
+  leftover references to all of the above inside `@media` comma-lists. Verified via a
+  script cross-referencing every CSS class selector against all 11 live HTML files (+
+  script.js/i18n.js) — down to zero real dead selectors (2 false-positive matches remain
+  from a `www.w3.org` SVG data-URI string, not real classes).
+- Bumped cache-busting version to `?v=20260709a` across all 11 pages.
+
+## ⚠️ KNOWN GAP: weapon-*.html pages are not translation-ready
+`weapon-intelligence.html`, `weapon-tokenization.html`, `weapon-lending.html`,
+`weapon-dex-listing.html`, and `weapon-ir-market-making.html` all have `data-i18n`
+attributes tagged (from the original auto-extractor pass) but **zero actual zh-Hant/
+zh-Hans translations were ever written** for their page-specific keys (`intel.*`,
+`token.*`, `lend.*`, `dex.*`, `irmm.*` — 759 keys × 2 languages). This was supposed to be
+finished in the original i18n session but got interrupted (session compaction) before
+the weapon pages' turn came up — only `common.*`, `home.*`, and `report.*` got done.
+Behavior: switching to 繁/簡 on these pages doesn't break anything (i18n.js gracefully
+falls back to the original English DOM content per-key), but the pages silently stay in
+English. Confirmed via browser: nav/footer translate correctly (shared `common.*` keys),
+page body does not. This needs a dedicated follow-up pass before the site can be called
+fully "3-language ready" — it's a large, well-defined continuation of the existing
+`translations.js` pattern, not a new architecture problem.

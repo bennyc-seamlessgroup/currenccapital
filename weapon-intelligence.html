@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Intelligence (SaaS Platform) | CURRENC Capital</title>
     <meta name="description" content="CURRENC Intelligence — real-time short attack monitoring and analytics for public companies. See the attack before it destroys you, with 15-30 days of early warning." />
-    <link rel="stylesheet" href="./styles.css?v=20260708d" />
+    <link rel="stylesheet" href="./styles.css?v=20260709b" />
   </head>
   <body>
 <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -138,6 +138,7 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+          <a data-i18n="common.nav.home" href="./index.html">Home</a>
           <a data-i18n="common.nav.problem" href="./index.html#problem">Problem</a>
           <div class="nav-dd">
             <a class="nav-dd-toggle" href="./index.html#solution"><span data-i18n="common.nav.arsenal">Arsenal</span><svg class="nav-chev" viewBox="0 0 16 16" width="12" height="12" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -177,15 +178,39 @@
 
     <main>
       <!-- HERO (slide 1) -->
-      <section class="page-hero">
+      <section class="page-hero page-hero-intel">
         <div class="container">
-          <span data-i18n="intel.sec01.001" class="page-hero-num" aria-hidden="true">01</span>
-          <p data-i18n="intel.sec01.002" class="meta">Weapon 01 · SaaS Platform</p>
-          <h1 data-i18n="intel.sec01.003">INTELLIGENCE <span class="wp-paren">(SaaS Platform)</span></h1>
-          <p data-i18n="intel.sec01.004" class="hero-subhead">Real-time short attack monitoring &amp; analytics. See the attack before it destroys you — with 15–30 days of early warning.</p>
-          <div class="hero-actions">
-            <a data-i18n="intel.sec01.005" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
-            <a data-i18n="intel.sec01.006" class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
+          <div>
+            <span data-i18n="intel.sec01.001" class="page-hero-num" aria-hidden="true">01</span>
+            <p data-i18n="intel.sec01.002" class="meta">Weapon 01 · SaaS Platform</p>
+            <h1 data-i18n="intel.sec01.003">INTELLIGENCE <span class="wp-paren">(SaaS Platform)</span></h1>
+            <p data-i18n="intel.sec01.004" class="hero-subhead">Real-time short attack monitoring &amp; analytics. See the attack before it destroys you — with 15–30 days of early warning.</p>
+            <div class="hero-actions">
+              <a data-i18n="intel.sec01.005" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+              <a data-i18n="intel.sec01.006" class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
+            </div>
+          </div>
+          <div class="hero-radar-visual" aria-hidden="true">
+            <svg class="radar-svg" viewBox="0 0 400 400">
+              <defs>
+                <radialGradient id="radarSweepGrad" cx="0%" cy="0%" r="100%">
+                  <stop offset="0%" stop-color="#F0D77B" stop-opacity="0.55" />
+                  <stop offset="100%" stop-color="#F0D77B" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <circle class="radar-ring" cx="200" cy="200" r="70" />
+              <circle class="radar-ring" cx="200" cy="200" r="130" />
+              <circle class="radar-ring r1" cx="200" cy="200" r="190" />
+              <line class="radar-crosshair" x1="200" y1="8" x2="200" y2="392" />
+              <line class="radar-crosshair" x1="8" y1="200" x2="392" y2="200" />
+              <g class="radar-sweep">
+                <path d="M200,200 L200,10 A190,190 0 0,1 334,66 Z" />
+              </g>
+              <circle class="radar-blip" cx="292" cy="140" r="5" />
+              <circle class="radar-blip b2" cx="130" cy="270" r="4" />
+              <circle class="radar-blip b3" cx="270" cy="290" r="3.5" />
+              <circle class="radar-center" cx="200" cy="200" r="5" />
+            </svg>
           </div>
         </div>
       </section>
@@ -240,7 +265,17 @@
               </ul>
             </div>
           </div>
-          <blockquote>By the time you see FINRA data, the damage is already done. You need real-time visibility to defend effectively.</blockquote>
+          <div class="detect-race reveal-stagger" aria-hidden="true">
+            <div class="detect-row">
+              <span data-i18n="intel.race.001" class="detect-label">FINRA Short Interest</span>
+              <div class="detect-track"><div class="detect-fill bad" style="--pct:100%"></div><span data-i18n="intel.race.002" class="detect-tag">Detected Day 45</span></div>
+            </div>
+            <div class="detect-row">
+              <span data-i18n="intel.race.003" class="detect-label">CURRENC Intelligence</span>
+              <div class="detect-track"><div class="detect-fill good" style="--pct:6%"></div><span data-i18n="intel.race.004" class="detect-tag">Detected in 15–30 min</span></div>
+            </div>
+          </div>
+          <blockquote data-i18n="intel.sec03.016">By the time you see FINRA data, the damage is already done. You need real-time visibility to defend effectively.</blockquote>
         </div>
       </section>
 
@@ -267,7 +302,7 @@
             <li data-i18n="intel.sec04.020">Future capital becomes more expensive</li>
             <li data-i18n="intel.sec04.021">Shareholder lawsuits drain resources</li>
           </ul>
-          <div class="callout-band">Without real-time intelligence, you are reacting to damage that is already done — <strong data-i18n="intel.sec04.022">not preventing it.</strong></div>
+          <div class="callout-band" data-i18n="intel.sec04.022">Without real-time intelligence, you are reacting to damage that is already done — <strong>not preventing it.</strong></div>
         </div>
       </section>
 
@@ -279,6 +314,27 @@
             <p data-i18n="intel.sec05.001" class="eyebrow">The Platform</p>
             <h2 data-i18n="intel.sec05.002">PLATFORM OVERVIEW</h2>
             <p data-i18n="intel.sec05.003" class="section-subtitle">A cloud-based SaaS platform delivering real-time visibility into short attack activity — multi-source data fusion with proprietary attack-pattern detection.</p>
+          </div>
+          <div class="flow-relay" aria-hidden="true">
+            <svg class="flow-relay-svg" viewBox="0 0 720 120">
+              <path class="flow-relay-line" d="M120,60 H340" />
+              <path class="flow-relay-line" d="M380,60 H600" />
+              <g class="flow-relay-node">
+                <circle cx="80" cy="60" r="26" />
+                <svg x="64" y="44" width="32" height="32" viewBox="0 0 24 24" class="icon-fg"><use href="#icon-list"></use></svg>
+              </g>
+              <text x="80" y="106" text-anchor="middle" class="flow-relay-label" data-i18n="intel.flow.001">Data Sources</text>
+              <g class="flow-relay-node mid">
+                <circle cx="360" cy="60" r="26" />
+                <svg x="344" y="44" width="32" height="32" viewBox="0 0 24 24" class="icon-fg"><use href="#icon-radar"></use></svg>
+              </g>
+              <text x="360" y="106" text-anchor="middle" class="flow-relay-label" data-i18n="intel.flow.002">Detection Engine</text>
+              <g class="flow-relay-node">
+                <circle cx="640" cy="60" r="26" />
+                <svg x="624" y="44" width="32" height="32" viewBox="0 0 24 24" class="icon-fg"><use href="#icon-gauge"></use></svg>
+              </g>
+              <text x="640" y="106" text-anchor="middle" class="flow-relay-label" data-i18n="intel.flow.003">Platform Outputs</text>
+            </svg>
           </div>
           <div class="wp-cols">
             <div class="wp-col">
@@ -408,7 +464,7 @@
             <article><strong data-i18n="intel.sec09.006">40–60%</strong><span data-i18n="intel.sec09.007" class="m-label">Reduced attack vulnerability</span><p data-i18n="intel.sec09.008">Data-driven defense measurably reduces your exposure.</p></article>
             <article><strong data-i18n="intel.sec09.009">$200K+</strong><span data-i18n="intel.sec09.010" class="m-label">Reduced IR / consultant spend</span><p data-i18n="intel.sec09.011">Replace multiple consultants with one integrated platform.</p></article>
           </div>
-          <div class="callout-band">Platform cost <strong data-i18n="intel.sec09.012">$350K/year</strong> → potential value saved <strong data-i18n="intel.sec09.013">$50M+</strong> for a $500M market-cap company. Insurance against a single attack pays for the platform <strong data-i18n="intel.sec09.014">142× over.</strong></div>
+          <div class="callout-band" data-i18n="intel.sec09.012">Platform cost <strong>$350K/year</strong> → potential value saved <strong>$50M+</strong> for a $500M market-cap company. Insurance against a single attack pays for the platform <strong>142× over.</strong></div>
         </div>
       </section>
 
@@ -469,7 +525,7 @@
             <article><strong data-i18n="intel.sec11.006">SEC</strong><span data-i18n="intel.sec11.007" class="m-label">Regulatory scrutiny rising</span><p data-i18n="intel.sec11.008">SEC transparency rules proposed — early compliance is an advantage.</p></article>
             <article><strong data-i18n="intel.sec11.009">1st</strong><span data-i18n="intel.sec11.010" class="m-label">Mover advantage</span><p data-i18n="intel.sec11.011">Your competitors are not monitoring — gain the defensive edge now.</p></article>
           </div>
-          <div class="callout-band"><strong data-i18n="intel.sec11.012">Intelligence + Tokenization</strong> is the most powerful combination: Intelligence identifies the threat — who is attacking, how, and when — while Tokenization removes the weapon, so shorts lose their ammunition. This is the foundation of the Equity Defense Infrastructure.</div>
+          <div class="callout-band" data-i18n="intel.sec11.012"><strong>Intelligence + Tokenization</strong> is the most powerful combination: Intelligence identifies the threat — who is attacking, how, and when — while Tokenization removes the weapon, so shorts lose their ammunition. This is the foundation of the Equity Defense Infrastructure.</div>
         </div>
       </section>
 
@@ -487,22 +543,50 @@
       </section>
     </main>
 
-    <footer class="footer-simple">
+    <footer class="site-footer">
       <div class="container">
-        <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
-        <nav aria-label="Footer navigation">
-          <a data-i18n="common.footer.intel" href="./weapon-intelligence.html">Intelligence</a>
-          <a data-i18n="common.footer.token" href="./weapon-tokenization.html">Tokenization</a>
-          <a data-i18n="common.footer.lend" href="./weapon-lending.html">Lending</a>
-          <a data-i18n="common.footer.dex" href="./weapon-dex-listing.html">DEX Listing</a>
-          <a data-i18n="common.footer.irmm" href="./weapon-ir-market-making.html">IR &amp; MM</a>
-          <a data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
-        </nav>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="./Resources/All-Logos_Currenc-Capital_Logo_White.png" alt="CURRENC Capital" />
+            <p data-i18n="home.foot.001">The Equity Defense Infrastructure for Public Companies.</p>
+            <span class="footer-ticker"><svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>NASDAQ: CURR</span>
+          </div>
+          <nav class="footer-col" aria-label="Platform">
+            <strong data-i18n="home.foot.002">Platform</strong>
+            <a data-i18n="common.footer.intel" href="./weapon-intelligence.html">Intelligence</a>
+            <a data-i18n="common.footer.token" href="./weapon-tokenization.html">Tokenization</a>
+            <a data-i18n="common.footer.lend" href="./weapon-lending.html">Lending</a>
+            <a data-i18n="common.footer.dex" href="./weapon-dex-listing.html">DEX Listing</a>
+            <a data-i18n="common.footer.irmm_full" href="./weapon-ir-market-making.html">IR &amp; Market Making</a>
+          </nav>
+          <nav class="footer-col" aria-label="Company">
+            <strong data-i18n="home.foot.003">Company</strong>
+            <a data-i18n="home.foot.004" href="./index.html#why">About</a>
+            <a data-i18n="common.nav.why" href="./index.html#why">Why CURRENC</a>
+            <a data-i18n="home.foot.005" href="./index.html#partners">Partners</a>
+            <a data-i18n="home.foot.006" href="./index.html#clients">Clients</a>
+            <a data-i18n="common.nav.deployment" href="./index.html#deployment">Deployment</a>
+            <a data-i18n="common.cta.report" href="./short-analysis.html">Get My $12K Report</a>
+          </nav>
+          <nav class="footer-col" aria-label="Resources">
+            <strong data-i18n="home.foot.007">Resources</strong>
+            <a data-i18n="home.foot.008" href="./sample-reports.html">Sample Analysis</a>
+            <a data-i18n="home.foot.009" href="./knowledge.html">Knowledge Base</a>
+            <a data-i18n="home.foot.010" href="./insights.html">Insights &amp; News</a>
+            <a data-i18n="home.foot.011" href="./faq.html">FAQ</a>
+            <a data-i18n="home.foot.012" href="./index.html#portal">Intelligence Portal</a>
+            <a data-i18n="home.foot.013" href="./index.html#subscribe">Newsletter</a>
+          </nav>
+        </div>
+        <div class="footer-legal">
+          <span data-i18n="home.foot.014">© 2026 CURRENC Capital. All rights reserved.</span>
+          <span data-i18n="home.foot.015">This website is for informational purposes only and does not constitute investment advice or an offer of securities.</span>
+        </div>
       </div>
     </footer>
 
-    <script src="./translations.js?v=20260708d"></script>
-    <script src="./i18n.js?v=20260708d"></script>
-    <script src="./script.js?v=20260708d"></script>
+    <script src="./translations.js?v=20260709b"></script>
+    <script src="./i18n.js?v=20260709b"></script>
+    <script src="./script.js?v=20260709b"></script>
   </body>
 </html>
