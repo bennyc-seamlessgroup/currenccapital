@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Intelligence (SaaS Platform) | CURRENC Capital</title>
     <meta name="description" content="CURRENC Intelligence — real-time short attack monitoring and analytics for public companies. See the attack before it destroys you, with 15-30 days of early warning." />
-    <link rel="stylesheet" href="./styles.css?v=20260709b" />
+    <link rel="stylesheet" href="./styles.css?v=20260709c" />
   </head>
   <body>
 <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -186,31 +186,26 @@
             <h1 data-i18n="intel.sec01.003">INTELLIGENCE <span class="wp-paren">(SaaS Platform)</span></h1>
             <p data-i18n="intel.sec01.004" class="hero-subhead">Real-time short attack monitoring &amp; analytics. See the attack before it destroys you — with 15–30 days of early warning.</p>
             <div class="hero-actions">
-              <a data-i18n="intel.sec01.005" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+              <a data-i18n="intel.sec01.005" class="button button-primary" href="https://ssma-livid.vercel.app/demo" target="_blank" rel="noopener">View Live Demo</a>
               <a data-i18n="intel.sec01.006" class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
             </div>
           </div>
-          <div class="hero-radar-visual" aria-hidden="true">
-            <svg class="radar-svg" viewBox="0 0 400 400">
-              <defs>
-                <radialGradient id="radarSweepGrad" cx="0%" cy="0%" r="100%">
-                  <stop offset="0%" stop-color="#F0D77B" stop-opacity="0.55" />
-                  <stop offset="100%" stop-color="#F0D77B" stop-opacity="0" />
-                </radialGradient>
-              </defs>
-              <circle class="radar-ring" cx="200" cy="200" r="70" />
-              <circle class="radar-ring" cx="200" cy="200" r="130" />
-              <circle class="radar-ring r1" cx="200" cy="200" r="190" />
-              <line class="radar-crosshair" x1="200" y1="8" x2="200" y2="392" />
-              <line class="radar-crosshair" x1="8" y1="200" x2="392" y2="200" />
-              <g class="radar-sweep">
-                <path d="M200,200 L200,10 A190,190 0 0,1 334,66 Z" />
-              </g>
-              <circle class="radar-blip" cx="292" cy="140" r="5" />
-              <circle class="radar-blip b2" cx="130" cy="270" r="4" />
-              <circle class="radar-blip b3" cx="270" cy="290" r="3.5" />
-              <circle class="radar-center" cx="200" cy="200" r="5" />
-            </svg>
+          <div class="portal-mockup" aria-hidden="true">
+            <div class="mockup-bar">
+              <span></span><span></span><span></span>
+              <em data-i18n="intel.hero.009">CURRENC INTELLIGENCE · LIVE</em>
+              <i class="live-dot"></i>
+            </div>
+            <div class="mockup-grid">
+              <div><strong data-i18n="intel.hero.001">Squeeze Readiness</strong><span data-count="78" data-suffix="/100">78/100</span><em data-i18n="intel.hero.002" class="mockup-tag at-risk">High</em></div>
+              <div><strong data-i18n="intel.hero.003">Short Interest</strong><span data-count="399.8" data-prefix="+" data-suffix="%">+399.8%</span><em data-i18n="intel.hero.004" class="mockup-tag at-risk">Surging</em></div>
+              <div><strong data-i18n="intel.hero.005">Lending Pressure</strong><span data-count="92">92</span><em data-i18n="intel.hero.006" class="mockup-tag at-risk">Extreme</em></div>
+              <div><strong data-i18n="intel.hero.007">Sentiment</strong><span data-count="62">62</span><em data-i18n="intel.hero.008" class="mockup-tag safe">Bullish</em></div>
+            </div>
+            <div class="mockup-footer">
+              <span data-i18n="intel.hero.010">Live monitoring · updated every 15 min</span>
+              <span data-i18n="intel.hero.011">Board report ready</span>
+            </div>
           </div>
         </div>
       </section>
@@ -336,31 +331,42 @@
               <text x="640" y="106" text-anchor="middle" class="flow-relay-label" data-i18n="intel.flow.003">Platform Outputs</text>
             </svg>
           </div>
-          <div class="wp-cols">
-            <div class="wp-col">
-              <h3 data-i18n="intel.sec05.004">Data Sources</h3>
-              <ul class="tick-list">
-                <li data-i18n="intel.sec05.005">DTC Participant borrowing data</li>
-                <li data-i18n="intel.sec05.006">SEC filing analytics (13F, 13D, 13G)</li>
-                <li data-i18n="intel.sec05.007">Options flow and open interest</li>
-                <li data-i18n="intel.sec05.008">Dark pool volume monitoring</li>
-                <li data-i18n="intel.sec05.009">Social sentiment and FUD detection</li>
-                <li data-i18n="intel.sec05.010">Rehypothecation tracking</li>
-                <li data-i18n="intel.sec05.011">Cost-to-borrow rate surveillance</li>
-              </ul>
-            </div>
-            <div class="wp-col">
-              <h3 data-i18n="intel.sec05.012">Platform Outputs</h3>
-              <ul class="tick-list">
-                <li data-i18n="intel.sec05.013">Real-time executive dashboard</li>
-                <li data-i18n="intel.sec05.014">Customizable alert system</li>
-                <li data-i18n="intel.sec05.015">Board-ready monthly reports</li>
-                <li data-i18n="intel.sec05.016">Peer benchmarking analysis</li>
-                <li data-i18n="intel.sec05.017">Attack pattern scoring</li>
-                <li data-i18n="intel.sec05.018">Historical trend analysis</li>
-                <li data-i18n="intel.sec05.019">Custom report builder</li>
-              </ul>
-            </div>
+          <div class="feature-grid">
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+              <div><strong data-i18n="intel.mod.001">Real-Time Dashboard</strong><p data-i18n="intel.mod.002">Executive KPI summary — price, squeeze readiness, short interest, and sentiment in one view.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+              <div><strong data-i18n="intel.mod.003">Ownership Intelligence</strong><p data-i18n="intel.mod.004">Track institutional holdings and float assumptions as they shift.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
+              <div><strong data-i18n="intel.mod.005">Short Interest Analysis</strong><p data-i18n="intel.mod.006">Monitor borrow metrics and utilization pressure in real time.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>
+              <div><strong data-i18n="intel.mod.007">Squeeze Readiness</strong><p data-i18n="intel.mod.008">A proprietary score for how primed conditions are for a short squeeze.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>
+              <div><strong data-i18n="intel.mod.009">Sentiment &amp; Narrative</strong><p data-i18n="intel.mod.010">Classify social media, filings, and news into a live sentiment score.</p></div>
+            </article>
+            <article class="detail-card">
+              <svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>
+              <div><strong data-i18n="intel.mod.011">Price Scenario Modeling</strong><p data-i18n="intel.mod.012">Board-level price scenarios modeled from current pressure conditions.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW LIVE DEMO BAND -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="callout-band callout-band-cta">
+            <span data-i18n="intel.demo.001">This is a real, working product — not a mockup. Explore the live Intelligence dashboard yourself.</span>
+            <a data-i18n="intel.demo.002" class="button button-primary" href="https://ssma-livid.vercel.app/demo" target="_blank" rel="noopener">View Live Demo</a>
           </div>
         </div>
       </section>
@@ -404,27 +410,26 @@
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
-            <p data-i18n="intel.sec07.001" class="eyebrow">Feature</p>
-            <h2 data-i18n="intel.sec07.002">REPORTING &amp; INTELLIGENCE</h2>
+            <p data-i18n="intel.sec07.001" class="eyebrow">Reporting Cadence</p>
+            <h2 data-i18n="intel.sec07.002">THREE REPORTS, EVERY TRADING DAY</h2>
           </div>
-          <p data-i18n="intel.sec07.003" class="wp-lead">Board-ready reports and executive dashboards that turn raw data into <b>actionable intelligence.</b></p>
-          <div class="detail-grid">
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>
-              <div><strong data-i18n="intel.sec07.004">Short Attack Risk Report</strong><p data-i18n="intel.sec07.005">A monthly, board-ready report with risk score, threat summary, and recommended actions.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
-              <div><strong data-i18n="intel.sec07.006">Executive Dashboard</strong><p data-i18n="intel.sec07.007">A CEO/CFO real-time dashboard with key risk indicators, trend charts, and alert status.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>
-              <div><strong data-i18n="intel.sec07.008">SEC Filing Impact Analysis</strong><p data-i18n="intel.sec07.009">Track how 13F, 13D, and 13G filings impact short interest and ownership structure.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>
-              <div><strong data-i18n="intel.sec07.010">Custom Report Builder</strong><p data-i18n="intel.sec07.011">Build and export custom reports to share with your board, counsel, or IR team.</p></div>
-            </article>
+          <p data-i18n="intel.sec07.003" class="wp-lead">Board-ready reports on a <b>fixed daily schedule</b> — not whenever someone gets around to it.</p>
+          <div class="report-timeline reveal-stagger">
+            <div class="report-node">
+              <span class="report-time">8:00 AM</span>
+              <h3 data-i18n="intel.report.001">Pre-Market Brief</h3>
+              <p data-i18n="intel.report.002">Overnight developments and pre-market price action, before the bell rings.</p>
+            </div>
+            <div class="report-node">
+              <span class="report-time">11:50 AM</span>
+              <h3 data-i18n="intel.report.003">Midday Flow Report</h3>
+              <p data-i18n="intel.report.004">Morning trading flow, options activity, and emerging squeeze pressure at the session midpoint.</p>
+            </div>
+            <div class="report-node">
+              <span class="report-time">7:00 PM</span>
+              <h3 data-i18n="intel.report.005">Post-Market Digest</h3>
+              <p data-i18n="intel.report.006">A full-day wrap-up, board-ready and archived for reference.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -536,7 +541,7 @@
           <h2 data-i18n="intel.sec12.002">SEE THE ATTACK BEFORE IT DESTROYS YOU</h2>
           <p data-i18n="intel.sec12.003" class="section-subtitle">Arm yourself in just <strong>4 weeks</strong> — from signed engagement to live, real-time short attack monitoring.</p>
           <div class="hero-actions">
-            <a data-i18n="intel.sec12.004" class="button button-primary" href="./short-analysis.html">Request Free Short Analysis</a>
+            <a data-i18n="intel.sec12.004" class="button button-primary" href="https://ssma-livid.vercel.app/demo" target="_blank" rel="noopener">View Live Demo</a>
             <a data-i18n="intel.sec12.005" class="button button-secondary" href="./index.html#deployment">See the Full Roadmap</a>
           </div>
         </div>
@@ -585,8 +590,8 @@
       </div>
     </footer>
 
-    <script src="./translations.js?v=20260709b"></script>
-    <script src="./i18n.js?v=20260709b"></script>
-    <script src="./script.js?v=20260709b"></script>
+    <script src="./translations.js?v=20260709c"></script>
+    <script src="./i18n.js?v=20260709c"></script>
+    <script src="./script.js?v=20260709c"></script>
   </body>
 </html>

@@ -796,25 +796,13 @@ blockquote {
 
 /* ============ INTELLIGENCE PAGE — CUSTOM VISUALS ============ */
 
-/* Hero: two-column layout with animated radar sweep */
-.page-hero-intel .container { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.75fr); gap: 48px; align-items: center; }
-.hero-radar-visual { display: flex; justify-content: center; align-items: center; }
-.radar-svg { width: min(360px, 100%); height: auto; overflow: visible; }
-.radar-ring { fill: none; stroke: rgba(201, 162, 39, 0.35); stroke-width: 1.5; }
-.radar-ring.r1 { stroke: rgba(201, 162, 39, 0.5); }
-.radar-crosshair { stroke: rgba(201, 162, 39, 0.18); stroke-width: 1; }
-.radar-sweep { transform-box: fill-box; transform-origin: center; animation: radarSweepSpin 4s linear infinite; }
-.radar-sweep path { fill: url(#radarSweepGrad); }
-.radar-blip { fill: var(--accent-bright); opacity: 0; animation: radarBlip 3.2s ease-in-out infinite; }
-.radar-blip.b2 { animation-delay: 1s; }
-.radar-blip.b3 { animation-delay: 2s; }
-.radar-center { fill: var(--accent-bright); }
-@keyframes radarSweepSpin { to { transform: rotate(360deg); } }
-@keyframes radarBlip { 0%, 100% { opacity: 0; transform: scale(0.6); } 15%, 40% { opacity: 1; transform: scale(1); } }
+/* Hero: two-column layout with live-dashboard mockup preview */
+.page-hero-intel .page-hero-num { display: none; }
+.page-hero-intel .container { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr); gap: 48px; align-items: center; }
+.page-hero-intel .portal-mockup { margin: 0; }
 @media (max-width: 1024px) {
   .page-hero-intel .container { grid-template-columns: 1fr; }
-  .hero-radar-visual { order: -1; margin-bottom: 12px; }
-  .radar-svg { width: 220px; }
+  .page-hero-intel .portal-mockup { order: -1; margin-bottom: 12px; }
 }
 
 /* Problem section: detection-race timeline (FINRA vs CURRENC) */
@@ -843,6 +831,26 @@ blockquote {
 .section-light .flow-relay-label { fill: var(--muted-light); }
 @keyframes flowDash { to { stroke-dashoffset: 0; } }
 @keyframes flowPulse { 0%, 100% { r: 26; opacity: 1; } 50% { r: 29; opacity: 0.85; } }
+
+/* Reporting: 3-report daily timeline */
+.report-timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 900px; margin: 0 auto; }
+.report-node { position: relative; text-align: center; padding: 0 22px; }
+.report-node::before { content: ""; position: absolute; top: 11px; left: -14px; right: calc(50% + 14px); height: 1px; background: var(--gold-line); }
+.report-node:first-child::before { display: none; }
+.report-time {
+  display: inline-flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1; margin-bottom: 16px; padding: 4px 14px;
+  border: 1px solid var(--gold-line); background: var(--light-bg);
+  color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.section-dark .report-time { background: var(--background); }
+.report-node h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 8px; }
+.section-dark .report-node h3 { color: var(--white); }
+.report-node p { margin: 0; font-size: 0.92rem; }
+@media (max-width: 760px) {
+  .report-timeline { grid-template-columns: 1fr; gap: 32px; }
+  .report-node::before { display: none; }
+}
 
 /* ============ WEAPON PAGE — EXTENDED COMPONENTS ============ */
 
@@ -919,6 +927,8 @@ blockquote {
 .callout-band { margin: 40px auto 0; max-width: 940px; padding: 30px 34px; border: 1px solid var(--gold-line); background: rgba(201, 162, 39, 0.08); text-align: center; color: var(--body-text); font-size: 1.12rem; line-height: 1.55; }
 .section-light .callout-band { color: var(--ink); }
 .callout-band strong { color: var(--accent); }
+.callout-band-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; text-align: left; }
+.callout-band-cta .button { flex-shrink: 0; }
 
 .cta-band .eyebrow { display: block; }
 .cta-band .section-subtitle { margin: 18px auto 0; text-align: center; }
