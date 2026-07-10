@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Intelligence (SaaS Platform) | CURRENC Capital</title>
     <meta name="description" content="CURRENC Intelligence — real-time short attack monitoring and analytics for public companies. See the attack before it destroys you, with 15-30 days of early warning." />
-    <link rel="stylesheet" href="./styles.css?v=20260709c" />
+    <link rel="stylesheet" href="./styles.css?v=20260710b" />
   </head>
   <body>
 <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -176,36 +176,23 @@
     </header>
     <div class="nav-scrim" hidden></div>
 
-    <main>
+    <main class="intel-enhanced">
       <!-- HERO (slide 1) -->
       <section class="page-hero page-hero-intel">
+        <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div>
             <span data-i18n="intel.sec01.001" class="page-hero-num" aria-hidden="true">01</span>
-            <p data-i18n="intel.sec01.002" class="meta">Weapon 01 · SaaS Platform</p>
-            <h1 data-i18n="intel.sec01.003">INTELLIGENCE <span class="wp-paren">(SaaS Platform)</span></h1>
+            <p data-i18n="intel.sec01.002" class="hero-kicker">Weapon 01 · SaaS Platform</p>
+            <h1 data-i18n="intel.sec01.003"><span class="h1-accent-inline">INTELLIGENCE</span> <span class="wp-paren">(SaaS Platform)</span></h1>
             <p data-i18n="intel.sec01.004" class="hero-subhead">Real-time short attack monitoring &amp; analytics. See the attack before it destroys you — with 15–30 days of early warning.</p>
             <div class="hero-actions">
               <a data-i18n="intel.sec01.005" class="button button-primary" href="https://ssma-livid.vercel.app/demo" target="_blank" rel="noopener">View Live Demo</a>
-              <a data-i18n="intel.sec01.006" class="button button-secondary" href="#pricing">See Pricing &amp; Deployment</a>
+              <a data-i18n="intel.sec01.006" class="button button-secondary" href="./index.html#investment">See Pricing &amp; Deployment</a>
             </div>
           </div>
-          <div class="portal-mockup" aria-hidden="true">
-            <div class="mockup-bar">
-              <span></span><span></span><span></span>
-              <em data-i18n="intel.hero.009">CURRENC INTELLIGENCE · LIVE</em>
-              <i class="live-dot"></i>
-            </div>
-            <div class="mockup-grid">
-              <div><strong data-i18n="intel.hero.001">Squeeze Readiness</strong><span data-count="78" data-suffix="/100">78/100</span><em data-i18n="intel.hero.002" class="mockup-tag at-risk">High</em></div>
-              <div><strong data-i18n="intel.hero.003">Short Interest</strong><span data-count="399.8" data-prefix="+" data-suffix="%">+399.8%</span><em data-i18n="intel.hero.004" class="mockup-tag at-risk">Surging</em></div>
-              <div><strong data-i18n="intel.hero.005">Lending Pressure</strong><span data-count="92">92</span><em data-i18n="intel.hero.006" class="mockup-tag at-risk">Extreme</em></div>
-              <div><strong data-i18n="intel.hero.007">Sentiment</strong><span data-count="62">62</span><em data-i18n="intel.hero.008" class="mockup-tag safe">Bullish</em></div>
-            </div>
-            <div class="mockup-footer">
-              <span data-i18n="intel.hero.010">Live monitoring · updated every 15 min</span>
-              <span data-i18n="intel.hero.011">Board report ready</span>
-            </div>
+          <div class="intel-hero-visual" aria-hidden="true">
+            <img src="./Resources/intelligence_hero_computer_image.png" alt="" loading="lazy">
           </div>
         </div>
       </section>
@@ -219,12 +206,12 @@
             <h2 data-i18n="intel.sec02.002">THE ONLY REAL-TIME SHORT INTELLIGENCE SYSTEM</h2>
             <p data-i18n="intel.sec02.003" class="section-subtitle">Purpose-built for public companies — so you are never flying blind against a short attack again.</p>
           </div>
-          <ul class="wp-highlights">
-            <li data-i18n="intel.sec02.004"><svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg>Real-time DTC Participant data</li>
-            <li data-i18n="intel.sec02.005"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>15–30 day early warning</li>
-            <li data-i18n="intel.sec02.006"><svg class="icon" aria-hidden="true"><use href="#icon-shuffle"></use></svg>Synthetic position detection</li>
-            <li data-i18n="intel.sec02.007"><svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg>Board-ready monthly reports</li>
-            <li data-i18n="intel.sec02.008"><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg>4-week deployment</li>
+          <ul class="intel-caps reveal-stagger">
+            <li><span class="cap-ic"><svg class="icon" aria-hidden="true"><use href="#icon-radar"></use></svg></span><span data-i18n="intel.sec02.004" class="cap-tx">Real-time DTC Participant data</span></li>
+            <li><span class="cap-ic"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg></span><span data-i18n="intel.sec02.005" class="cap-tx">15–30 day early warning</span></li>
+            <li><span class="cap-ic"><svg class="icon" aria-hidden="true"><use href="#icon-shuffle"></use></svg></span><span data-i18n="intel.sec02.006" class="cap-tx">Synthetic position detection</span></li>
+            <li><span class="cap-ic"><svg class="icon" aria-hidden="true"><use href="#icon-doc"></use></svg></span><span data-i18n="intel.sec02.007" class="cap-tx">Board-ready monthly reports</span></li>
+            <li><span class="cap-ic"><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg></span><span data-i18n="intel.sec02.008" class="cap-tx">4-week deployment</span></li>
           </ul>
         </div>
       </section>
@@ -275,7 +262,7 @@
       </section>
 
       <!-- COST OF BLINDNESS (slide 5) -->
-      <section class="section-full section-dark reveal">
+      <section class="section-full section-dark reveal cost-blindness">
         <div class="anim-bg danger" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
@@ -283,20 +270,20 @@
             <h2 data-i18n="intel.sec04.002">THE COST OF BLINDNESS</h2>
             <p data-i18n="intel.sec04.003" class="section-subtitle">The most dangerous attacks are the ones you never see coming.</p>
           </div>
-          <div class="metric-grid m4">
-            <article><strong data-i18n="intel.sec04.004">18 mo</strong><span data-i18n="intel.sec04.005" class="m-label">Average attack duration</span><p data-i18n="intel.sec04.006">Before it is even discovered.</p></article>
-            <article><strong data-i18n="intel.sec04.007">40–70%</strong><span data-i18n="intel.sec04.008" class="m-label">Stock price decline</span><p data-i18n="intel.sec04.009">During an undetected attack.</p></article>
-            <article><strong data-i18n="intel.sec04.010">$2M+</strong><span data-i18n="intel.sec04.011" class="m-label">Defensive costs</span><p data-i18n="intel.sec04.012">Lawyers, IR, proxy fights.</p></article>
-            <article><strong data-i18n="intel.sec04.013">30%</strong><span data-i18n="intel.sec04.014" class="m-label">CEO / CFO time</span><p data-i18n="intel.sec04.015">Diverted to defense.</p></article>
+          <div class="stat-slabs reveal-stagger">
+            <article><span class="slab-ic"><svg class="icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span><strong data-i18n="intel.sec04.004">18 mo</strong><span data-i18n="intel.sec04.005" class="m-label">Average attack duration</span><p data-i18n="intel.sec04.006">Before it is even discovered.</p></article>
+            <article><span class="slab-ic"><svg class="icon" aria-hidden="true"><use href="#icon-trend-down"></use></svg></span><strong data-i18n="intel.sec04.007">40–70%</strong><span data-i18n="intel.sec04.008" class="m-label">Stock price decline</span><p data-i18n="intel.sec04.009">During an undetected attack.</p></article>
+            <article><span class="slab-ic"><svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg></span><strong data-i18n="intel.sec04.010">$2M+</strong><span data-i18n="intel.sec04.011" class="m-label">Defensive costs</span><p data-i18n="intel.sec04.012">Lawyers, IR, proxy fights.</p></article>
+            <article><span class="slab-ic"><svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg></span><strong data-i18n="intel.sec04.013">30%</strong><span data-i18n="intel.sec04.014" class="m-label">CEO / CFO time</span><p data-i18n="intel.sec04.015">Diverted to defense.</p></article>
           </div>
-          <ul class="arrow-list">
-            <li data-i18n="intel.sec04.016">Management distraction destroys focus</li>
-            <li data-i18n="intel.sec04.017">Key talent leaves as the stock declines</li>
-            <li data-i18n="intel.sec04.018">Competitors acquire at distressed prices</li>
-            <li data-i18n="intel.sec04.019">Customer confidence erodes</li>
-            <li data-i18n="intel.sec04.020">Future capital becomes more expensive</li>
-            <li data-i18n="intel.sec04.021">Shareholder lawsuits drain resources</li>
-          </ul>
+          <ol class="intel-cascade reveal-stagger">
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.016" class="casc-tx">Management distraction destroys focus</span></li>
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.017" class="casc-tx">Key talent leaves as the stock declines</span></li>
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.018" class="casc-tx">Competitors acquire at distressed prices</span></li>
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.019" class="casc-tx">Customer confidence erodes</span></li>
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.020" class="casc-tx">Future capital becomes more expensive</span></li>
+            <li><span class="casc-node" aria-hidden="true"></span><span data-i18n="intel.sec04.021" class="casc-tx">Shareholder lawsuits drain resources</span></li>
+          </ol>
           <div class="callout-band" data-i18n="intel.sec04.022">Without real-time intelligence, you are reacting to damage that is already done — <strong>not preventing it.</strong></div>
         </div>
       </section>
@@ -331,30 +318,55 @@
               <text x="640" y="106" text-anchor="middle" class="flow-relay-label" data-i18n="intel.flow.003">Platform Outputs</text>
             </svg>
           </div>
-          <div class="feature-grid">
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
-              <div><strong data-i18n="intel.mod.001">Real-Time Dashboard</strong><p data-i18n="intel.mod.002">Executive KPI summary — price, squeeze readiness, short interest, and sentiment in one view.</p></div>
+          <div class="intel-bento reveal-stagger">
+            <article class="bento-cell bento-feature">
+              <div class="bento-viz" aria-hidden="true">
+                <svg viewBox="0 0 340 176" role="img">
+                  <rect x="0.5" y="0.5" width="339" height="175" rx="10" class="bv-panel"/>
+                  <text x="20" y="30" class="bv-h">SQUEEZE READINESS</text>
+                  <path d="M20 118 A70 70 0 0 1 160 118" class="bv-gauge-track"/>
+                  <path d="M20 118 A70 70 0 0 1 143 77" class="bv-gauge-fill"/>
+                  <text x="90" y="112" text-anchor="middle" class="bv-gauge-num">78</text>
+                  <text x="90" y="140" text-anchor="middle" class="bv-gauge-lbl">HIGH</text>
+                  <g class="bv-spark">
+                    <polyline class="bv-spark-line" points="196,120 214,104 232,110 250,84 268,92 286,60 312,48"/>
+                    <circle cx="312" cy="48" r="3.5" class="bv-spark-dot"/>
+                  </g>
+                  <text x="196" y="34" class="bv-chip">SHORT INT.</text>
+                  <text x="196" y="58" class="bv-chip-val">+399.8%</text>
+                  <g class="bv-bars">
+                    <rect x="196" y="150" width="24" height="14" class="bv-bar b1"/>
+                    <rect x="228" y="142" width="24" height="22" class="bv-bar b2"/>
+                    <rect x="260" y="132" width="24" height="32" class="bv-bar b3"/>
+                    <rect x="292" y="120" width="24" height="44" class="bv-bar b4"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="bento-body">
+                <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+                <strong data-i18n="intel.mod.001">Real-Time Dashboard</strong>
+                <p data-i18n="intel.mod.002">Executive KPI summary — price, squeeze readiness, short interest, and sentiment in one view.</p>
+              </div>
             </article>
-            <article class="detail-card">
+            <article class="bento-cell">
               <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
-              <div><strong data-i18n="intel.mod.003">Ownership Intelligence</strong><p data-i18n="intel.mod.004">Track institutional holdings and float assumptions as they shift.</p></div>
+              <strong data-i18n="intel.mod.003">Ownership Intelligence</strong><p data-i18n="intel.mod.004">Track institutional holdings and float assumptions as they shift.</p>
             </article>
-            <article class="detail-card">
+            <article class="bento-cell">
               <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
-              <div><strong data-i18n="intel.mod.005">Short Interest Analysis</strong><p data-i18n="intel.mod.006">Monitor borrow metrics and utilization pressure in real time.</p></div>
+              <strong data-i18n="intel.mod.005">Short Interest Analysis</strong><p data-i18n="intel.mod.006">Monitor borrow metrics and utilization pressure in real time.</p>
             </article>
-            <article class="detail-card">
+            <article class="bento-cell">
               <svg class="icon" aria-hidden="true"><use href="#icon-warning"></use></svg>
-              <div><strong data-i18n="intel.mod.007">Squeeze Readiness</strong><p data-i18n="intel.mod.008">A proprietary score for how primed conditions are for a short squeeze.</p></div>
+              <strong data-i18n="intel.mod.007">Squeeze Readiness</strong><p data-i18n="intel.mod.008">A proprietary score for how primed conditions are for a short squeeze.</p>
             </article>
-            <article class="detail-card">
+            <article class="bento-cell">
               <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>
-              <div><strong data-i18n="intel.mod.009">Sentiment &amp; Narrative</strong><p data-i18n="intel.mod.010">Classify social media, filings, and news into a live sentiment score.</p></div>
+              <strong data-i18n="intel.mod.009">Sentiment &amp; Narrative</strong><p data-i18n="intel.mod.010">Classify social media, filings, and news into a live sentiment score.</p>
             </article>
-            <article class="detail-card">
+            <article class="bento-cell">
               <svg class="icon" aria-hidden="true"><use href="#icon-trend-up"></use></svg>
-              <div><strong data-i18n="intel.mod.011">Price Scenario Modeling</strong><p data-i18n="intel.mod.012">Board-level price scenarios modeled from current pressure conditions.</p></div>
+              <strong data-i18n="intel.mod.011">Price Scenario Modeling</strong><p data-i18n="intel.mod.012">Board-level price scenarios modeled from current pressure conditions.</p>
             </article>
           </div>
         </div>
@@ -372,7 +384,7 @@
       </section>
 
       <!-- FEATURE: REAL-TIME MONITORING (slide 8) -->
-      <section class="section-full section-dark reveal">
+      <section class="section-full section-dark reveal intel-monitor">
         <div class="anim-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
@@ -380,27 +392,39 @@
             <h2 data-i18n="intel.sec06.002">REAL-TIME MONITORING</h2>
           </div>
           <p data-i18n="intel.sec06.003" class="wp-lead"><b>15-minute updates — not 15-day delays.</b> See every borrow, every return, every surge as it happens.</p>
-          <div class="feature-grid">
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
-              <div><strong data-i18n="intel.sec06.004">Short Interest Tracking</strong><p data-i18n="intel.sec06.005">Live short interest updates every 15 minutes — not the 15-day FINRA delay.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
-              <div><strong data-i18n="intel.sec06.006">DTC Participant Data</strong><p data-i18n="intel.sec06.007">See exactly which firms are borrowing your shares, and in what quantities.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
-              <div><strong data-i18n="intel.sec06.008">Utilization Heat Maps</strong><p data-i18n="intel.sec06.009">Visualize borrowing-pressure intensity. Red zones signal an imminent attack.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
-              <div><strong data-i18n="intel.sec06.010">Cost-to-Borrow Tracking</strong><p data-i18n="intel.sec06.011">Surging borrow costs are the #1 leading indicator of an attack. Track them live.</p></div>
-            </article>
-            <article class="detail-card">
-              <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
-              <div><strong data-i18n="intel.sec06.012">24/7 Automated Surveillance</strong><p data-i18n="intel.sec06.013">Never sleeps, never misses — continuous monitoring with instant alerts to your team.</p></div>
-            </article>
+          <div class="monitor-split">
+            <div class="monitor-viz" aria-hidden="true">
+              <div class="mv-head"><i class="live-dot"></i><span>LIVE · BORROW UTILIZATION</span></div>
+              <div class="heatmap">
+                <span class="lvl1"></span><span class="lvl2"></span><span class="lvl1"></span><span class="lvl3"></span><span class="lvl2"></span><span class="lvl1"></span>
+                <span class="lvl2"></span><span class="lvl3"></span><span class="hot"></span><span class="hot"></span><span class="lvl3"></span><span class="lvl2"></span>
+                <span class="lvl1"></span><span class="lvl3"></span><span class="hot"></span><span class="lvl4"></span><span class="lvl3"></span><span class="lvl1"></span>
+                <span class="lvl1"></span><span class="lvl2"></span><span class="lvl2"></span><span class="lvl3"></span><span class="lvl2"></span><span class="lvl1"></span>
+              </div>
+              <div class="mv-foot"><span class="mv-key"><i class="k-lo"></i>Low</span><span class="mv-key"><i class="k-mid"></i>Rising</span><span class="mv-key"><i class="k-hi"></i>Critical</span></div>
+            </div>
+            <ul class="monitor-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-ticker"></use></svg>
+                <div><strong data-i18n="intel.sec06.004">Short Interest Tracking</strong><p data-i18n="intel.sec06.005">Live short interest updates every 15 minutes — not the 15-day FINRA delay.</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+                <div><strong data-i18n="intel.sec06.006">DTC Participant Data</strong><p data-i18n="intel.sec06.007">See exactly which firms are borrowing your shares, and in what quantities.</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-gauge"></use></svg>
+                <div><strong data-i18n="intel.sec06.008">Utilization Heat Maps</strong><p data-i18n="intel.sec06.009">Visualize borrowing-pressure intensity. Red zones signal an imminent attack.</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>
+                <div><strong data-i18n="intel.sec06.010">Cost-to-Borrow Tracking</strong><p data-i18n="intel.sec06.011">Surging borrow costs are the #1 leading indicator of an attack. Track them live.</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+                <div><strong data-i18n="intel.sec06.012">24/7 Automated Surveillance</strong><p data-i18n="intel.sec06.013">Never sleeps, never misses — continuous monitoring with instant alerts to your team.</p></div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -457,80 +481,102 @@
       </section>
 
       <!-- IMPACT & ROI (slide 12) -->
-      <section class="section-full section-light reveal">
+      <section class="section-full section-light reveal intel-roi">
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
             <p data-i18n="intel.sec09.001" class="eyebrow">Impact &amp; ROI</p>
             <h2 data-i18n="intel.sec09.002">INTELLIGENCE THAT PAYS FOR ITSELF</h2>
           </div>
-          <div class="metric-grid m3">
-            <article><strong data-i18n="intel.sec09.003">3–6 mo</strong><span data-i18n="intel.sec09.004" class="m-label">Early detection window</span><p data-i18n="intel.sec09.005">Months of preparation time before traditional signals appear.</p></article>
-            <article><strong data-i18n="intel.sec09.006">40–60%</strong><span data-i18n="intel.sec09.007" class="m-label">Reduced attack vulnerability</span><p data-i18n="intel.sec09.008">Data-driven defense measurably reduces your exposure.</p></article>
-            <article><strong data-i18n="intel.sec09.009">$200K+</strong><span data-i18n="intel.sec09.010" class="m-label">Reduced IR / consultant spend</span><p data-i18n="intel.sec09.011">Replace multiple consultants with one integrated platform.</p></article>
+          <div class="roi-layout">
+            <div class="metric-grid m3">
+              <article><strong data-i18n="intel.sec09.003">3–6 mo</strong><span data-i18n="intel.sec09.004" class="m-label">Early detection window</span><p data-i18n="intel.sec09.005">Months of preparation time before traditional signals appear.</p></article>
+              <article><strong data-i18n="intel.sec09.006">40–60%</strong><span data-i18n="intel.sec09.007" class="m-label">Reduced attack vulnerability</span><p data-i18n="intel.sec09.008">Data-driven defense measurably reduces your exposure.</p></article>
+              <article><strong data-i18n="intel.sec09.009">$200K+</strong><span data-i18n="intel.sec09.010" class="m-label">Reduced IR / consultant spend</span><p data-i18n="intel.sec09.011">Replace multiple consultants with one integrated platform.</p></article>
+            </div>
+            <div class="roi-bars" aria-hidden="true">
+              <div class="roi-row cost">
+                <span class="roi-cap"><svg class="icon" aria-hidden="true"><use href="#icon-dollar"></use></svg>$350K</span>
+                <div class="roi-track"><div class="roi-fill" style="--w:1.4%"></div></div>
+              </div>
+              <div class="roi-row value">
+                <span class="roi-cap"><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg>$50M+</span>
+                <div class="roi-track"><div class="roi-fill" style="--w:100%"></div></div>
+              </div>
+              <div class="roi-mult"><strong>142×</strong><span>ROI</span></div>
+            </div>
           </div>
           <div class="callout-band" data-i18n="intel.sec09.012">Platform cost <strong>$350K/year</strong> → potential value saved <strong>$50M+</strong> for a $500M market-cap company. Insurance against a single attack pays for the platform <strong>142× over.</strong></div>
         </div>
       </section>
 
-      <!-- PRICING & DEPLOYMENT (slide 13) -->
-      <section id="pricing" class="section-full section-dark reveal">
-        <div class="anim-bg" aria-hidden="true"></div>
-        <div class="container">
-          <div class="section-heading centered">
-            <p data-i18n="intel.pricing.001" class="eyebrow">Pricing &amp; Deployment</p>
-            <h2 data-i18n="intel.pricing.002">TWO WAYS TO DEPLOY</h2>
-            <p data-i18n="intel.pricing.003" class="section-subtitle">Live in four weeks from signed engagement — pay in cash, or in shares to preserve capital.</p>
-          </div>
-          <div class="pricing-grid">
-            <div class="pricing-card">
-              <span data-i18n="intel.pricing.004" class="pricing-tag">Option A — Cash</span>
-              <div class="pricing-price">$350,000</div>
-              <p data-i18n="intel.pricing.005" class="pricing-sub">One-time cash payment.</p>
-              <ul>
-                <li data-i18n="intel.pricing.006">Includes Intelligence + Tokenization bundle</li>
-                <li data-i18n="intel.pricing.007">12-month full support included</li>
-              </ul>
-            </div>
-            <div class="pricing-card featured">
-              <span data-i18n="intel.pricing.008" class="pricing-tag">Option B — Shares</span>
-              <div class="pricing-price">$500,000</div>
-              <p data-i18n="intel.pricing.009" class="pricing-sub">Paid in your shares at current market price.</p>
-              <ul>
-                <li data-i18n="intel.pricing.010">No cash outlay — preserve capital</li>
-                <li data-i18n="intel.pricing.011">Includes Intelligence + Tokenization bundle</li>
-              </ul>
-            </div>
-          </div>
-          <div class="pricing-include">
-            <strong data-i18n="intel.pricing.012">Both options include</strong>
-            <ul>
-              <li data-i18n="intel.pricing.013">Full Intelligence SaaS platform access</li>
-              <li data-i18n="intel.pricing.014">Tokenization setup via Securitize</li>
-              <li data-i18n="intel.pricing.015">Onboarding and training</li>
-              <li data-i18n="intel.pricing.016">12-month support and updates</li>
-              <li data-i18n="intel.pricing.017">6-K filing support</li>
-              <li data-i18n="intel.pricing.018">Board briefing included</li>
-              <li data-i18n="intel.pricing.019">4-week deployment from signed engagement</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <!-- WHY NOW (slide 14) -->
-      <section class="section-full section-light reveal">
+      <section class="section-full section-light reveal intel-why">
         <div class="anim-bg light" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading centered">
             <p data-i18n="intel.sec11.001" class="eyebrow">Why Now</p>
             <h2 data-i18n="intel.sec11.002">THE THREAT IS ACCELERATING</h2>
           </div>
-          <div class="metric-grid m3">
-            <article><strong data-i18n="intel.sec11.003">+30%</strong><span data-i18n="intel.sec11.004" class="m-label">Short attacks increasing YoY</span><p data-i18n="intel.sec11.005">The threat environment is getting worse, not better.</p></article>
-            <article><strong data-i18n="intel.sec11.006">SEC</strong><span data-i18n="intel.sec11.007" class="m-label">Regulatory scrutiny rising</span><p data-i18n="intel.sec11.008">SEC transparency rules proposed — early compliance is an advantage.</p></article>
-            <article><strong data-i18n="intel.sec11.009">1st</strong><span data-i18n="intel.sec11.010" class="m-label">Mover advantage</span><p data-i18n="intel.sec11.011">Your competitors are not monitoring — gain the defensive edge now.</p></article>
+          <div class="why-trends reveal-stagger">
+            <article><span class="why-spark up" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong data-i18n="intel.sec11.003">+30%</strong><span data-i18n="intel.sec11.004" class="m-label">Short attacks increasing YoY</span><p data-i18n="intel.sec11.005">The threat environment is getting worse, not better.</p></article>
+            <article><span class="why-spark ic" aria-hidden="true"><svg class="icon"><use href="#icon-shield"></use></svg></span><strong data-i18n="intel.sec11.006">SEC</strong><span data-i18n="intel.sec11.007" class="m-label">Regulatory scrutiny rising</span><p data-i18n="intel.sec11.008">SEC transparency rules proposed — early compliance is an advantage.</p></article>
+            <article><span class="why-spark ic" aria-hidden="true"><svg class="icon"><use href="#icon-rocket"></use></svg></span><strong data-i18n="intel.sec11.009">1st</strong><span data-i18n="intel.sec11.010" class="m-label">Mover advantage</span><p data-i18n="intel.sec11.011">Your competitors are not monitoring — gain the defensive edge now.</p></article>
           </div>
           <div class="callout-band" data-i18n="intel.sec11.012"><strong>Intelligence + Tokenization</strong> is the most powerful combination: Intelligence identifies the threat — who is attacking, how, and when — while Tokenization removes the weapon, so shorts lose their ammunition. This is the foundation of the Equity Defense Infrastructure.</div>
+          <div class="callout-band callout-band-cta">
+            <div>
+              <strong data-i18n="common.pricing_ptr.title">Pricing &amp; Deployment</strong><br>
+              <span data-i18n="common.pricing_ptr.sub">Two ways to deploy — pay in cash or in shares, live in four weeks from signed engagement. See the full breakdown on the main page.</span>
+            </div>
+            <a data-i18n="common.pricing_ptr.cta" class="button button-primary" href="./index.html#investment">See Pricing &amp; Deployment →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- READING PATH — continue the arsenal -->
+      <section class="section-full section-dark reveal">
+        <div class="anim-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading centered">
+            <p data-i18n="common.path.eyebrow" class="eyebrow">The Arsenal · Reading Path</p>
+            <h2 data-i18n="common.path.title">CONTINUE THE ARSENAL</h2>
+            <p data-i18n="common.path.subtitle" class="section-subtitle">Each weapon builds on the last. Read them in sequence to see how the full Equity Defense Infrastructure fits together.</p>
+          </div>
+          <ol class="arsenal-journey">
+            <li class="aj-step is-current">
+              <span>
+                <span class="aj-num">01</span>
+                <span data-i18n="common.footer.intel" class="aj-name">Intelligence</span>
+                <span data-i18n="common.path.here" class="aj-badge">You are here</span>
+              </span>
+            </li>
+            <li class="aj-step is-next">
+              <a href="weapon-tokenization.html">
+                <span class="aj-num">02</span>
+                <span data-i18n="common.footer.token" class="aj-name">Tokenization</span>
+                <span data-i18n="common.path.next" class="aj-badge">Read next →</span>
+              </a>
+            </li>
+            <li class="aj-step is-upcoming">
+              <a href="weapon-lending.html">
+                <span class="aj-num">03</span>
+                <span data-i18n="common.footer.lend" class="aj-name">Lending</span>
+              </a>
+            </li>
+            <li class="aj-step is-upcoming">
+              <a href="weapon-dex-listing.html">
+                <span class="aj-num">04</span>
+                <span data-i18n="common.footer.dex" class="aj-name">DEX Listing</span>
+              </a>
+            </li>
+            <li class="aj-step is-upcoming">
+              <a href="weapon-ir-market-making.html">
+                <span class="aj-num">05</span>
+                <span data-i18n="common.footer.irmm_full" class="aj-name">IR &amp; Market Making</span>
+              </a>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -590,8 +636,8 @@
       </div>
     </footer>
 
-    <script src="./translations.js?v=20260709c"></script>
-    <script src="./i18n.js?v=20260709c"></script>
-    <script src="./script.js?v=20260709c"></script>
+    <script src="./translations.js?v=20260710b"></script>
+    <script src="./i18n.js?v=20260710b"></script>
+    <script src="./script.js?v=20260710b"></script>
   </body>
 </html>
