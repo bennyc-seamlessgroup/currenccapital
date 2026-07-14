@@ -232,6 +232,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 .button-secondary { color: var(--white); border-color: rgba(255, 255, 255, 0.5); }
 .button-secondary:hover { border-color: var(--accent); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25); }
+.button:disabled { opacity: 0.6; cursor: not-allowed; pointer-events: none; transform: none; }
 
 /* ============ TYPOGRAPHY ============ */
 
@@ -694,6 +695,7 @@ blockquote {
 .form-note { margin: 14px 0 0; color: var(--body-text); font-size: 0.84rem; }
 .form-note.is-success { color: #3FD17C; font-weight: 700; }
 .form-note.is-error { color: #F3B0AA; font-weight: 700; }
+.form-note.is-loading { color: var(--accent); font-weight: 700; }
 
 /* ============ CONTACT ============ */
 

@@ -165,7 +165,7 @@ function setNote(form, message, state) {
     note.dataset.original = note.textContent;
   }
   note.textContent = message;
-  note.classList.remove("is-success", "is-error");
+  note.classList.remove("is-success", "is-error", "is-loading");
   if (state) note.classList.add(state);
 }
 
@@ -194,19 +194,33 @@ if (subscribeForm) {
   });
 }
 
-/* ============ Contact form (composes an email) ============ */
+/* ============ Contact form (Web3Forms AJAX submission) ============ */
+
+const WEB3FORMS_ACCESS_KEY = "3725d6d5-a768-42c5-9c92-e4289d6a7fad";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  const submitButton = contactForm.querySelector("button[type='submit']");
+
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    // Captured fresh on every submit so it restores whatever language is currently active.
+    const submitButtonLabel = submitButton.innerHTML;
 
     const name = contactForm.querySelector("#cf-name");
     const title = contactForm.querySelector("#cf-title");
     const company = contactForm.querySelector("#cf-company");
     const email = contactForm.querySelector("#cf-email");
     const message = contactForm.querySelector("#cf-message");
+    const botcheck = contactForm.querySelector("#cf-botcheck");
+
+    // Honeypot: a real visitor never fills this in. Silently drop the submission.
+    if (botcheck && botcheck.checked) {
+      return;
+    }
 
     let valid = true;
 
@@ -242,22 +256,41 @@ if (contactForm) {
 
     email.classList.remove("is-invalid");
 
-    const subject = `Free Short Analysis Request — ${company.value.trim()}`;
-    const bodyLines = [
-      `Name: ${name.value.trim()}`,
-      `Title: ${title.value.trim()}`,
-      `Company / Ticker: ${company.value.trim()}`,
-      `Company Email: ${email.value.trim()}`,
-      "",
-      message.value.trim() || "(No additional message)",
-    ];
-    const mailto =
-      "mailto:tokenize@currencgroup.com" +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `Free Short Analysis Request — ${company.value.trim()}`,
+      from_name: name.value.trim(),
+      name: name.value.trim(),
+      title: title.value.trim(),
+      company: company.value.trim(),
+      email: email.value.trim(),
+      message: message.value.trim() || "(No additional message)",
+    };
 
-    window.location.href = mailto;
-    setNote(contactForm, "Opening your email client — send the drafted message to complete your request.", "is-success");
+    submitButton.disabled = true;
+    submitButton.innerHTML = "Sending…";
+    setNote(contactForm, "Sending your request…", "is-loading");
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        contactForm.reset();
+        setNote(contactForm, "Thank you — your request has been sent. We'll respond within one business day.", "is-success");
+      } else {
+        setNote(contactForm, "Something went wrong sending your request. Please try again or email us directly.", "is-error");
+      }
+    } catch (error) {
+      setNote(contactForm, "Something went wrong sending your request. Please try again or email us directly.", "is-error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = submitButtonLabel;
+    }
   });
 }
 
