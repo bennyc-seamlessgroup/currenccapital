@@ -350,9 +350,9 @@ window.I18N = {
     "home.clients.001": "客戶",
     "home.clients.002": "深受上市公司信賴",
     "home.clients.003": "正在部署股權防禦基礎設施的公司。",
-    "home.clients.004": "客戶標誌",
-    "home.clients.005": "客戶標誌",
-    "home.clients.006": "客戶標誌",
+    "home.clients.004": "即將公布",
+    "home.clients.005": "即將公布",
+    "home.clients.006": "即將公布",
 
     "home.portal.001": "情報入口平台",
     "home.portal.002": "在攻擊來臨前就看見它",
@@ -451,7 +451,7 @@ window.I18N = {
     "home.analysis.011": "範例",
     "home.analysis.012": "做空分析報告",
     "home.analysis.013": "Mint Incorporation Ltd.",
-    "home.analysis.014": "MINT Inc.",
+    "home.analysis.014": "Nasdaq: MIMI",
     "home.analysis.015": "<strong>28.4%</strong><span>做空比例</span>",
     "home.analysis.016": "<strong>69.5%</strong><span>使用率</span>",
     "home.analysis.017": "董事會適用・22 頁・2026 年第二季",
@@ -462,7 +462,7 @@ window.I18N = {
     "home.analysis.022": "<strong>42.1%</strong><span>做空比例</span>",
     "home.analysis.023": "<strong>81.0%</strong><span>使用率</span>",
     "home.analysis.024": "董事會適用・26 頁・2026 年第一季",
-    "home.analysis.025": "查看所有分析報告範例",
+    "home.analysis.025": "索取完整報告",
 
     /* ---------- home: final CTA (3 entry points) ---------- */
     "home.finalcta.001": "立即開始",
@@ -1925,9 +1925,9 @@ window.I18N = {
     "home.clients.001": "客户",
     "home.clients.002": "深受上市公司信赖",
     "home.clients.003": "正在部署股权防御基础设施的公司。",
-    "home.clients.004": "客户标志",
-    "home.clients.005": "客户标志",
-    "home.clients.006": "客户标志",
+    "home.clients.004": "即将公布",
+    "home.clients.005": "即将公布",
+    "home.clients.006": "即将公布",
 
     "home.portal.001": "情报入口平台",
     "home.portal.002": "在攻击来临前就看见它",
@@ -2026,7 +2026,7 @@ window.I18N = {
     "home.analysis.011": "范例",
     "home.analysis.012": "做空分析报告",
     "home.analysis.013": "Mint Incorporation Ltd.",
-    "home.analysis.014": "MINT Inc.",
+    "home.analysis.014": "Nasdaq: MIMI",
     "home.analysis.015": "<strong>28.4%</strong><span>做空比例</span>",
     "home.analysis.016": "<strong>69.5%</strong><span>使用率</span>",
     "home.analysis.017": "董事会适用・22 页・2026 年第二季",
@@ -2037,7 +2037,7 @@ window.I18N = {
     "home.analysis.022": "<strong>42.1%</strong><span>做空比例</span>",
     "home.analysis.023": "<strong>81.0%</strong><span>使用率</span>",
     "home.analysis.024": "董事会适用・26 页・2026 年第一季",
-    "home.analysis.025": "查看所有分析报告范例",
+    "home.analysis.025": "索取完整报告",
 
     /* ---------- home: final CTA (3 entry points) ---------- */
     "home.finalcta.001": "立即开始",
