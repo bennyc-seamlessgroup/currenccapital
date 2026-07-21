@@ -1051,8 +1051,6 @@ blockquote {
   margin: -4% -10% -4% 0;
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6));
 }
-@keyframes tkGlowPulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
-@keyframes tkDrift { 0% { transform: translateX(0); opacity: 0; } 12% { opacity: 0.9; } 70% { opacity: 0.9; } 100% { transform: translateX(84px); opacity: 0; } }
 @media (max-width: 900px) {
   .token-enhanced .hero-split-grid { grid-template-columns: 1fr; }
   .token-enhanced .hero-split-visual { order: -1; margin-bottom: 12px; }
@@ -1145,34 +1143,72 @@ blockquote {
 
 /* ============ LENDING PAGE — ENHANCED SECTION LAYOUTS (scoped) ============ */
 
-/* Hero — two-column split with vault + coin-flow visual */
+/* Hero — two-column split with right-bleeding lending vault image (matches tokenization/intelligence) */
 .lend-enhanced .page-hero-num { display: none; }
-.lend-enhanced .hero-split-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 48px; align-items: center; }
-.lend-enhanced .hero-split-visual { display: flex; justify-content: center; }
-.lend-enhanced .lend-vault-svg { width: 100%; max-width: 480px; height: auto; overflow: visible; }
-.lend-enhanced .lv-glow { animation: tkGlowPulse 6s ease-in-out infinite; }
-.lend-enhanced .lv-body { fill: url(#lvBodyGrad); stroke: var(--gold-line); stroke-width: 1.5; }
-.lend-enhanced .lv-inner { fill: none; stroke: var(--gold-line-soft); stroke-width: 1; }
-.lend-enhanced .lv-hinge { fill: var(--accent); opacity: 0.65; }
-.lend-enhanced .lv-slot { fill: rgba(201, 162, 39, 0.35); }
-.lend-enhanced .lv-dial-rim { fill: url(#lvRimGrad); }
-.lend-enhanced .lv-dial-face { fill: url(#lvFaceGrad); stroke: rgba(240, 215, 123, 0.55); stroke-width: 1; }
-.lend-enhanced .lv-dial-ticks { fill: none; stroke: rgba(201, 162, 39, 0.45); stroke-width: 1; stroke-dasharray: 2 7; }
-.lend-enhanced .lv-spokes-g { transform-origin: 210px 190px; animation: tokenClockSweep 26s linear infinite; }
-.lend-enhanced .lv-spoke { stroke: var(--accent-bright); stroke-width: 4.5; stroke-linecap: round; }
-.lend-enhanced .lv-spoke-ring { fill: none; stroke: var(--accent-bright); stroke-width: 3; }
-.lend-enhanced .lv-hub { fill: var(--accent-bright); }
-.lend-enhanced .lv-bolt { fill: var(--accent); opacity: 0.55; }
-.lend-enhanced .lv-coin-rim { fill: url(#lvRimGrad); }
-.lend-enhanced .lv-coin-face { fill: url(#lvFaceGrad); stroke: rgba(240, 215, 123, 0.55); stroke-width: 0.8; }
-.lend-enhanced .lv-coin-ic { color: var(--accent-bright); }
-.lend-enhanced .lv-flow { animation: tkDrift 5.5s ease-in-out infinite; }
-.lend-enhanced .lv-flow.d2 { animation-delay: 1.8s; }
-.lend-enhanced .lv-flow.d3 { animation-delay: 3.6s; }
+.lend-enhanced .hero-split-grid { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 40px; align-items: center; }
+.lend-enhanced .hero-split-visual { position: relative; margin: 0; }
+.lend-enhanced .hero-split-visual::before {
+  content: ""; position: absolute; inset: -20% -12%; z-index: 0;
+  background: radial-gradient(closest-side, rgba(201, 162, 39, 0.3), transparent 72%);
+  filter: blur(14px); animation: intelGlowPulse 6s ease-in-out infinite;
+}
+.lend-enhanced .lend-hero-image {
+  position: relative; z-index: 1; display: block;
+  width: 122%; max-width: 122%; height: auto;
+  margin: -4% -10% -4% 0;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6));
+}
 @media (max-width: 900px) {
   .lend-enhanced .hero-split-grid { grid-template-columns: 1fr; }
-  .lend-enhanced .hero-split-visual { order: 2; margin-top: 8px; }
-  .lend-enhanced .lend-vault-svg { max-width: 360px; }
+  .lend-enhanced .hero-split-visual { order: -1; margin-bottom: 12px; }
+  .lend-enhanced .lend-hero-image { width: 100%; max-width: 100%; margin: 0 auto; }
+}
+
+/* ============ DEX LISTING PAGE — ENHANCED (scoped) ============ */
+
+/* Hero — two-column split with right-bleeding image (matches tokenization/lending/intelligence) */
+.dex-enhanced .page-hero-num { display: none; }
+.dex-enhanced .hero-split-grid { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 40px; align-items: center; }
+.dex-enhanced .hero-split-visual { position: relative; margin: 0; }
+.dex-enhanced .hero-split-visual::before {
+  content: ""; position: absolute; inset: -20% -12%; z-index: 0;
+  background: radial-gradient(closest-side, rgba(201, 162, 39, 0.3), transparent 72%);
+  filter: blur(14px); animation: intelGlowPulse 6s ease-in-out infinite;
+}
+.dex-enhanced .dex-hero-image {
+  position: relative; z-index: 1; display: block;
+  width: 122%; max-width: 122%; height: auto;
+  margin: -4% -10% -4% 0;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6));
+}
+@media (max-width: 900px) {
+  .dex-enhanced .hero-split-grid { grid-template-columns: 1fr; }
+  .dex-enhanced .hero-split-visual { order: -1; margin-bottom: 12px; }
+  .dex-enhanced .dex-hero-image { width: 100%; max-width: 100%; margin: 0 auto; }
+}
+
+/* Value chain — horizontal numbered step-flow with connectors */
+.dex-enhanced .dex-flow { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); }
+.dex-enhanced .dex-flow-step { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 12px; }
+.dex-enhanced .dex-flow-step::after {
+  content: ""; position: absolute; top: 27px; left: 50%; width: 100%; height: 2px; z-index: 0;
+  background: linear-gradient(90deg, var(--accent), rgba(201, 162, 39, 0.25));
+}
+.dex-enhanced .dex-flow-step:last-child::after { display: none; }
+.dex-enhanced .dex-flow-num {
+  position: relative; z-index: 1; width: 56px; height: 56px; display: grid; place-items: center;
+  border-radius: 50%; border: 1.5px solid var(--gold-line); background: var(--background-deep);
+  color: var(--accent); font-size: 1.3rem; font-weight: 800; line-height: 1; margin-bottom: 18px;
+}
+.dex-enhanced .dex-flow-step.is-end .dex-flow-num { background: var(--accent); color: var(--background-deep); border-color: var(--accent); }
+.dex-enhanced .dex-flow-step strong { color: var(--white); font-size: 1rem; margin-bottom: 6px; }
+.dex-enhanced .dex-flow-sub { color: var(--body-text); font-size: 0.86rem; line-height: 1.4; }
+@media (max-width: 760px) {
+  .dex-enhanced .dex-flow { grid-template-columns: 1fr; }
+  .dex-enhanced .dex-flow-step { display: grid; grid-template-columns: 56px 1fr; column-gap: 18px; align-items: start; text-align: left; padding: 0 0 26px; }
+  .dex-enhanced .dex-flow-num { grid-row: 1 / 3; margin-bottom: 0; }
+  .dex-enhanced .dex-flow-step strong { align-self: center; margin: 0; }
+  .dex-enhanced .dex-flow-step::after { top: 56px; left: 27px; width: 2px; height: calc(100% - 56px); background: linear-gradient(180deg, var(--accent), rgba(201, 162, 39, 0.25)); }
 }
 
 /* ============ WEAPON PAGE — EXTENDED COMPONENTS ============ */
@@ -1346,6 +1382,10 @@ blockquote {
   .nav-cta-desktop { display: none; }
   .lang-switch-desktop { display: none; }
   .nav-toggle { display: inline-flex; }
+  /* backdrop-filter on the header would make it the containing block for the
+     fixed nav panel below (collapsing it to header height) — disable on mobile.
+     The header's 0.9-opacity background keeps it solid without the blur. */
+  .site-header { backdrop-filter: none; }
   .site-nav {
     position: fixed; top: 0; right: 0; bottom: 0; z-index: 120;
     width: min(340px, 82vw); flex-direction: column; justify-content: flex-start; align-items: stretch;
@@ -1363,11 +1403,18 @@ blockquote {
   .nav-dd { display: block; width: 100%; }
   .nav-dd::before { display: none; }
   .nav-dd-toggle { width: 100%; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-  .nav-chev { display: none; }
+  .nav-chev { display: block; width: 14px; height: 14px; }
+  .nav-dd.open .nav-chev { transform: rotate(180deg); }
+  /* Accordion: collapsed by default, expands only when .open is toggled (JS on tap). */
   .nav-dd-menu {
-    position: static; opacity: 1; visibility: visible; transform: none;
-    min-width: 0; padding: 4px 0 6px; border: 0; box-shadow: none; background: transparent;
+    position: static; opacity: 1; visibility: visible;
+    min-width: 0; padding: 0; border: 0; box-shadow: none; background: transparent;
+    max-height: 0; overflow: hidden; transition: max-height 300ms ease;
   }
+  .nav-dd.open .nav-dd-menu { max-height: 460px; }
+  /* Neutralize the desktop hover/focus transform so touch focus can't slide it off-screen. */
+  .nav-dd:hover .nav-dd-menu,
+  .nav-dd:focus-within .nav-dd-menu { transform: none; }
   .nav-dd-menu a { padding: 12px 0 12px 16px; font-size: 0.85rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
   .nav-dd-menu a:hover { background: transparent; }
 }

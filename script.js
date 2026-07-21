@@ -23,6 +23,9 @@ for (const node of reveals) {
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.getElementById("primary-nav");
 const navScrim = document.querySelector(".nav-scrim");
+const navDd = document.querySelector(".nav-dd");
+const navDdToggle = document.querySelector(".nav-dd-toggle");
+const isMobileNav = () => window.matchMedia("(max-width: 1024px)").matches;
 
 function setNav(open) {
   document.body.classList.toggle("nav-open", open);
@@ -31,6 +34,7 @@ function setNav(open) {
     navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   }
   if (navScrim) navScrim.hidden = !open;
+  if (!open && navDd) navDd.classList.remove("open"); // reset accordion when drawer closes
 }
 
 if (navToggle) {
@@ -39,8 +43,21 @@ if (navToggle) {
   );
 }
 if (navScrim) navScrim.addEventListener("click", () => setNav(false));
+
+// Arsenal dropdown: tap-to-expand accordion on mobile, plain link on desktop.
+if (navDdToggle && navDd) {
+  navDdToggle.addEventListener("click", (event) => {
+    if (isMobileNav()) {
+      event.preventDefault();
+      navDd.classList.toggle("open");
+    }
+  });
+}
+
 if (siteNav) {
   for (const link of siteNav.querySelectorAll("a")) {
+    // The Arsenal toggle expands the submenu instead of closing the drawer.
+    if (link.classList.contains("nav-dd-toggle")) continue;
     link.addEventListener("click", () => setNav(false));
   }
 }
