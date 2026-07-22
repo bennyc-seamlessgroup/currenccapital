@@ -25,7 +25,7 @@ const siteNav = document.getElementById("primary-nav");
 const navScrim = document.querySelector(".nav-scrim");
 const navDd = document.querySelector(".nav-dd");
 const navDdToggle = document.querySelector(".nav-dd-toggle");
-const isMobileNav = () => window.matchMedia("(max-width: 1024px)").matches;
+const isMobileNav = () => window.matchMedia("(max-width: 1360px)").matches;
 
 function setNav(open) {
   document.body.classList.toggle("nav-open", open);
@@ -304,6 +304,94 @@ if (contactForm) {
       }
     } catch (error) {
       setNote(contactForm, "Something went wrong sending your request. Please try again or email us directly.", "is-error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = submitButtonLabel;
+    }
+  });
+}
+
+/* ============ Partner application form (Web3Forms AJAX submission) ============ */
+
+const PARTNER_WEB3FORMS_ACCESS_KEY = "037884fa-3e3a-4ced-9b36-7ddc37fd123e";
+
+const partnerForm = document.getElementById("partner-apply-form");
+
+if (partnerForm) {
+  const submitButton = partnerForm.querySelector("button[type='submit']");
+
+  partnerForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButtonLabel = submitButton.innerHTML;
+
+    const firm = partnerForm.querySelector("#pf-firm");
+    const contact = partnerForm.querySelector("#pf-contact");
+    const email = partnerForm.querySelector("#pf-email");
+    const phone = partnerForm.querySelector("#pf-phone");
+    const region = partnerForm.querySelector("#pf-region");
+    const message = partnerForm.querySelector("#pf-message");
+    const botcheck = partnerForm.querySelector("#pf-botcheck");
+
+    // Honeypot: a real visitor never fills this in. Silently drop the submission.
+    if (botcheck && botcheck.checked) {
+      return;
+    }
+
+    let valid = true;
+
+    for (const field of [firm, contact, email]) {
+      const empty = field.value.trim() === "";
+      field.classList.toggle("is-invalid", empty);
+      if (empty) valid = false;
+    }
+
+    if (!valid) {
+      setNote(partnerForm, "Please complete the highlighted fields.", "is-error");
+      return;
+    }
+
+    if (!isValidEmail(email.value)) {
+      email.classList.add("is-invalid");
+      setNote(partnerForm, "Please enter a valid email address.", "is-error");
+      email.focus();
+      return;
+    }
+
+    email.classList.remove("is-invalid");
+
+    const payload = {
+      access_key: PARTNER_WEB3FORMS_ACCESS_KEY,
+      subject: `IR Partner Application — ${firm.value.trim()}`,
+      from_name: contact.value.trim(),
+      firm: firm.value.trim(),
+      contact: contact.value.trim(),
+      email: email.value.trim(),
+      phone: phone.value.trim() || "(Not provided)",
+      region: region.value || "(Not specified)",
+      message: message.value.trim() || "(No additional message)",
+    };
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = "Sending…";
+    setNote(partnerForm, "Sending your application…", "is-loading");
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        partnerForm.reset();
+        setNote(partnerForm, "Thank you — your application has been sent. Our Partner Team will respond within 48 hours.", "is-success");
+      } else {
+        setNote(partnerForm, "Something went wrong sending your application. Please try again or email us directly.", "is-error");
+      }
+    } catch (error) {
+      setNote(partnerForm, "Something went wrong sending your application. Please try again or email us directly.", "is-error");
     } finally {
       submitButton.disabled = false;
       submitButton.innerHTML = submitButtonLabel;
