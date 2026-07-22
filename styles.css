@@ -1251,8 +1251,8 @@ blockquote {
 .wp-col h3 { display: inline-block; color: var(--primary); font-size: 1.15rem; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid var(--accent); }
 .section-dark .wp-col h3 { color: var(--white); }
 .tick-list { list-style: none; padding: 0; margin: 0; }
-.tick-list li { display: flex; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--navy-line); }
-.tick-list li::before { content: "▸"; color: var(--accent); font-weight: 800; }
+.tick-list li { position: relative; padding: 13px 0 13px 22px; border-bottom: 1px solid var(--navy-line); }
+.tick-list li::before { content: "▸"; position: absolute; left: 0; top: 13px; color: var(--accent); font-weight: 800; line-height: 1.55; }
 .section-dark .tick-list li { border-bottom-color: var(--gold-line-soft); color: var(--body-text); }
 
 .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -1596,6 +1596,46 @@ blockquote {
 
 /* ============ OUR STORY PAGE ============ */
 
+/* Hero — two-column split with animated crash → recovery share-price chart */
+.story-page .page-hero-num { display: none; }
+.story-page .hero-split-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 44px; align-items: center; }
+.story-page .hero-split-visual { position: relative; margin: 0; }
+.story-page .hero-split-visual::before {
+  content: ""; position: absolute; inset: -14% -6%; z-index: 0;
+  background: radial-gradient(closest-side, rgba(201, 162, 39, 0.22), transparent 72%);
+  filter: blur(16px); animation: intelGlowPulse 6s ease-in-out infinite;
+}
+.story-page .story-chart { position: relative; z-index: 1; width: 100%; max-width: 620px; height: auto; overflow: visible; }
+.story-page .sc-grid line { stroke: rgba(255, 255, 255, 0.08); stroke-width: 1; }
+.story-page .sc-line { stroke-dasharray: 1000; stroke-dashoffset: 1000; filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45)); }
+.story-page .reveal .sc-crash, .story-page .sc-crash { animation: storyDraw 1.5s ease forwards; }
+.story-page .sc-recover { animation: storyDraw 1.7s ease 1.4s forwards; }
+.story-page .sc-area { opacity: 0; animation: storyFade 1.2s ease 2.6s forwards; }
+.story-page .sc-dot { filter: drop-shadow(0 0 6px currentColor); }
+.story-page .sc-dot-low { fill: var(--danger-bright); color: var(--danger-bright); opacity: 0; animation: storyFade 0.5s ease 1.3s forwards; }
+.story-page .sc-dot-high { fill: var(--accent-bright); color: var(--accent-bright); opacity: 0; animation: storyFade 0.5s ease 3s forwards; }
+.story-page .sc-label { font-size: 20px; font-weight: 800; font-family: inherit; opacity: 0; }
+.story-page .sc-label-low { fill: var(--danger-bright); animation: storyFade 0.5s ease 1.4s forwards; }
+.story-page .sc-label-high { fill: var(--accent-bright); animation: storyFade 0.5s ease 3.1s forwards; }
+@keyframes storyDraw { to { stroke-dashoffset: 0; } }
+@keyframes storyFade { to { opacity: 1; } }
+@media (max-width: 900px) {
+  .story-page .hero-split-grid { grid-template-columns: 1fr; }
+  .story-page .hero-split-visual { order: -1; margin-bottom: 8px; }
+  .story-page .story-chart { max-width: 480px; margin: 0 auto; display: block; }
+}
+
+/* Mission signature — dark brand seal with the CURRENC logo */
+.story-page .story-seal {
+  margin: 40px auto 0; max-width: 720px; text-align: center;
+  padding: 44px 40px; border: 1px solid var(--gold-line);
+  background: linear-gradient(180deg, var(--background-deep), #050f20);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+.story-page .story-seal-logo { width: 190px; height: auto; margin: 0 auto 26px; display: block; opacity: 0.96; }
+.story-page .story-seal-quote { margin: 0; color: var(--white); font-style: italic; font-size: 1.18rem; line-height: 1.6; }
+.story-page .story-seal-by { margin: 20px 0 0; color: var(--accent); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem; }
+
 /* Vertical narrative timeline */
 .story-timeline { list-style: none; margin: 56px 0 0; padding: 0; max-width: 880px; margin-inline: auto; position: relative; }
 .story-timeline::before { content: ""; position: absolute; left: 23px; top: 8px; bottom: 8px; width: 2px; background: var(--gold-line); }
@@ -1631,7 +1671,8 @@ blockquote {
 .story-weapon p { color: var(--muted-light); margin: 0 0 12px; font-size: 0.94rem; line-height: 1.65; }
 .story-weapon p strong { color: var(--ink); }
 .story-weapon .tick-list { margin: 16px 0; }
-.story-weapon .tick-list li { padding: 10px 0; font-size: 0.88rem; }
+.story-weapon .tick-list li { padding: 10px 0 10px 22px; font-size: 0.88rem; }
+.story-weapon .tick-list li::before { top: 10px; }
 .sw-pitch { margin-top: 18px; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(201, 162, 39, 0.08); font-style: italic; color: var(--ink); font-size: 0.92rem; }
 
 /* Before/after results */

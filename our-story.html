@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Story | CURRENC Capital</title>
     <meta name="description" content="We did not build this from a white paper. We built it from a war room. The only firm that has defended its own equity with the exact system it sells." />
-    <link rel="stylesheet" href="./styles.css?v=20260710y" />
+    <link rel="stylesheet" href="./styles.css?v=2026071aa" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -176,15 +176,54 @@
 
     <main class="story-page">
       <!-- HERO -->
-      <section class="page-hero">
-        <div class="container">
-          <span class="page-hero-num" aria-hidden="true"></span>
-          <p data-i18n="story.hero.001" class="meta">Company · Our Story</p>
-          <h1 data-i18n="story.hero.002">OUR STORY <span class="h1-accent">WE LIVED IT. WE BUILT IT. WE SURVIVED.</span></h1>
-          <p data-i18n="story.hero.003" class="hero-subhead">We did not build this from a white paper. We built it from a war room. The only firm that has defended its own equity with the exact system it sells.</p>
-          <div class="hero-actions">
-            <a data-i18n="story.hero.004" class="button button-primary" href="./short-analysis.html">Get My Complimentary Short Analysis</a>
-            <a data-i18n="story.hero.005" class="button button-secondary" href="#arsenal">See What We Built</a>
+      <section class="page-hero story-hero-split">
+        <div class="anim-bg danger" aria-hidden="true"></div>
+        <div class="container hero-split-grid">
+          <div class="hero-split-text">
+            <p data-i18n="story.hero.001" class="hero-kicker">Company · Our Story</p>
+            <h1 data-i18n="story.hero.002">OUR STORY <span class="h1-accent">WE LIVED IT. WE BUILT IT. WE SURVIVED.</span></h1>
+            <p data-i18n="story.hero.003" class="hero-subhead">We did not build this from a white paper. We built it from a war room. The only firm that has defended its own equity with the exact system it sells.</p>
+            <div class="hero-actions">
+              <a data-i18n="story.hero.004" class="button button-primary" href="./short-analysis.html">Get My Complimentary Short Analysis</a>
+              <a data-i18n="story.hero.005" class="button button-secondary" href="#arsenal">See What We Built</a>
+            </div>
+          </div>
+          <div class="hero-split-visual" aria-hidden="true">
+            <svg class="story-chart" viewBox="0 0 560 420" role="img">
+              <defs>
+                <linearGradient id="scCrash" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#F0776B"/>
+                  <stop offset="100%" stop-color="#C43B32"/>
+                </linearGradient>
+                <linearGradient id="scRecover" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#C9A227"/>
+                  <stop offset="100%" stop-color="#F0D77B"/>
+                </linearGradient>
+                <linearGradient id="scArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(201,162,39,0.34)"/>
+                  <stop offset="100%" stop-color="rgba(201,162,39,0)"/>
+                </linearGradient>
+              </defs>
+              <!-- grid -->
+              <g class="sc-grid">
+                <line x1="24" y1="372" x2="540" y2="372"/>
+                <line x1="24" y1="286" x2="540" y2="286"/>
+                <line x1="24" y1="200" x2="540" y2="200"/>
+                <line x1="24" y1="114" x2="540" y2="114"/>
+              </g>
+              <!-- recovery area fill -->
+              <path class="sc-area" d="M300 344 L340 322 L372 276 L410 224 L446 160 L500 108 L524 92 L524 372 L300 372 Z" fill="url(#scArea)"/>
+              <!-- crash line -->
+              <path class="sc-line sc-crash" d="M24 80 L78 120 L120 104 L170 176 L210 156 L250 244 L288 312 L300 344" fill="none" stroke="url(#scCrash)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- recovery line -->
+              <path class="sc-line sc-recover" d="M300 344 L340 322 L372 276 L410 224 L446 160 L500 108 L524 92" fill="none" stroke="url(#scRecover)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- low point -->
+              <circle class="sc-dot sc-dot-low" cx="300" cy="344" r="6"/>
+              <text class="sc-label sc-label-low" x="300" y="366" text-anchor="middle">$0.32</text>
+              <!-- high point -->
+              <circle class="sc-dot sc-dot-high" cx="524" cy="92" r="6"/>
+              <text class="sc-label sc-label-high" x="516" y="78" text-anchor="end">~$3.00</text>
+            </svg>
           </div>
         </div>
       </section>
@@ -415,9 +454,10 @@
           <p data-i18n="story.sec04.003" class="wp-lead">We built this arsenal for ourselves. Now we offer it to every public company facing the same enemy.</p>
           <p data-i18n="story.sec04.004" class="wp-lead">Our mission is simple: give public companies the weapons and the intelligence to fight back against short attacks, defend their valuation, and reclaim control of their equity.</p>
           <p data-i18n="story.sec04.005" class="wp-lead">Short sellers have institutional-grade tools, Prime Broker relationships, and regulatory blind spots working in their favor. Public companies have had nothing — until now.</p>
-          <div class="callout-band">
-            <p data-i18n="story.sec04.006" style="margin:0; font-style:italic; font-size:1.15rem;">"We did not build CURRENC Capital to sell services. We built it because we needed it to survive. And now that we have survived, we are making sure no other public company has to fight with one hand tied behind their back."</p>
-            <p data-i18n="story.sec04.007" style="margin:16px 0 0; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; font-size:0.78rem;">— CURRENC CAPITAL TEAM · NASDAQ: CURR</p>
+          <div class="story-seal">
+            <img src="./Resources/All Logos_Currenc_Logo_dark_bg.png" alt="CURRENC" class="story-seal-logo" />
+            <p data-i18n="story.sec04.006" class="story-seal-quote">"We did not build CURRENC Capital to sell services. We built it because we needed it to survive. And now that we have survived, we are making sure no other public company has to fight with one hand tied behind their back."</p>
+            <p data-i18n="story.sec04.007" class="story-seal-by">— CURRENC CAPITAL TEAM · NASDAQ: CURR</p>
           </div>
         </div>
       </section>
@@ -449,8 +489,8 @@
       </div>
     </footer>
 
-    <script src="./translations.js?v=20260710y"></script>
-    <script src="./i18n.js?v=20260710y"></script>
-    <script src="./script.js?v=20260710y"></script>
+    <script src="./translations.js?v=2026071aa"></script>
+    <script src="./i18n.js?v=2026071aa"></script>
+    <script src="./script.js?v=2026071aa"></script>
   </body>
 </html>
