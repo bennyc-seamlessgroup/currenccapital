@@ -399,6 +399,33 @@ if (partnerForm) {
   });
 }
 
+/* ============ Sample-report horizontal carousel ============ */
+
+const tombScroll = document.getElementById("tombstone-scroll");
+
+if (tombScroll) {
+  const prevBtn = document.querySelector('[data-tomb-scroll="-1"]');
+  const nextBtn = document.querySelector('[data-tomb-scroll="1"]');
+
+  const updateNavState = () => {
+    const maxScroll = tombScroll.scrollWidth - tombScroll.clientWidth;
+    if (prevBtn) prevBtn.disabled = tombScroll.scrollLeft <= 4;
+    if (nextBtn) nextBtn.disabled = tombScroll.scrollLeft >= maxScroll - 4;
+  };
+
+  const scrollByCard = (direction) => {
+    const card = tombScroll.querySelector(".tombstone");
+    const step = card ? card.getBoundingClientRect().width + 24 : 300;
+    tombScroll.scrollBy({ left: step * direction, behavior: "smooth" });
+  };
+
+  if (prevBtn) prevBtn.addEventListener("click", () => scrollByCard(-1));
+  if (nextBtn) nextBtn.addEventListener("click", () => scrollByCard(1));
+  tombScroll.addEventListener("scroll", updateNavState, { passive: true });
+  window.addEventListener("resize", updateNavState);
+  updateNavState();
+}
+
 /* ============ Report page sticky CTA bar ============ */
 
 const reportSticky = document.getElementById("report-sticky");

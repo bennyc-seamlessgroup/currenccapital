@@ -8,7 +8,7 @@
       name="description"
       content="CURRENC Capital provides Equity Defense Infrastructure for public companies facing short seller attacks. Intelligence, Tokenization, Lending, DEX Listing, and IR &amp; Market Making."
     />
-    <link rel="stylesheet" href="./styles.css?v=2026071ah" />
+    <link rel="stylesheet" href="./styles.css?v=2026071ai" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -87,6 +87,9 @@
         </symbol>
         <symbol id="icon-arrow-right" viewBox="0 0 24 24">
           <path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+          <path d="M20 12H6M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
         </symbol>
         <symbol id="icon-badge-check" viewBox="0 0 24 24">
           <path d="M12 2.5 15 4.6 18.8 5 18 8.8 19 12l-1 3.2.8 3.8-3.8.4L12 21.5 9 19.4l-3.8-.4.8-3.8L5 12l1-3.2L5.2 5 9 4.6 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
@@ -793,35 +796,108 @@
           <div class="section-heading centered">
             <p data-i18n="home.analysis.001" class="eyebrow">Sample Work</p>
             <h2 data-i18n="home.analysis.002">SEE WHAT $12,000 OF INTELLIGENCE LOOKS LIKE</h2>
-            <p data-i18n="home.analysis.003" class="section-subtitle">Recent reports prepared for public companies under active short attack. Each is 20–28 pages, board-ready, and delivered within 1 business day. Request the full confidential report for your company.</p>
+            <p data-i18n="home.analysis.003" class="section-subtitle">Seven reports prepared for public companies under active short attack. Each is board-ready and delivered within 1 business day. Request the full confidential report for your company.</p>
           </div>
-          <div class="tombstone-grid reveal-stagger">
-            <article class="tombstone">
-              <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
-              <div class="tomb-logo"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
-              <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
-              <h3 data-i18n="home.analysis.006">CURRENC Group Inc.</h3>
-              <p data-i18n="home.analysis.007" class="tomb-sub">Nasdaq: CURR</p>
-              <ul class="tomb-metrics">
-                <li data-i18n="home.analysis.008"><strong>31.8%</strong><span>Short Interest</span></li>
-                <li data-i18n="home.analysis.009"><strong>74.2%</strong><span>Utilization</span></li>
-              </ul>
-              <span data-i18n="home.analysis.010" class="tomb-foot">Board-ready · 24 pages · Q2 2026</span>
-              <a class="card-link" href="./Resources/CURR_Comprehensive_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
-            </article>
-            <article class="tombstone">
-              <span data-i18n="home.analysis.011" class="tomb-badge">Sample</span>
-              <div class="tomb-logo"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
-              <span data-i18n="home.analysis.012" class="tomb-kicker">Short Analysis Report</span>
-              <h3 data-i18n="home.analysis.013">Mint Incorporation Ltd.</h3>
-              <p data-i18n="home.analysis.014" class="tomb-sub">Nasdaq: MIMI</p>
-              <ul class="tomb-metrics">
-                <li data-i18n="home.analysis.015"><strong>28.4%</strong><span>Short Interest</span></li>
-                <li data-i18n="home.analysis.016"><strong>69.5%</strong><span>Utilization</span></li>
-              </ul>
-              <span data-i18n="home.analysis.017" class="tomb-foot">Board-ready · 22 pages · Q2 2026</span>
-              <a class="card-link" href="./Resources/MIMI_Comprehensive_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
-            </article>
+          <div class="tombstone-carousel">
+            <button class="tomb-nav tomb-nav-prev" type="button" data-tomb-scroll="-1" aria-label="Scroll to previous report">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+            </button>
+            <div class="tombstone-scroll reveal-stagger" id="tombstone-scroll" tabindex="0" role="group" aria-label="Sample short analysis reports">
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><img src="./Resources/currenc.png" alt="CURRENC Group Inc." /></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.006">CURRENC Group Inc.</h3>
+                <p data-i18n="home.analysis.007" class="tomb-sub">Nasdaq: CURR</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.008"><strong>31.8%</strong><span>Short Interest</span></li>
+                  <li data-i18n="home.analysis.009"><strong>74.2%</strong><span>Utilization</span></li>
+                </ul>
+                <span data-i18n="home.analysis.010" class="tomb-foot">Board-ready · 18 pages · Q3 2026</span>
+                <a class="card-link" href="./Resources/CURR_Short_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><img src="./Resources/mimi.png" alt="Mint Incorporation Ltd." /></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.013">Mint Incorporation Ltd.</h3>
+                <p data-i18n="home.analysis.014" class="tomb-sub">Nasdaq: MIMI</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.015"><strong>28.4%</strong><span>Short Interest</span></li>
+                  <li data-i18n="home.analysis.016"><strong>69.5%</strong><span>Utilization</span></li>
+                </ul>
+                <span data-i18n="home.analysis.017" class="tomb-foot">Board-ready · 22 pages · Q2 2026</span>
+                <a class="card-link" href="./Resources/MIMI_Comprehensive_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><span class="tomb-logo-text">SUPX</span></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.026">SuperX AI Technology Limited</h3>
+                <p data-i18n="home.analysis.027" class="tomb-sub">Nasdaq: SUPX</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.028"><strong>73.2%</strong><span>Global Short</span></li>
+                  <li data-i18n="home.analysis.029"><strong>92.2%</strong><span>Utilization</span></li>
+                </ul>
+                <span data-i18n="home.analysis.030" class="tomb-foot">Board-ready · 15 pages · Q2 2026</span>
+                <a class="card-link" href="./Resources/SUPX_Short_Analysis_EN_27_June_2026_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><span class="tomb-logo-text">DDC</span></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.031">DDC Enterprise Limited</h3>
+                <p data-i18n="home.analysis.032" class="tomb-sub">NYSE American: DDC</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.033"><strong>0.52%</strong><span>Short Interest</span></li>
+                  <li data-i18n="home.analysis.034"><strong>42/100</strong><span>Squeeze Score</span></li>
+                </ul>
+                <span data-i18n="home.analysis.035" class="tomb-foot">Board-ready · 20 pages · Q3 2026</span>
+                <a class="card-link" href="./Resources/DDC_Short_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><span class="tomb-logo-text">AMBR</span></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.036">Amber International Holding Limited</h3>
+                <p data-i18n="home.analysis.037" class="tomb-sub">Nasdaq: AMBR</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.038"><strong>91.6%</strong><span>Utilization</span></li>
+                  <li data-i18n="home.analysis.039"><strong>139 Days</strong><span>Avg. Duration</span></li>
+                </ul>
+                <span data-i18n="home.analysis.040" class="tomb-foot">Board-ready · 6 pages · Q2 2026</span>
+                <a class="card-link" href="./Resources/AMBR_Short_Analysis_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><span class="tomb-logo-text">HUIZ</span></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.041">Huize Holding Limited</h3>
+                <p data-i18n="home.analysis.042" class="tomb-sub">Nasdaq: HUIZ</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.043"><strong>1.31%</strong><span>Short Interest</span></li>
+                  <li data-i18n="home.analysis.044"><strong>0.53%</strong><span>Utilization</span></li>
+                </ul>
+                <span data-i18n="home.analysis.045" class="tomb-foot">Board-ready · 13 pages · Q2 2026</span>
+                <a class="card-link" href="./Resources/HUIZ_Short_Analysis_Report_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+              <article class="tombstone">
+                <span data-i18n="home.analysis.004" class="tomb-badge">Sample</span>
+                <div class="tomb-logo"><span class="tomb-logo-text">NCTY</span></div>
+                <span data-i18n="home.analysis.005" class="tomb-kicker">Short Analysis Report</span>
+                <h3 data-i18n="home.analysis.046">The9 Limited</h3>
+                <p data-i18n="home.analysis.047" class="tomb-sub">Nasdaq: NCTY</p>
+                <ul class="tomb-metrics">
+                  <li data-i18n="home.analysis.048"><strong>9.3%</strong><span>Global Short</span></li>
+                  <li data-i18n="home.analysis.049"><strong>44.5%</strong><span>YTD Decline</span></li>
+                </ul>
+                <span data-i18n="home.analysis.050" class="tomb-foot">Board-ready · 10 pages · Q3 2026</span>
+                <a class="card-link" href="./Resources/NCTY_Tokenization_Analysis_7_July_2026_pdf.pdf" target="_blank" rel="noopener">View Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+              </article>
+            </div>
+            <button class="tomb-nav tomb-nav-next" type="button" data-tomb-scroll="1" aria-label="Scroll to next report">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
           </div>
           <p class="section-cta-note" style="text-align:center; margin-top:32px;"><a data-i18n="home.analysis.025" class="card-link" href="./short-analysis.html">Request Full Report<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a></p>
         </div>
@@ -909,8 +985,8 @@
       </div>
     </footer>
 
-    <script src="./translations.js?v=2026071ah"></script>
-    <script src="./i18n.js?v=2026071ah"></script>
-    <script src="./script.js?v=2026071ah"></script>
+    <script src="./translations.js?v=2026071ai"></script>
+    <script src="./i18n.js?v=2026071ai"></script>
+    <script src="./script.js?v=2026071ai"></script>
   </body>
 </html>

@@ -1337,6 +1337,31 @@ blockquote {
 .tombstone .card-link { color: var(--primary); margin-top: auto; padding-top: 0; }
 .tombstone .card-link:hover { color: var(--accent); }
 
+/* Horizontal-scroll report carousel (index.html Sample Work) */
+.tombstone-carousel { position: relative; display: flex; align-items: center; gap: 16px; }
+.tombstone-scroll {
+  display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x proximity;
+  scroll-padding-left: 4px; padding: 4px 4px 20px; margin: 0 -4px;
+  scrollbar-width: thin; scrollbar-color: var(--gold-line) transparent;
+}
+.tombstone-scroll::-webkit-scrollbar { height: 6px; }
+.tombstone-scroll::-webkit-scrollbar-track { background: transparent; }
+.tombstone-scroll::-webkit-scrollbar-thumb { background: var(--gold-line); }
+.tombstone-scroll .tombstone { flex: 0 0 auto; width: clamp(250px, 27vw, 290px); scroll-snap-align: start; }
+.tomb-nav {
+  flex-shrink: 0; width: 44px; height: 44px; display: grid; place-items: center;
+  border: 1px solid var(--gold-line); background: #fff; color: var(--primary);
+  cursor: pointer; transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.tomb-nav .icon { width: 18px; height: 18px; }
+.tomb-nav:hover { background: var(--accent); border-color: var(--accent); color: var(--background); }
+.tomb-nav:disabled { opacity: 0.3; cursor: default; }
+.tomb-nav:disabled:hover { background: #fff; color: var(--primary); border-color: var(--gold-line); }
+@media (max-width: 640px) {
+  .tomb-nav { display: none; }
+  .tombstone-scroll .tombstone { width: 78vw; }
+}
+
 /* ============ REVEAL ============ */
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 650ms ease, transform 650ms ease; }
