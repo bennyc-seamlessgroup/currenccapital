@@ -10,13 +10,15 @@ window.KNOWLEDGE_VIDEOS = [
     youtubeId: "dydgO_7aw4E",
     duration: "2:37",
     source: "CBS Mornings",
-    opinion: true
+    opinion: true,
+    homepage: true
   },
   {
     title: "Larry Fink: “We’re at the Beginning of the Tokenization of All Assets”",
     youtubeId: "-LPit2bEWAo",
     duration: "5:52",
-    source: "CNBC Television"
+    source: "CNBC Television",
+    homepage: true
   },
   {
     title: "Failure to Deliver (FTD): Where Are the Stocks?",
@@ -43,7 +45,8 @@ window.KNOWLEDGE_VIDEOS = [
     youtubeId: "i-tKiiHWGkE",
     duration: "3:19",
     source: "Gaming Wall Street (HBO), via Kilgore Trout",
-    opinion: true
+    opinion: true,
+    homepage: true
   }
 ];
 

@@ -18,24 +18,33 @@
     });
   }
 
+  function videoCardHTML(v) {
+    return (
+      '<a class="klib-video" href="https://www.youtube.com/watch?v=' + esc(v.youtubeId) + '" target="_blank" rel="noopener">' +
+        '<span class="klib-thumb">' +
+          '<img src="https://i.ytimg.com/vi/' + esc(v.youtubeId) + '/hqdefault.jpg" alt="" />' +
+          '<span class="klib-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7.5l9 4.5-9 4.5z" /></svg></span>' +
+          '<span class="klib-dur">' + esc(v.duration) + "</span>" +
+          (v.opinion ? '<span class="klib-opinion">' + esc(t("klib.card.opinion", "Opinion")) + "</span>" : "") +
+        "</span>" +
+        '<span class="klib-video-title">' + esc(v.title) + "</span>" +
+        '<span class="klib-video-meta">' + esc(v.source) + "</span>" +
+      "</a>"
+    );
+  }
+
   function renderVideos() {
     const grid = document.getElementById("klibVideoGrid");
     if (!grid) return;
+    grid.innerHTML = videos.map(videoCardHTML).join("");
+  }
+
+  function renderHomePicks() {
+    const grid = document.getElementById("homeVideoGrid");
+    if (!grid) return;
     grid.innerHTML = videos
-      .map(function (v) {
-        return (
-          '<a class="klib-video" href="https://www.youtube.com/watch?v=' + esc(v.youtubeId) + '" target="_blank" rel="noopener">' +
-            '<span class="klib-thumb">' +
-              '<img src="https://i.ytimg.com/vi/' + esc(v.youtubeId) + '/hqdefault.jpg" alt="" />' +
-              '<span class="klib-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7.5l9 4.5-9 4.5z" /></svg></span>' +
-              '<span class="klib-dur">' + esc(v.duration) + "</span>" +
-              (v.opinion ? '<span class="klib-opinion">' + esc(t("klib.card.opinion", "Opinion")) + "</span>" : "") +
-            "</span>" +
-            '<span class="klib-video-title">' + esc(v.title) + "</span>" +
-            '<span class="klib-video-meta">' + esc(v.source) + "</span>" +
-          "</a>"
-        );
-      })
+      .filter(function (v) { return v.homepage; })
+      .map(videoCardHTML)
       .join("");
   }
 
@@ -59,6 +68,7 @@
   function renderAll() {
     renderVideos();
     renderArticles();
+    renderHomePicks();
   }
 
   document.addEventListener("DOMContentLoaded", function () {
