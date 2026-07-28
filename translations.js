@@ -1583,7 +1583,17 @@ window.I18N = {
     "home.analysis.047": "Nasdaq: NCTY",
     "home.analysis.048": "<strong>9.3%</strong><span>全球做空比例</span>",
     "home.analysis.049": "<strong>44.5%</strong><span>年初至今跌幅</span>",
-    "home.analysis.050": "董事會適用・10 頁・2026 年第三季"
+    "home.analysis.050": "董事會適用・10 頁・2026 年第三季",
+    "klib.hero.001": "知識庫",
+    "klib.hero.002": "知識<span style=\"color:var(--accent)\">庫</span>",
+    "klib.hero.003": "精選代幣化證券、市場結構與上市公司股份未來的影片與文章。",
+    "klib.card.opinion": "觀點",
+    "klib.videos.002": "影片",
+    "klib.articles.002": "文章",
+    "home.libpromo.001": "知識庫",
+    "home.libpromo.002": "還不確定代幣化對您意味著什麼？",
+    "home.libpromo.003": "來自 SEC、DTCC、BlackRock、Securitize 等機構的精選影片與文章。",
+    "home.libpromo.010": "瀏覽知識庫"
   },
   "zh-Hans": {
     "common.nav.home": "首页",
@@ -3166,6 +3176,16 @@ window.I18N = {
     "home.analysis.047": "Nasdaq: NCTY",
     "home.analysis.048": "<strong>9.3%</strong><span>全球做空比例</span>",
     "home.analysis.049": "<strong>44.5%</strong><span>年初至今跌幅</span>",
-    "home.analysis.050": "董事会适用・10 页・2026 年第三季"
+    "home.analysis.050": "董事会适用・10 页・2026 年第三季",
+    "klib.hero.001": "知识库",
+    "klib.hero.002": "知识<span style=\"color:var(--accent)\">库</span>",
+    "klib.hero.003": "精选代币化证券、市场结构与上市公司股份未来的视频与文章。",
+    "klib.card.opinion": "观点",
+    "klib.videos.002": "视频",
+    "klib.articles.002": "文章",
+    "home.libpromo.001": "知识库",
+    "home.libpromo.002": "还不确定代币化对您意味着什么？",
+    "home.libpromo.003": "来自 SEC、DTCC、BlackRock、Securitize 等机构的精选视频与文章。",
+    "home.libpromo.010": "浏览知识库"
   }
 };

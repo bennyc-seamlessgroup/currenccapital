@@ -381,6 +381,7 @@ h3 {
 /* ============ SECTION SHELLS ============ */
 
 .section-dark { background: var(--background); color: var(--body-text); }
+.section-obsidian { background: var(--black-deep); color: var(--body-text); }
 .section-light { background: var(--light-bg); color: var(--ink); }
 .section-light .section-subtitle,
 .section-light p,
@@ -637,20 +638,6 @@ blockquote {
 .news-card time { display: block; margin: 16px 0 10px; color: var(--muted-light); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .news-card h3 { font-size: 1.18rem; line-height: 1.3; text-transform: none; letter-spacing: 0; color: var(--primary); }
 .news-card p { flex: 1; }
-
-/* ============ KNOWLEDGE BASE ============ */
-
-.kb-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.kb-card {
-  display: flex; flex-direction: column; min-height: 320px; padding: 34px 30px;
-  border: 1px solid var(--gold-line-soft); background: linear-gradient(180deg, rgba(15, 52, 96, 0.5), rgba(11, 29, 58, 0.8));
-  transition: transform 220ms ease, border-color 220ms ease;
-}
-.kb-card:hover { transform: translateY(-6px); border-color: var(--gold-line); }
-.kb-icon { width: 30px; height: 30px; margin-bottom: 22px; }
-.kb-type { color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
-.kb-card h3 { color: var(--white); font-size: 1.12rem; text-transform: none; letter-spacing: 0; line-height: 1.3; }
-.kb-card p { flex: 1; font-size: 0.95rem; color: var(--body-text); }
 
 /* ============ FAQ ============ */
 
@@ -1405,7 +1392,6 @@ blockquote {
   .solution-cards article:nth-child(2n) { border-right: 0; }
   .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .news-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-  .kb-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 44px; }
 }
 
@@ -1460,7 +1446,7 @@ blockquote {
   .portal-grid, .contact-grid, .subscribe-grid, .cost-layout { grid-template-columns: 1fr; }
   .subscribe-grid { gap: 40px; }
 
-  .solution-cards, .why-grid, .news-grid, .kb-grid, .detail-grid, .stats-band { grid-template-columns: 1fr; }
+  .solution-cards, .why-grid, .news-grid, .detail-grid, .stats-band { grid-template-columns: 1fr; }
 
   .solution-cards article, .stats-band article {
     border-right: 0; border-bottom: 1px solid var(--gold-line-soft);
@@ -1508,7 +1494,7 @@ blockquote {
   .subscribe-form input[type="email"] { border-right: 1px solid var(--gold-line); }
   .faq-item summary { font-size: 1rem; padding-right: 44px; }
   .faq-body { padding-right: 0; }
-  .news-card, .kb-card { padding: 28px 24px; min-height: auto; }
+  .news-card { padding: 28px 24px; min-height: auto; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-legal { flex-direction: column; }
   .timeline-top { flex-direction: column; align-items: flex-start; gap: 6px; }
@@ -1828,4 +1814,66 @@ blockquote {
 }
 @media (max-width: 560px) {
   .partner-page .partner-steps { grid-template-columns: 1fr; }
+}
+
+/* ============ KNOWLEDGE LIBRARY PAGE (scoped) ============ */
+
+.klib-enhanced .page-hero-num { display: none; }
+.klib-enhanced .klib-head { margin: 0 0 44px; font-size: 1.5rem; letter-spacing: 0.12em; }
+.klib-enhanced .section-dark .klib-head { color: var(--white); }
+.klib-enhanced .section-light .klib-head { color: var(--primary); }
+
+/* Video gallery — YouTube-style thumbnail grid */
+.klib-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
+.klib-video { display: flex; flex-direction: column; gap: 12px; }
+.klib-thumb {
+  position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
+  border: 1px solid var(--gold-line-soft); background: var(--background-deep);
+}
+.klib-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 260ms ease; }
+.klib-video:hover .klib-thumb img { transform: scale(1.04); }
+.klib-video:hover .klib-thumb { border-color: var(--gold-line); }
+.klib-play {
+  position: absolute; inset: 0; margin: auto; width: 56px; height: 56px;
+  display: grid; place-items: center;
+  background: rgba(7, 20, 40, 0.72); border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background 200ms ease, border-color 200ms ease;
+}
+.klib-play svg { width: 26px; height: 26px; fill: var(--white); }
+.klib-video:hover .klib-play { background: var(--accent); border-color: var(--accent); }
+.klib-video:hover .klib-play svg { fill: var(--background-deep); }
+.klib-dur {
+  position: absolute; right: 8px; bottom: 8px; padding: 3px 7px;
+  background: rgba(7, 20, 40, 0.86); color: var(--white);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em;
+}
+.klib-opinion {
+  position: absolute; left: 8px; top: 8px; padding: 4px 9px;
+  background: var(--danger); color: var(--white);
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase;
+}
+.klib-video-title { color: var(--white); font-size: 0.98rem; font-weight: 700; line-height: 1.35; }
+.klib-video:hover .klib-video-title { color: var(--accent-bright); }
+.klib-video-meta { color: var(--body-text); font-size: 0.84rem; }
+@media (max-width: 900px) { .klib-video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .klib-video-grid { grid-template-columns: 1fr; } }
+
+/* Article list */
+.klib-article-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--navy-line); }
+.klib-article-list li { border-bottom: 1px solid var(--navy-line); }
+.klib-article {
+  display: grid; grid-template-columns: 120px minmax(0, 1fr) auto auto;
+  align-items: center; gap: 20px; padding: 22px 4px;
+  transition: background 180ms ease, padding-left 180ms ease;
+}
+.klib-article:hover { background: rgba(15, 52, 96, 0.06); padding-left: 14px; }
+.klib-article-source { color: var(--accent); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.klib-article-title { color: var(--primary); font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
+.klib-article-meta { color: var(--muted-light); font-size: 0.82rem; white-space: nowrap; }
+.klib-article .icon { width: 18px; height: 18px; color: var(--accent); }
+@media (max-width: 700px) {
+  .klib-article { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; padding: 20px 4px; }
+  .klib-article-source { grid-column: 1 / -1; }
+  .klib-article-meta { grid-row: 3; grid-column: 1; }
+  .klib-article .icon { grid-row: 3; grid-column: 2; }
 }
